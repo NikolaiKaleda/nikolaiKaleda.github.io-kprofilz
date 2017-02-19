@@ -1,0 +1,45 @@
+﻿@model Nop.Plugin.Widgets.Gallery.Models.PublicInfoGalleryModel
+@using Nop.Web.Framework.UI
+@{
+    Html.AddScriptParts("~/Plugins/Widgets.Gallery/Scripts/slimbox2.js");
+    Html.AddCssFileParts("~/Plugins/Widgets.Gallery/Content/Gallery.css");
+}
+
+<div class="wrapper grid3-widget gallery">
+    @Html.Action("CenterMenu", "GalleryPublicInfo")
+    @foreach (var item in Model.ImageModel)
+    {
+        if (item.ShareImage)
+        {
+        <article class="col">
+            <div class="thumbnail">
+                <div class="gallery-image-center">
+                        <a href="@Url.Action("SingleImage", "GalleryPublicInfo", new { id = item.Id, galleryId = ViewBag.galleryId  })">
+                        <img src="@item.ImageGalleryPictureModel.ImageUrl"  title="@item.ImageGalleryPictureModel.Title"/>
+                    </a>
+                </div>
+                <div class="caption">
+                    <h3>@item.ImageGalleryPictureModel.Title</h3>
+                </div>
+            </div>
+        </article>
+        }
+        else
+        {
+        <article class="col">
+            <div class="thumbnail">
+                <div class="gallery-image-center">
+                    <a data-gallery="lightbox-p" href="@item.ImageGalleryPictureModel.FullSizeImageUrl" title="@item.ImageGalleryPictureModel.AlternateText">
+                        <img src="@item.ImageGalleryPictureModel.ImageUrl" class="img-polaroid" title="@item.ImageGalleryPictureModel.Title"/>
+                    </a>
+                </div>
+                <div class="caption">
+                    <h3>@item.ImageGalleryPictureModel.Title</h3>
+                </div>
+            </div>
+        </article>
+        }
+    }
+</div>
+@*@Html.Action("GalleryPaging", "GalleryPublicInfo")*@
+

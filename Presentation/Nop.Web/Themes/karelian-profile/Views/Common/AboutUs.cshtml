@@ -1,0 +1,351 @@
+﻿@model ContactUsModel
+@using Nop.Web.Models.Common;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts("О Компании");
+    //page class
+    Html.AppendPageCssClassParts("html-contact-page");
+}
+
+<div class="aboutPage">
+    <div class="aboutPageTitleContainer parallax" data-parallax="scroll" data-image-src="/Themes/karelian-profile/img/aboutPage/title_bg.jpg">
+        <h2 class="aboutPageTitle">О компании</h2>
+    </div>
+    <section class="aboutContentPosition">
+        <div class="aboutDescription">
+            <div class="row">
+                @Html.Action("TopicBlock", "Topic", new { systemName = "AboutBlock1" })
+            </div>
+        </div>
+    </section>
+    <section class="aboutAdvantagesPosition">
+        <div class="aboutAdvantages">
+            <h4 class="aboutAdvantagesSubtitle">Неукоснительные принципы нашей работы :</h4>
+            <div class="row">
+                @Html.Action("TopicBlock", "Topic", new { systemName = "AboutBlock2" })
+            </div>
+        </div>
+    </section>
+    <section class="aboutVideosPosition">
+        <div class="aboutVideosContainer">
+            @Html.Action("TopicBlock", "Topic", new { systemName = "AboutBlock3" })
+        </div>
+    </section>
+
+    <!-- --- Sertificate gallery --- -->
+    <!-- --- SERTIFICATE GALLERY --- -->
+    <section class="sertificateGallery">
+        <div class="row">
+            <h3 class="galleryTitle">Сертификаты качества</h3>
+            <!-- first slider -->
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 slide">
+                <div class="grid my-gallery" itemscope>
+                    <!--1 image-->
+                    <figure class="effect-layla" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/company/1.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/company/1.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">
+                            <h2 class="nameProject">Сертификаты <span> компании</span></h2>
+                            <!--<p class="descriptionProject">стандарты</p>-->
+                        </figcaption>
+                    </figure>
+                    <!--end 1 image-->
+                    <!--2 image-->
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/company/2.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/company/2.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">Сертификаты Компании.</figcaption>
+                    </figure>
+                    <!--end 2 image-->
+                    <!--3 image-->
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/company/2.jpg" itemprop="contentUrl" data-size="1024x683">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/company/2.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">Сертификаты компании.</figcaption>
+                    </figure>
+                    <!--end 3 image-->
+                </div>
+            </div>
+            <!-- end first slider -->
+            <!-- second slider -->
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 slide">
+                <div class="grid my-gallery" itemscope>
+                    <!--1 image-->
+                    <figure class="effect-layla" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/employees/1.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/employees/1.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">
+                            <h2 class="nameProject">Сертификаты <span> Сотрудника</span></h2>
+                            <!--<p class="descriptionProject">200 м<sup>2</sup></p>-->
+                        </figcaption>
+                    </figure>
+                    <!--end 1 image-->
+                    <!--2 image-->
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/employees/2.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/employees/2.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">Сертификаты компании.</figcaption>
+                    </figure>
+                    <!--end 2 image-->
+                    <!--3 image-->
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/employees/3.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/employees/3.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">Сертификаты компании.</figcaption>
+                    </figure>
+                    <!--end 3 image-->
+                    <!--4 image-->
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/employees/4.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/employees/4.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">Сертификаты компании.</figcaption>
+                    </figure>
+                    <!--end 4 image-->
+                </div>
+            </div>
+            <!-- end second slider -->
+            <!-- third slide -->
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 slide">
+                <div class="grid my-gallery" itemscope>
+                    <!--1 image-->
+                    <figure class="effect-layla" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/productions/1.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/productions/1.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">
+                            <h2 class="nameProject">Сертификаты <span> На продукцию</span></h2>
+                            <!--<p class="descriptionProject">200 м<sup>2</sup></p>-->
+                        </figcaption>
+                    </figure>
+                    <!--end 1 image-->
+                    <!--2 image-->
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/productions/2.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/productions/2.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">Сертификаты на продукцию.</figcaption>
+                    </figure>
+                    <!--end 2 image-->
+                </div>
+            </div>
+            <!-- end third slide -->
+            <!-- fourth slider -->
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 slide">
+                <div class="grid my-gallery" itemscope>
+                    <!--1 image-->
+                    <figure class="effect-layla" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/materials/1.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/materials/1.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">
+                            <h2 class="nameProject">Сертификаты <span> На материалы</span></h2>
+                            <!--<p class="descriptionProject">ТМ "Карельский профиль".</p>-->
+                        </figcaption>
+                    </figure>
+                    <!--end 1 image-->
+                    <!--2 image-->
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/materials/2.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/materials/2.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">Сертификаты на материалы.</figcaption>
+                    </figure>
+                    <!--end 2 image-->
+                    <!--3 image-->
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/materials/3.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/materials/3.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">Сертификаты на материалы.</figcaption>
+                    </figure>
+                    <!--end 3 image-->
+                    <!--4 image-->
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/materials/4.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/materials/4.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">Сертификаты на материалы.</figcaption>
+                    </figure>
+                    <!--end 4 image-->
+                    <!--5 image-->
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/materials/5.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/materials/5.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">Сертификаты на материалы.</figcaption>
+                    </figure>
+                    <!--end 5 image-->
+                    <!--6 image-->
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/materials/6.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/materials/6.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">Сертификаты на материалы.</figcaption>
+                    </figure>
+                    <!--end 6 image-->
+                    <!--7 image-->
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                        <a href="/Themes/karelian-profile/img/aboutPage/sertificates/materials/7.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/sertificates/materials/7.jpg" itemprop="thumbnail" alt="Сертификат" />
+                        </a>
+                        <figcaption itemprop="caption description">Сертификаты на материалы.</figcaption>
+                    </figure>
+                    <!--end 7 image-->
+                </div>
+            </div>
+            <!-- end fourth slider -->
+
+        </div>
+
+
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <!-- Background of PhotoSwipe.
+            It's a separate element, as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+                <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <!--  Controls are self-explanatory. Order can be changed. -->
+                        <div class="pswp__counter"></div>
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- --- End sertificate gallery --- -->
+    <!-- --- End sertificate gallery --- -->
+    <!-- --- Recomendation letters --- -->
+    <!-- --- SERTIFICATE GALLERY --- -->
+    <section class="aboutReccomendLetters">
+
+        <div class="row">
+            <h3 class="galleryTitle">Рекомендательные письма</h3>
+            <!-- first slider -->
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 slide">
+                <div class="grid my-gallery" itemscope>
+                    <!--1 image-->
+                    <figure class="effect-layla" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="/Themes/karelian-profile/img/aboutPage/reccomendLetters/1.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/reccomendLetters/1.jpg" itemprop="thumbnail" alt="Рекомендательное письмо" />
+                        </a>
+                        <figcaption itemprop="caption description">
+                            <h2 class="nameProject">Рекомендательное <span> Письмо</span></h2>
+                            <!--<p class="descriptionProject">стандарты</p>-->
+                        </figcaption>
+                    </figure>
+                    <!--end 1 image-->
+                </div>
+            </div>
+            <!-- end first slider -->
+            <!-- second slider -->
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 slide">
+                <div class="grid my-gallery" itemscope>
+                    <!--1 image-->
+                    <figure class="effect-layla" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="/Themes/karelian-profile/img/aboutPage/reccomendLetters/2.jpg" itemprop="contentUrl" data-size="1024x1024">
+                            <img src="/Themes/karelian-profile/img/aboutPage/reccomendLetters/2.jpg" itemprop="thumbnail" alt="Рекомендательное письмо" />
+                        </a>
+                        <figcaption itemprop="caption description">
+                            <h2 class="nameProject">Рекомендательное <span> Письмо</span></h2>
+                            <!--<p class="descriptionProject">200 м<sup>2</sup></p>-->
+                        </figcaption>
+                    </figure>
+                    <!--end 1 image-->
+                </div>
+            </div>
+            <!-- end second slider -->
+        </div>
+
+
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <!-- Background of PhotoSwipe.
+                 It's a separate element, as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+                <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <!--  Controls are self-explanatory. Order can be changed. -->
+                        <div class="pswp__counter"></div>
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- --- End sertificate gallery --- -->
+    <!-- --- End recomendation letters --- -->
+
+    @Html.Action("TopicBlock", "Topic", new { systemName = "AboutBlock4" })
+</div>

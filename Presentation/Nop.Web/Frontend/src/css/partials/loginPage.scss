@@ -1,0 +1,72 @@
+.loginPage {
+	margin: 0 auto;
+	.loginTitle {
+		margin-top: 60px;
+		margin-bottom: 30px;
+		text-align: center;
+		.title {
+			@include input-font($OswardFont, 3em, $textColor5, 2px, normal);
+		}
+	}
+	.alert {
+		font-family: $regularFont;
+		font-size: 1.5em;
+		text-align: center;
+	}
+	form {
+		width: 50%;
+		margin: 0 auto 60px auto;
+		padding: 30px 45px;
+		background-color: #F9F9F9;
+		border-top: 1px solid #E6E6E6;
+		.form-group {
+			margin-bottom: 20px;
+			label {
+				@include input-font($RobotoRegularFont, 1.1em, $textColor5, 0, normal);
+			}
+			input {
+				border-radius: 0;
+			}
+		}
+		.reversed {
+			.forgot-password {
+				a {
+					@include input-font($RobotoRegularFont, 1.1em, $textColor5, 0, normal);
+					float: right;
+					text-decoration: underline;
+				}
+			}
+		}
+		.submitBtn {
+			@include input-font($RobotoRegularFont, 1.2em, #fff, 0, normal);
+			display: block;
+			border-radius: 0;
+			margin: 0 auto;
+			padding: 10px 45px;
+			transition: all .4s;
+			background-color: rgb(28,28,28);
+			text-align: center;
+			text-decoration: none;
+			text-transform: capitalize;
+		}
+		.submitBtn:hover {
+			background-color: #fff;
+			color: rgb(28,28,28);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

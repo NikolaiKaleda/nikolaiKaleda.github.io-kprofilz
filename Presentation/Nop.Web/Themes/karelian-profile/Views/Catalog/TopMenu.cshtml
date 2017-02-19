@@ -1,0 +1,37 @@
+﻿@model TopMenuModel
+@using Nop.Web.Models.Catalog;
+
+@{
+    var rootCategory = Model.Categories.FirstOrDefault(x => x.IncludeInTopMenu);
+}
+
+<nav id="menu" class="panel" role="navigation">
+    @Html.Widget("header_menu_before")
+    <ul>
+        <li><a href="@Url.RouteUrl("Topic", new { SeName = "category-page" })" class="navLink underlineHover">Категории</a></li>
+        <li><a href="#tab2" class="navLink underlineHover">Наши работы</a></li>
+        <li><a href="@Url.RouteUrl("Blog")" class="navLink underlineHover">@T("Blog")</a></li>
+        <li><a class="navLink underlineHover" href="@Url.RouteUrl("NewsArchive")">@T("News")</a></li>
+        <li><a class="navLink underlineHover" href="@Url.RouteUrl("AboutUs")">О компании</a></li>
+        <li><a class="navLink underlineHover" href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+    </ul>
+    @Html.Widget("header_menu_after")
+</nav>
+<div class="wrap push">
+    <a href="#menu" class="menu-link">
+        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+    </a>
+</div>
+
+<nav class="navigation navbar">
+    @Html.Widget("header_menu_before")
+    <ul class="nav nav-tabs">
+        <li><a href="@Url.RouteUrl("Topic", new { SeName = "category-page" })" class="navLink underlineHover">Категории</a></li>
+        <li class="displayNoneMenuItem"><a href="#tab2" class="navLink underlineHover">Наши работы</a></li>
+        <li><a href="@Url.RouteUrl("Blog")" class="navLink underlineHover">@T("Blog")</a></li>
+        <li><a class="navLink underlineHover" href="@Url.RouteUrl("NewsArchive")">@T("News")</a></li>
+        <li><a class="navLink underlineHover" href="@Url.RouteUrl("AboutUs")">О компании</a></li>
+        <li><a class="navLink underlineHover" href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+    </ul>
+    @Html.Widget("header_menu_after")
+</nav>

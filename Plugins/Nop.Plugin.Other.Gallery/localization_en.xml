@@ -1,0 +1,254 @@
+﻿<Language Name="English">
+  <LocaleResource Name="Plugin.Widgets.Gallery">
+    <Value>Gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Galleries">
+    <Value>Gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.WidgetZones">
+    <Value>Top Menu Widget Zones</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.GalleryWidgetZones">
+    <Value>Gallery Widget Zones</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.WidgetZones.Hint">
+    <Value>Enter widget zones separated ';'</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.GalleryWidgetZones.Hint">
+    <Value>Enter widget zones separated ';'</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ShowImageAfterGalleries">
+    <Value>Show Images After Galleries</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ShowImageAfterGalleries.Hint">
+    <Value>Show images after galleries, if image not consist at any gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ShowGallery">
+    <Value>Show gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ShowGallery.Hint">
+    <Value>Show gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.SortByCreatedDate">
+    <Value>Sorting</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.SortByCreatedDate.Hint">
+    <Value>Sorting</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.GalleryType">
+    <Value>Gallery type</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.GalleryType.Hint">
+    <Value>Gallery type</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.GalleryWidgetName">
+    <Value>Filtering. Gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.GalleryWidgetName.Hint">
+    <Value>Filtering. Gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.Slider">
+    <Value>Slider</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ImagesList">
+    <Value>List of images</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.SortByDate">
+    <Value>Sort By Date</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.SortByDisplayOrder">
+    <Value>Sort By Display Order</Value>
+  </LocaleResource>
+  <LocaleResource Name="plugin.widgets.ViewGalleries">
+    <Value>View Galleries</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.SimpleGallery">
+    <Value>Simple Gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.FlickrGallery">
+    <Value>Flickr Gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.PicasaGallery">
+    <Value>Picasa Gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.VideoGallery">
+    <Value>Video Gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.Add">
+    <Value>Add</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.Remove">
+    <Value>Remove</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.FlickrKeyword">
+    <Value>Flickr Keyword</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.FlickrKeyword.Hint">
+    <Value>Flickr Keyword</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.PicasaKeyword">
+    <Value>Picasa Keyword</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.PicasaKeyword.Hint">
+    <Value>Picasa Keyword</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.VideoLink">
+    <Value>Video Link</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.VideoLink.Hint">
+    <Value>Video Link</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ProductPerWidgetPage">
+    <Value>Amount of images per widget page</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ProductPerWidgetPage.Hint">
+    <Value>Amount of images per widget page</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ProductPerPage">
+    <Value>Amount of images per page</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ProductPerPage.Hint">
+    <Value>Amount of images per page</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.BackToConfigure">
+    <Value>Back to configure</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.GalleryImages">
+    <Value>Gallery images</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.Configure.EditGalery">
+    <Value>Manage galleries</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.Configure.EditImages">
+    <Value>Manage images</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.Configure.Submit">
+    <Value>Save</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.Name">
+    <Value>Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.Name.Hint">
+    <Value>Enter Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.Name.Required">
+    <Value>Required</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.Description">
+    <Value>Description</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.Description.Hint">
+    <Value>Enter Description</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.DisplayOrder">
+    <Value>Display Order</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.DisplayOrder.Hint">
+    <Value>Set the gallery display order</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.ShareImage">
+    <Value>Share Image</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.ShareImage.Hint">
+    <Value>Share Image</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.Picture">
+    <Value>Picture</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryModel.Picture.Hint">
+    <Value>Gallery picture</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryImagesModel.Name">
+    <Value>Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryImagesModel.Name.Hint">
+    <Value>Enter Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryImagesModel.Name.Required">
+    <Value>Required</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryImagesModel.Description">
+    <Value>Description</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryImagesModel.Description.Hint">
+    <Value>Enter Description</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryImagesModel.DisplayOrder">
+    <Value>Display Order</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryImagesModel.DisplayOrder.Hint">
+    <Value>Set the gallery images display order</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryImagesModel.Picture">
+    <Value>Picture</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryImagesModel.Picture.Hint">
+    <Value>Gallery picture</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryImagesModel.GalleryId">
+    <Value>Gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.ConfigurationGalleryImagesModel.GalleryId.Hint">
+    <Value>Choose Gallery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.GalleryConfigureController.Added">
+    <Value>The new gallery item has been added successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.GalleryConfigureController.ImageAdded">
+    <Value>Image has been added successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.GalleryConfigureController.Deleted">
+    <Value>The picture has been deleted successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.GalleryConfigureController.Updated">
+    <Value>The gallery item has been updated successfully.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.Info">
+    <Value>Gallery Info</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.GalleryImages.Info">
+    <Value>Gallery Images Info</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.AddNew">
+    <Value>Add a new gallery item</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.AddNewImage">
+    <Value>Add a new image</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.BackToList">
+    <Value>back to gallery list</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.BackToImagesList">
+    <Value>back to images list</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.BackToPluginList">
+    <Value>back to plugin list</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.Save">
+    <Value>Save</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.Delete">
+    <Value>Delete</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.Edit">
+    <Value>Edit</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.EditGalleryDetails">
+    <Value>Edit Gallery Details</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.EditGalleryImagesDetails">
+    <Value>Edit Gallery Details</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.Pager.Previous">
+    <Value>Previous</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.Pager.Next">
+    <Value>Next</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.Pager.First">
+    <Value>First</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugin.Widgets.Gallery.Pager.Last">
+    <Value>Last</Value>
+  </LocaleResource>
+</Language>

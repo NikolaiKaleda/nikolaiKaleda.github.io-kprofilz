@@ -1,0 +1,241 @@
+@media only screen and (min-width:1680px) {
+.moreNewPage {
+	padding-top: 2em;
+	.moreNewPageTitle {
+        font-size: 3.3em;
+		margin-bottom: 1em;
+	}
+	.moreNewContentPosition {
+		padding-bottom: 4em;
+		.moreNewPost {
+			.titleImg {
+				height: 30em;
+			}
+			.postText {
+				padding: 0 3em 3em;
+				.postTitle {
+				    font-size: 2em;
+					margin-bottom: 0.5em;
+					margin-top: 1.5em;
+				}
+				.postDate {
+				    font-size: 0.9em;
+					margin-bottom: 2em;
+				}
+				.postContent {
+				    font-size: 1em;
+					line-height: 1.5em;
+				}
+				.my-gallery {
+					img {
+						max-width: 20em;
+    					height: auto;
+						margin: 1em;
+					}
+				}
+				.backBtnContainer {
+					height: 3em;
+					width: 15em;
+					line-height: 3em;
+					margin: 3em auto 0;
+					.backBtn {
+				        font-size: 1.4em;
+						.fa {
+							padding-right: 1em;
+						}
+					}
+				}
+				.backBtnContainer:hover {
+					.backBtn {
+						.fa {
+							padding-right: 1.2em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:1680px) {
+.moreNewPage {
+	.moreNewPageTitle {
+        font-size: 3em;
+	}
+	.moreNewContentPosition {
+		.moreNewPost {
+			.titleImg {
+				height: 20em;
+			}
+			.postText {
+				.postTitle {
+				    font-size: 1.7em;
+				}
+				.postContent {
+				    font-size: 0.9em;
+				}
+				.my-gallery {
+					img {
+						max-width: 15em;
+					}
+				}
+				.backBtnContainer {
+					height: 2.5em;
+					width: 13em;
+					line-height: 2.5em;
+					.backBtn {
+				        font-size: 1.2em;
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:1370px) {
+.moreNewPage {
+	.moreNewPageTitle {
+        font-size: 2.7em;
+	}
+	.moreNewContentPosition {
+        padding-bottom: 3em;
+		.moreNewPost {
+			.postText {
+                padding: 0 3em 2em;
+				.backBtnContainer {
+				    margin: 2em auto 0;
+					.backBtn {
+				        font-size: 1.1em;
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:1199px) {
+.moreNewPage {
+    padding-top: 2em;
+	.moreNewContentPosition {
+		.moreNewPost {
+			.postText {
+				.postTitle {
+				    margin-top: 1em;
+                    margin-bottom: 0.3em;
+				}
+				.postContent {
+				    line-height: 22px;
+				}
+				.my-gallery {
+					img {
+						max-width: 14em;
+                        margin: 1em;
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:992px) {
+.moreNewPage {
+    .moreNewContentPosition {
+        .moreNewPost {
+            .titleImg {
+                height: 15em;
+            }
+            .postText {
+                .postContetnt {
+                    line-height: 20px;
+                }
+                .backBtnContainer {
+                    margin: 1em auto 0;
+                }
+            }
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:768px) {
+.moreNewPage {
+    padding-top: 1em;
+	.moreNewPageTitle {
+        margin-bottom: 1em;
+	}
+	.moreNewContentPosition {
+		.moreNewPost {
+			.postText {
+				padding: 0 2em 2em;
+				.postDate {
+				    margin-bottom: 1em;
+				}
+				.postContent {
+				    font-size: 1em;
+				    line-height: 1.5em;
+				}
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:500px) {
+.moreNewPage {
+	.moreNewContentPosition {
+		.moreNewPost {
+			.postText {
+				.my-gallery {
+				    img {
+                        max-width: 12em;
+                    }
+				}
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:350px) {
+.moreNewPage {
+    .moreNewContentPosition {
+        .moreNewPost {
+            .postText {
+                .postContent {
+                    font-size: 1.2em;
+                }
+                .backBtnContainer  {
+                    height: 3em;
+                    line-height: 2.5em;
+                    width: 14em;
+                }
+            }
+        }
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

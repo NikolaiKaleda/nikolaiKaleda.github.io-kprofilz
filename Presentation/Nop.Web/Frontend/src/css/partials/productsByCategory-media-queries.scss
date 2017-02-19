@@ -1,0 +1,1612 @@
+@media only screen and (min-width:1680px) {
+.productsPage {
+	font-size: 17px;
+	max-width: 1920px;
+	margin: 0 auto;
+    .productsTitleContainer {
+        min-height: 200px;
+        height: 400px;
+        .productsTitle {
+            font-size: 6em;
+            padding: 30px;
+        }
+    }
+    .productsNavigation {
+		display: none;
+        .row {
+            .navLinkContainer {
+                .row {
+                    .linkToProduct {
+                        .linkTextContainer {
+                            .linkText {
+                                font-size: 1.5em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .productsPagePosition {
+        .breadCrumbs {
+            ul {
+                li {
+                    a {
+						font-size: 1.2em;
+                    }
+                }
+            }
+        }
+        .sortProducts {
+            margin-top: 60px;
+            .sort {
+                margin-right: 30px;
+                .sortTitle {
+					font-size: 1.1em;
+                }
+                #sortBy {
+                    font-size: 1.5em;
+                    width: 170px;
+                }
+            }
+            .currency {
+                .currencyTitle {
+                    font-size: 1.1em;
+                }
+                #currencyBy {
+                    font-size: 1.5em;
+                    width: 170px;
+                }
+            }
+            .search {
+                form {
+                    width: 370px;
+                    input {
+						font-size: 1.3em;
+                        width: 100%;
+                        height: 50px;
+                    }
+                    button {
+                        height: 50px;
+                        width: 50px;
+                    }
+                    button:before {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+        .products {
+            .row {
+                .filtersProductContainer {
+                    .filtersProduct {
+                        .smartfilter {
+                            .buildType {
+                                .typeTitle {
+                                    font-size: 2.5em;
+                                    padding-top: 45px;
+                                }
+                                .listBuildings {
+                                    padding-bottom: 30px;
+                                    .buildItem {
+                                        font-size: 1.45em;
+                                    }
+                                }
+                            }
+                            .buildPrice {
+                                margin-top: 45px;
+                                padding: 0 15px 30px;
+                                p {
+                                    label {
+                                        font-size: 1.9em;
+                                    }
+                                    #amount {
+                                        font-size: 1.4em;
+                                    }
+                                }
+								.checkbox {
+									label {
+										font-size: 1.5em;
+									}
+								}
+                            }
+                            .floorCount {
+								padding-bottom: 20px;
+                                .floorTitle {
+                                    font-size: 1.9em;
+                                }
+                                .checkbox {
+                                    label {
+                                        font-size: 1.5em;
+                                    }
+                                }
+                            }
+                            .buildArea {
+                                padding: 0 15px 30px;
+                                p {
+                                    label {
+                                        font-size: 1.9em;
+                                    }
+                                    #amount-area {
+                                        font-size: 1.4em;
+                                    }
+                                }
+								.checkbox {
+                                    label {
+                                        font-size: 1.5em;
+                                    }
+                                }
+                            }
+                            .submit {
+                                margin-top: 40px;
+                                padding-bottom: 30px;
+                                .set_filter {
+                                    font-size: 1.6em;
+                                    height: 60px;
+                                }
+                                #del_filter {
+                                    font-size: 1.6em;
+                                    height: 60px;
+                                }
+                            }
+                        }
+                    }
+                    .recentlyProducts {
+                        .recentlyTitle {
+                            font-size: 1.9em;
+                            padding-bottom: 20px;
+                            margin-bottom: 45px;
+                        }
+                        .recentlyItem {
+                            .recentlyLink {
+                                .recentlyText {
+                                    margin-left: 30px;
+                                    h4 {
+                                        font-size: 1.6em;
+                                    }
+                                    p {
+                                        font-size: 1.3em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .products {
+                    .row {
+                        margin-left: 10px;
+                        .productItem {
+                            height: 620px;
+                            .productLink {
+                                .addToCompareReact {
+                                    height: 50px;
+                                    width: 50px;
+                                    .fa {
+                                        margin: 24%;
+                                    }
+                                }
+                                img {
+                                    height: 230px;
+                                }
+                                .productTitle {
+                                    font-size: 1.8em;
+                                    margin-top: 10%;
+                                }
+                                .productArea, .floor, .size, .personsCount {
+                                    font-size: 1.4em;
+                                }
+                                .productDescription {
+                                    font-size: 1.1em;
+                                    margin: 5%;
+                                }
+                            }
+                            .cart-button {
+                                bottom: 2%;
+                                .btn {
+                                    font-size: 1.5em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+	.newsPagination {
+		.pager {
+			ul {
+				.individual-page {
+					a {
+						font-size: 1.5em;
+					}
+				}
+				.current-page {
+					a {
+						span {
+							font-size: 1.5em;
+						}
+					}
+				}
+			}
+		}
+	}
+    .compareBtnConntainer {
+        .btn {
+            font-size: 1.5em;
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:1890px) {
+.productsPage {
+    .productsNavigation {
+        .row {
+            .navLinkContainer {
+                .row {
+                    .linkToProduct {
+                        .linkTextContainer {
+                            .linkText {
+                                font-size: 1.34em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:1680px) {
+.productsPage {
+	font-size: 16px;
+    .productsTitleContainer {
+        height: 360px;
+        .productsTitle {
+            font-size: 5em;
+			margin-top: 8%;
+            padding: 25px;
+        }
+    }
+    .productsNavigation {
+		display: none;
+        .row {
+            .navLinkContainer {
+                .row {
+                    .linkToProduct {
+                        .linkTextContainer {
+                            .linkText {
+                                font-size: 1.05em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .productsPagePosition {
+        .breadCrumbs {
+            ul {
+                li {
+                    a {
+						font-size: 1em;
+                    }
+                }
+            }
+        }
+        .sortProducts {
+            margin-top: 55px;
+            .sort {
+                margin-right: 20px;
+                .sortTitle {
+                    font-size: 0.95em;
+                }
+                #sortBy {
+                    font-size: 1.25em;
+                    width: 160px;
+                }
+            }
+            .currency {
+                .currencyTitle {
+                    font-size: 0.95em;
+                }
+                #currencyBy {
+                    font-size: 1.25em;
+                    width: 160px;
+                }
+            }
+            .search {
+                form {
+                    width: 350px;
+                    input {
+                        height: 46px;
+                    }
+                    button {
+                        height: 46px;
+                        width: 46px;
+                    }
+                    button:before {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .products {
+            margin-top: 50px;
+            .row {
+                .filtersProductContainer {
+                    .filtersProduct {
+                        .smartfilter {
+                            .buildType {
+                                .typeTitle {
+                                    font-size: 2em;
+                                    padding-top: 40px;
+                                }
+                                .listBuildings {
+                                    .buildItem {
+                                        font-size: 1.3em;
+                                    }
+                                }
+                            }
+                            .buildPrice {
+                                margin-top: 40px;
+                                p {
+                                    label {
+										font-size: 1.8em;
+                                    }
+                                    #amount {
+                                        font-size: 1.2em;
+                                    }
+                                }
+								.checkbox {
+									margin-bottom: 0;
+									label {
+										font-size: 1.3em;
+                                        padding-bottom: 5px;
+									}
+								}
+                            }
+                            .floorCount {
+                                padding-left: 20px;
+                                .floorTitle {
+                                    font-size: 1.8em;
+                                    padding: 25px 0 10px 25px;
+                                }
+                                .checkbox {
+									margin-bottom: 0;
+                                    label {
+                                        font-size: 1.3em;
+                                        padding-bottom: 5px;
+                                    }
+                                }
+                            }
+                            .buildArea {
+                                p {
+                                    label {
+                                        font-size: 1.8em;
+                                    }
+                                    #amount-area {
+                                        font-size: 1.2em;
+                                    }
+                                }
+								.checkbox {
+									margin-bottom: 0;
+                                    label {
+                                        font-size: 1.3em;
+                                        padding-bottom: 5px;
+                                    }
+                                }
+                            }
+                            .submit {
+                                margin-top: 35px;
+                                .set_filter,#del_filter  {
+                                    font-size: 1.3em;
+                                    height: 50px;
+                                }
+                            }
+                        }
+                    }
+                    .recentlyProducts {
+                        .recentlyTitle {
+                            font-size: 1.8em;
+                            margin-bottom: 40px;
+                        }
+                        .recentlyItem {
+                            .recentlyLink {
+                                .recentlyText {
+                                    margin-left: 20px;
+                                    h4 {
+                                        font-size: 1.4em;
+                                    }
+                                    p {
+                                        font-size: 0.8em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .products {
+					margin-top: 40px;
+                    .row {
+                        margin-left: 5px;
+                        .productItem {
+                            height: 530px;
+                            margin: 0 0.5% 45px;
+                            .productLink {
+                                img {
+                                    height: 190px;
+                                }
+                                .productTitle {
+                                    font-size: 1.3em;
+                                    margin: 7% 0 5% 5%;
+                                }
+                                .productArea, .floor, .size, .personsCount {
+                                    font-size: 1.3em;
+                                }
+								.productDescription {
+									font-size: .9em;
+								}
+                            }
+                            .cart-button {
+                                bottom: 3%;
+                                .btn {
+                                    font-size: 1.2em;
+								}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+	.newsPagination {
+		.pager {
+			ul {
+				.individual-page {
+					a {
+						font-size: 1.3em;
+					}
+				}
+				.current-page {
+					a {
+						span {
+							font-size: 1.3em;
+						}
+					}
+				}
+			}
+		}
+	}
+    .compareBtnConntainer {
+        .btn {
+			font-size: 1.2em;
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:1370px) {
+.productsPage {
+	font-size: 14px;
+	padding-bottom: 5%;
+    .productsTitleContainer {
+        height: 330px;
+        .productsTitle {
+            font-size: 4.5em;
+			margin-top: 9%;
+            padding: 20px;
+        }
+    }
+    .productsNavigation {
+        margin-bottom: 25px;
+        .row {
+            .navLinkContainer {
+                .row {
+                    .linkToProduct {
+                        .linkTextContainer {
+                            .linkText {
+                                font-size: 0.95em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .productsPagePosition {
+        width: 95%;
+        .breadCrumbs {
+            ul {
+                li {
+                    a {
+						font-size: 0.85em;
+                        margin-right: 10px;
+                        margin-left: 10px;
+                    }
+                    img {
+                        height: 12px;
+                    }
+                }
+            }
+        }
+        .sortProducts {
+            margin-top: 45px;
+            .sort {
+                margin-right: 15px;
+                .sortTitle {
+                    font-size: .85em;
+                }
+                #sortBy {
+                    font-size: 1.2em;
+                    width: 150px;
+                }
+            }
+            .currency {
+                .currencyTitle {
+                    font-size: .85em;
+                }
+                #currencyBy {
+                    font-size: 1.2em;
+                    width: 150px;
+                }
+            }
+            .search {
+	                form {
+                    width: 310px;
+                    input {
+						font-size: 1.1em;
+                        height: 40px;
+                        padding-left: 10px;
+                    }
+                    button {
+                        height: 40px;
+                        width: 40px;
+                    }
+                }
+            }
+        }
+        .products {
+            margin-top: 40px;
+            .row {
+                .filtersProductContainer {
+                    .filtersProduct {
+                        .smartfilter {
+                            .buildType {
+                                margin-bottom: 0px;
+                                .typeTitle {
+                                    font-size: 1.8em;
+                                    padding-top: 35px;
+                                }
+                                .listBuildings {
+                                    .buildItem {
+                                        font-size: 1.2em;
+                                        padding-bottom: 2px;
+                                        .sublist {
+                                            padding-left: 20px;
+                                            .buildSubItem {
+                                                font-size: 1.1em;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .buildPrice {
+                                margin-top: 30px;
+                                padding: 0 10px 20px;
+                                p {
+                                    label {
+                                        font-size: 1.6em;
+                                    }
+                                    #amount {
+                                        font-size: 1.1em;
+                                    }
+                                }
+                                #slider-range {
+                                    .ui-slider-handle {
+                                        width: 18px;
+                                        height: 18px;
+                                    }
+                                    .ui-corner-all {
+                                        border-radius: 9px;
+                                    }
+                                }
+								.checkbox {
+                                    label {
+                                        font-size: 1.2em;
+                                    }
+                                }
+                            }
+                            .floorCount {
+                                padding-left: 15px;
+                                .floorTitle {
+                                    @include input-font($OswardFont, 1.3em, $textColor5, 0.5px, normal);
+                                    padding: 25px 0 5px 15px;
+                                }
+                                .checkbox {
+                                    label {
+                                        font-size: 1.2em;
+                                    }
+                                }
+                            }
+                            .buildArea {
+                                p {
+                                    label {
+                                        font-size: 1.8em;
+                                    }
+                                    #amount-area {
+                                        font-size: 1.1em;
+                                    }
+                                }
+                                #slider-range-area {
+                                    .ui-slider-handle {
+                                        width: 18px;
+                                        height: 18px;
+                                    }
+                                    .ui-corner-all {
+                                        border-radius: 9px;
+                                    }
+                                }
+								.checkbox {
+                                    label {
+                                        font-size: 1.2em;
+                                    }
+                                }
+                            }
+                            .submit {
+                                margin-top: 30px;
+								padding-bottom: 25px;
+                                .set_filter {
+                                    font-size: 1.2em;
+                                    height: 45px;
+                                }
+                                #del_filter {
+                                    font-size: 1.2em;
+                                    height: 45px;
+                                }
+                            }
+                        }
+                    }
+                    .recentlyProducts {
+                        .recentlyTitle {
+                            font-size: 1.6em;
+                            margin-bottom: 30px;
+                        }
+                        .recentlyItem {
+                            margin-bottom: 25px;
+                            .recentlyLink {
+                                .recentlyText {
+									width: 60%;
+                                    margin-left: 15px;
+                                    h4 {
+                                        font-size: 1.3em;
+										margin-top: 0;
+                                    }
+                                    p {
+                                        font-size: 1em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .products {
+                    .row {
+                        .productItem {
+                            padding: 0;
+                            height: 500px;
+                            .productLink {
+                                .addToCompareReact {
+                                    height: 40px;
+                                    width: 40px;
+                                    .fa {
+                                        margin: 20%;
+                                    }
+                                }
+                                img {
+                                    height: 185px;
+                                }
+                                .productTitle {
+                                    font-size: 1.2em;
+                                    margin: 6% 0 5% 5%;
+                                }
+                                .productArea, .floor, .size, .personsCount {
+                                    font-size: 1.2em;
+                                }
+                                .productDescription {
+                                    font-size: 1em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+	.newsPagination {
+		.pager {
+			ul {
+				.individual-page {
+					a {
+						font-size: 1.1em;
+					}
+				}
+				.current-page {
+					a {
+						span {
+							font-size: 1.1em;
+						}
+					}
+				}
+			}
+		}
+	}
+    .compareBtnConntainer {
+        .btn {
+            font-size: 1.1em;
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:1199px) {
+.productsPage {
+    .productsTitleContainer {
+        height: 300px;
+        .productsTitle {
+            font-size: 4em;
+			margin-top: 10%;
+            padding: 15px;
+        }
+    }
+    .productsNavigation {
+        margin-bottom: 25px;
+        .row {
+            .navLinkContainer {
+                .row {
+                    .linkToProduct {
+                        .linkTextContainer {
+                            .linkText {
+                                font-size: .78em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .productsPagePosition {
+        width: 100%;
+        .breadCrumbs {
+            ul {
+                li {
+                    a {
+						font-size: .75em;
+                        margin-right: 5px;
+                        margin-left: 5px;
+                    }
+                    img {
+                        height: 10px;
+                    }
+                }
+            }
+        }
+        .sortProducts {
+            margin-top: 40px;
+            .sort {
+                .sortTitle {
+                    font-size: .75em;
+                }
+                #sortBy {
+                    font-size: 1.1em;
+                    width: 130px;
+                }
+            }
+            .currency {
+                .currencyTitle {
+                    font-size: .75em;
+                }
+                #currencyBy {
+                    font-size: 1.1em;
+                    width: 130px;
+                }
+            }
+            .search {
+                form {
+                    width: 280px;
+                    input {
+                        height: 36px;
+                    }
+                    button {
+                        height: 36px;
+                        width: 36px;
+                    }
+                    button:before {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .products {
+            margin-top: 35px;
+            .row {
+                .filtersProductContainer {
+                    .filtersProduct {
+                        .smartfilter {
+                            .buildType {
+                                .typeTitle {
+                                    font-size: 1.6em;
+                                }
+                                .listBuildings {
+									padding-left: 30px;
+                                    .buildItem {
+                                        font-size: 1.1em;
+                                        .sublist {
+                                            padding-left: 15px;
+                                            .buildSubItem {
+                                                font-size: 1em;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .buildPrice {
+                                margin-top: 25px;
+								margin-bottom: 0;
+                                p {
+                                    label {
+                                        font-size: 1.5em;
+                                    }
+                                }
+								.checkbox {
+                                    label {
+                                        font-size: 1.15em;
+                                        padding-bottom: 10px;
+                                    }
+                                }
+                            }
+                            .floorCount {
+								padding-top: 10px;
+                                .floorTitle {
+                                    font-size: 1.5em;
+                                    padding-left: 5px;
+                                }
+                                .checkbox {
+                                    label {
+                                        font-size: 1.15em;
+                                        padding-bottom: 10px;
+                                    }
+                                }
+                            }
+                            .buildArea {
+                                p {
+                                    label {
+                                        font-size: 1.47em;
+                                    }
+                                }
+								.checkbox {
+                                    label {
+                                        font-size: 1.15em;
+                                        padding-bottom: 10px;
+                                    }
+                                }
+                            }
+                            .submit {
+                                .set_filter {
+                                    font-size: 1.1em;
+                                    height: 40px;
+                                    width: 80%;
+                                    line-height: 25px;
+                                }
+                                #del_filter {
+                                    font-size: 1.1em;
+                                    height: 40px;
+									width: 80%;
+									line-height: 25px;
+                                }
+                            }
+                        }
+                    }
+                    .recentlyProducts {
+                        .recentlyTitle {
+                            font-size: 1.31em;
+                            padding-bottom: 15px;
+                            margin-bottom: 25px;
+                        }
+                        .recentlyItem {
+                            margin-bottom: 20px;
+                            .recentlyLink {
+                                .recentlyText {
+                                    margin-left: 10px;
+                                    h4 {
+                                        font-size: 1.2em;
+                                    }
+                                    p {
+                                        font-size: 0.9em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .products {
+					margin-top: 30px;
+                    .row {
+                        margin-left: 0px;
+                        .productItem {
+                            width: 32%;
+                            height: 440px;
+                            margin-bottom: 20px;
+                            .productLink {
+                                img {
+                                    height: 180px;
+                                }
+                                .productArea, .floor, .size, .personsCount {
+                                    font-size: 1.1em;
+                                }
+                                .productDescription {
+                                    font-size: 0.9em;
+                                }
+                            }
+                            .cart-button {
+                                .btn {
+                                    font-size: 1.1em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+	.newsPagination {
+		.pager {
+			ul {
+				.individual-page {
+					a {
+						font-size: 1em;
+					}
+				}
+				.current-page {
+					a {
+						span {
+							font-size: 1em;
+						}
+					}
+				}
+			}
+		}
+	}
+    .compareBtnConntainer {
+        .btn {
+            font-size: 1em;
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:992px) {
+.productsPage {
+    .productsTitleContainer {
+        height: 280px;
+        .productsTitle {
+            font-size: 3.5em;
+			margin-top: 14%;
+            padding: 10px;
+        }
+    }
+    .productsNavigation {
+        .row {
+            .navLinkContainer {
+                .row {
+                    .linkToProduct {
+                        .linkTextContainer {
+                            .linkText {
+                                font-size: 1.1em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .productsPagePosition {
+        .breadCrumbs {
+            ul {
+                li {
+                    a {
+						font-size: 0.9em;
+                    }
+                }
+            }
+        }
+        .sortProducts {
+            margin-left: 5px;
+            .sort {
+                .sortTitle {
+                    font-size: .8em;
+                }
+                #sortBy {
+                    width: 120px;
+                }
+            }
+            .currency {
+                .currencyTitle {
+                   font-size: .8em;
+                }
+                #currencyBy {
+                    width: 120px;
+                }
+            }
+            .search {
+                form {
+                    width: 250px;
+                    input {
+                        height: 32px;
+                    }
+                    button {
+                        height: 32px;
+                        width: 32px;
+                    }
+                }
+            }
+        }
+        .products {
+            margin-top: 20px;
+            .row {
+                .filtersProductContainer {
+                    .filtersProduct {
+                        .smartfilter {
+                            .buildType {
+                                .typeTitle {
+                                    font-size: 1.8em;
+                                    padding: 30px 0 15px 10px;
+                                }
+                                .listBuildings {
+                                    padding-left: 25px;
+                                    .buildItem {
+                                        font-size: 1em;
+										padding-bottom: 5px;
+                                        .sublist {
+                                            .buildSubItem {
+                                                font-size: 1em;
+												padding-bottom: 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .buildPrice {
+                                p {
+                                    label {
+                                        font-size: 1.8em;
+                                    }
+                                    #amount {
+                                        font-size: 1em;
+										width: 100%;
+                                    }
+                                }
+								.checkbox {
+                                    label {
+                                        font-size: 1.3em;
+                                    }
+                                }
+                            }
+                            .floorCount {
+                                padding-left: 10px;
+                                .floorTitle {
+                                    font-size: 1.8em;
+                                }
+                                .checkbox {
+                                    label {
+                                        font-size: 1.3em;
+                                    }
+                                }
+                            }
+                            .buildArea {
+                                p {
+                                    label {
+                                        font-size: 1.5em;
+                                    }
+                                    #amount-area {
+                                        font-size: 1em;
+                                        width: 100%;
+                                    }
+                                }
+								.checkbox {
+                                    label {
+                                        font-size: 1.3em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .recentlyProducts {
+                        .recentlyTitle {
+                            font-size: 1.5em;
+                        }
+                        .recentlyItem {
+                            .recentlyLink {
+                                .recentlyText {
+                                    h4 {
+										margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .products {
+					padding: 0;
+					padding-right: 10px;
+    				margin-top: 20px;
+                    .row {
+                        .productItem {
+							width: 96%;
+							margin-bottom: 30px;
+                            height: 100%;
+                            .productLink {
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                                .productTitle {
+                                    font-size: 1.9em;
+                                    margin: 4% 0 3% 5%;
+                                }
+                                .productDescription {
+                                    font-size: 1em;
+                                    margin: 4% 5% 5%;
+                                }
+                            }
+                            .cart-button {
+                                position: initial;
+                                text-align: center;
+								margin-bottom: 15px;
+                                .btn {
+                                    font-size: 1.1em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:767px) {
+.productsPage {
+    .productsTitleContainer {
+        height: 270px;
+        .productsTitle {
+            font-size: 3.2em;
+			margin-top: 19%;
+            padding: 8px;
+        }
+    }
+    .productsNavigation {
+        .row {
+            .navLinkContainer {
+                .row {
+                    .linkToProduct {
+                        .linkTextContainer {
+                            .linkText {
+                                line-height: 3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .productsPagePosition {
+		padding: 0;
+        .sortProducts {
+            .sort {
+                margin-right: 10px;
+                #sortBy {
+                    width: 110px;
+                }
+            }
+            .currency {
+				margin-right: 10px;
+                #currencyBy {
+                    width: 110px;
+                }
+            }
+            .search {
+                form {
+					width: 200px;
+    				margin-top: 13px;
+					margin-right: 5px;
+                    input {
+                        height: 24px;
+                        padding-left: 5px;
+                    }
+                    button {
+                        height: 24px;
+                        width: 24px;
+                    }
+                    button:before {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .products {
+            margin-top: 15px;
+            .row {
+				margin: 0;
+                .filtersProductContainer {
+					border-bottom: 1px solid rgba(132,132,132,.5);
+                    .filtersProduct {
+                        .smartfilter {
+                            .buildType {
+                                .typeTitle {
+                                    font-size: 2em;
+                                    padding-right: 30px;
+                                }
+                                .listBuildings {
+                                    padding-left: 50px;
+                                    .buildItem {
+                                        font-size: 1.1em;
+                                        padding-bottom: 2px;
+                                        .sublist {
+                                            padding-left: 25px;
+                                            .buildSubItem {
+                                                font-size: 1.1em;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .buildPrice {
+                                margin-top: 30px;
+                                padding: 0 25px 30px;;
+                                p {
+                                    label {
+                                        font-size: 2em;
+                                    }
+                                    #amount {
+                                        font-size: 1.3em;
+                                    }
+                                }
+								.checkbox {
+									margin-top: 15px;
+                                    label {
+                                        font-size: 1.4em;
+                                        padding-bottom: 8px;
+                                    }
+                                }
+                            }
+                            .floorCount {
+                                padding-left: 30px;
+                                .floorTitle {
+                                    font-size: 2em;
+                                    padding-left: 15px;
+                                }
+                                .checkbox {
+									margin-top: 15px;
+                                    label {
+                                        font-size: 1.4em;
+                                        padding-bottom: 8px;
+                                    }
+                                }
+                            }
+                            .buildArea {
+                                margin-top: 30px;
+                                padding: 0 25px 30px;;
+                                p {
+                                    text-align: center;
+                                    label {
+                                        font-size: 2em;
+                                    }
+                                    #amount-area {
+                                        font-size: 1.3em;
+                                    }
+                                }
+								.checkbox {
+									margin-top: 15px;
+                                    label {
+                                        font-size: 1.4em;
+                                        padding-bottom: 8px;
+                                    }
+                                }
+                            }
+                            .submit {
+                                .set_filter {
+                                    font-size: 1.2em;
+                                    width: 45%;
+                                }
+                                #del_filter {
+                                    font-size: 1.2em;
+                                    width: 45%;
+                                }
+                            }
+                        }
+                    }
+                    .recentlyProducts {
+						border:  1px solid rgba(132,132,132,.5);
+						border-top: none;
+						border-bottom: none;
+						padding-bottom: 30px;
+                        .recentlyTitle {
+                            font-size: 2em;
+                            border-bottom: none;
+                            padding-top: 30px;
+                        }
+                        .recentlyItem {
+                            .recentlyLink {
+                                .recentlyImg {
+                                    width: 30%;
+                                }
+                                .recentlyText {
+                                    margin-left: 20px;
+                                    h4 {
+                                        font-size: 1.35em;
+                                    }
+                                    p {
+                                        font-size: 1em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .products {
+					margin: 60px 0 0 0;
+					padding: 0;
+                    .row {
+						margin: 0;
+                        .productItem {
+                            width: 100%;
+                            .productLink {
+                                .addToCompareReact {
+                                    right: 3%;
+    								top: 3%;
+                                }
+                                .productTitle {
+                                    font-size: 2em;
+                                }
+                                .productArea, .floor, .size, .personsCount {
+                                    font-size: 1.2em;
+                                }
+                            }
+                            .cart-button {
+                                margin-bottom: 20px;
+                                .btn {
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .compareBtnConntainer {
+        .btn {
+            font-size: 0.9em;
+        }
+    }
+}
+}
+
+@media only screen and (max-width:500px) {
+.productsPage {
+    .productsTitleContainer {
+        .productsTitle {
+			margin-top: 23%;
+        }
+    }
+    .productsNavigation {
+        .row {
+            .navLinkContainer {
+                .row {
+                    .linkToProduct {
+                        .linkTextContainer {
+                            .linkText {
+                                font-size: 1em;
+                                line-height: 2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .productsPagePosition {
+        .sortProducts {
+            margin-top: 25px;
+            margin-left: 0;
+            .sort {
+                margin-right: 0px;
+                #sortBy {
+                    width: 100px;
+                }
+            }
+            .currency {
+				margin-right: 0px;
+                #currencyBy {
+                    width: 100px;
+                }
+            }
+            .search {
+				display: block;
+    			float: none;
+                form {
+					width: 250px;
+                    margin-top: 15px;
+					margin-left: 0;
+                    input {
+                        height: 30px;
+                    }
+                    button {
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+        }
+        .products {
+            margin-top: 30px;
+            .row {
+                .filtersProductContainer {
+                    .filtersProduct {
+                        .smartfilter {
+							.buildPrice {
+								.checkbox {
+									margin-top: 5px;
+                                    label {
+                                        padding-bottom: 0px;
+                                    }
+                                }
+							}
+                            .floorCount {
+                                .checkbox {
+									margin-top: 5px;
+                                    label {
+                                        padding-bottom: 0px;
+                                    }
+                                }
+                            }
+							.buildArea {
+								.checkbox {
+									margin-top: 5px;
+                                    label {
+                                        padding-bottom: 0px;
+                                    }
+                                }
+							}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+@media only screen and (max-width:350px) {
+.productsPage {
+    .productsNavigation {
+        .row {
+            .navLinkContainer {
+                .row {
+                    .linkToProduct {
+                        .linkTextContainer {
+                            .linkText {
+                                font-size: 0.9em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .productsPagePosition {
+        .breadCrumbs {
+            ul {
+                li {
+                    a {
+                        font-size: .85em;
+                    }
+                }
+            }
+        }
+        .sortProducts {
+            .sort {
+                #sortBy {
+                    font-size: 1em;
+                }
+            }
+            .currency {
+                #currencyBy {
+                    font-size: 1em;
+                }
+            }
+        }
+        .products {
+            .row {
+                .filtersProductContainer {
+                    .filtersProduct {
+                        .smartfilter {
+                            .buildType {
+                                .typeTitle {
+                                    font-size: 1.8em;
+                                }
+                                .listBuildings {
+                                    .buildItem {
+                                        font-size: 1em;
+										padding-bottom: 1px;
+                                        .sublist {
+                                            .buildSubItem {
+                                                font-size: 1em;
+												padding-bottom: 1px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .buildPrice {
+                                p {
+                                    label {
+                                        font-size: 1.8em;
+                                    }
+                                    #amount {
+                                        font-size: 1.2em;
+                                    }
+                                }
+								.checkbox {
+                                    label {
+                                        font-size: 1.3em;
+                                    }
+                                }
+                            }
+                            .floorCount {
+                                .floorTitle {
+                                    font-size: 1.8em;
+                                }
+                                .checkbox {
+                                    label {
+                                        font-size: 1.3em;
+                                    }
+                                }
+                            }
+                            .buildArea {
+                                p {
+                                    label {
+                                        font-size: 1.8em;
+                                    }
+                                    #amount-area {
+                                        font-size: 1.2em;
+                                    }
+                                }
+								.checkbox {
+                                    label {
+                                        font-size: 1.3em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .recentlyProducts {
+                        .recentlyTitle {
+                            font-size: 1.8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}

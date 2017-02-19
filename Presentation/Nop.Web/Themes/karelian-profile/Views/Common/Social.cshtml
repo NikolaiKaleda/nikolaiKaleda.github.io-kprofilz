@@ -1,0 +1,76 @@
+﻿@model Nop.Web.Models.Common.SocialModel
+
+@{
+    var link = @"https://www.google.ru/maps/place/Sky+Towers,+vulica+Dambro%C5%ADskaja+9,+Minsk,+%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C/@53.9113109,27.4522671,17z/data=!3m1!4b1!4m5!3m4!1s0x46dbc52b84813315:0xba5b065b3bb31bea!8m2!3d53.9113078!4d27.4544558";
+}
+
+
+<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 footerBlock footerContacts">
+    <h4 class="footerSubtitle">Наши контакты</h4>
+    <div class="footerPhone">
+        <a href="tel:@Model.Phone1" class="footerPhoneLink">
+            <i class="fa fa-phone footerPhoneLinkIcon" aria-hidden="true"></i>
+            <p class="footerPhoneLinkText">@Model.Phone1</p>
+        </a>
+    </div>
+    <div class="footerPhone">
+        <a href="tel:@Model.Phone2" class="footerPhoneLink">
+            <i class="fa fa-phone footerPhoneLinkIcon" aria-hidden="true"></i>
+            <p class="footerPhoneLinkText">@Model.Phone2</p>
+        </a>
+    </div>
+    <div class="footerLocation">
+        <a href="@link" class="footerLocationLink">
+            <i class="fa fa-map-marker footerLocationLinkIcon" aria-hidden="true"></i>
+            <p class="footerLocationLinkText">@Model.Address</p>
+        </a>
+    </div>
+    <div class="footerEmail">
+        <a href="mailto:@Model.Email" class="footerEmailLink">
+            <i class="fa fa-envelope-o footerEmailLinkIcon" aria-hidden="true"></i>
+            <p class="footerEmailLinkText">@Model.Email</p>
+        </a>
+    </div>
+    <div class="footerSkype">
+        <a href="skype:@Model.Skype?call" class="footerSkypeLink">
+            <i class="fa fa-skype footerSkypeLinkIcon" aria-hidden="true"></i>
+            <p class="footerSkypeLinkText">@Model.Skype</p>
+        </a>
+    </div>
+</div>
+<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 footerBlock footerSocial">
+    <h4 class="footerSubtitle">@T("Footer.FollowUs")</h4>
+    @if (!string.IsNullOrEmpty(Model.FacebookLink))
+    {
+        <div class="footerFacebook">
+            <a href="@Model.FacebookLink" class="footerFacebookLink">
+                <div class="facebookIconBorder">
+                    <i class="fa fa-facebook footerFacebookIcon" aria-hidden="true"></i>
+                </div>
+                <p class="footerFacebookText">@T("Footer.FollowUs.Facebook")</p>
+            </a>
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(Model.VkLink))
+    {
+    <div class="footerVk">
+        <a href="@Model.VkLink" class="footerVkLink">
+            <div class="vkIconBorder">
+                <i class="fa fa-vk vkIcon footerVkIcon" aria-hidden="true"></i>
+            </div>
+            <p class="footerVkText">v kontakte</p>
+        </a>
+    </div>
+    }
+    @if (!string.IsNullOrEmpty(Model.InstagramLink))
+    {
+    <div class="footerInsta">
+        <a href="@Model.InstagramLink" class="footerInstaLink">
+            <div class="instaIconBorder">
+                <i class="fa fa-instagram footerInstaIcon" aria-hidden="true"></i>
+            </div>
+            <p class="footerInstaText">instagram</p>
+        </a>
+    </div>
+    }
+</div>

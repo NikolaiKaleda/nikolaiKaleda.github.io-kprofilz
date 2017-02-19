@@ -1,0 +1,335 @@
+.aboutPage {
+	width: 100%;
+	.aboutPageTitleContainer {
+        min-height: 150px;
+        height: 350px;
+        position: relative;
+		.aboutPageTitle {
+			@include input-font($OswardFont, 80px, $textColor5, 5px, bold);
+            position: absolute;
+            top: 30%;
+            left: 30%;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+	.aboutContentPosition {
+		width: 90%;
+		margin: 0 auto;
+		padding: 100px 0 85px 0;
+		.aboutDescription {
+			padding-bottom: 85px;
+			.descriptionTextContainer {
+				padding-right: 20px;
+				.descriptionTitle {
+					@include input-font($OswardFont, 45px, $textColor5, 0, bold);
+					margin-bottom: 35px;
+					text-transform: uppercase;
+				}
+				.descriptionseparator {
+					//visibility: hidden;
+					border-bottom: 3px solid $textColor3;
+					width: 50px;
+					margin-bottom: 25px;
+					-webkit-transition: all 0.4s ease-out 0s;
+					-moz-transition: all 0.4s ease-out 0s;
+					-o-transition: all 0.4s ease-out 0s;
+					transition: all 0.4s ease-out 0s;
+				}
+				.descriptionText {
+					@include input-font($RalewayFont, 17px, $textColor6, 0, normal);
+				}
+			}
+			.descriptionImage {
+				padding-left: 20px;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.aboutAdvantagesPosition {
+		width: 100%;
+		background-color: $bgPartnersColor;
+		padding: 50px 0;
+		.aboutAdvantages {
+			width: 75%;
+			margin: 0 auto;
+			.aboutAdvantagesSubtitle {
+				@include input-font($OswardFont, 30px, $textColor5, 0, normal);
+			}
+			.row {
+				margin-top: 50px;
+				.aboutAdvantagesItem {
+					padding-right: 30px;
+    				padding-left: 30px;
+					.itemTitleContent {
+						.itemNumber {
+							@include input-font($OswardFont, 70px, $newsTextColor, 0, normal);
+							position: absolute;
+							left: 30px;
+							top: -35px;
+							z-index: 0;
+							line-height: 50px;
+						}
+						.itemTitle {
+							@include input-font($RobotoRegularFont, 22px, $textColor5, 0, normal);
+							z-index: 1;
+							position: relative;
+							text-transform: uppercase;
+						}
+					}
+					.itemTextContainer {
+						margin-top: 20px;
+						.itemText {
+							@include input-font($RalewayFont, 15px, $textColor6, 0, normal);
+						}
+					}
+				}
+			}
+		}
+	}
+	.aboutVideosPosition {
+		width: 100%;
+		padding: 80px 0;
+		.aboutVideosContainer {
+			width: 90%;
+			margin: 0 auto;
+			.aboutVideo {
+				@include inlineBlock();
+				padding: 0 80px;
+				width: 47%;
+				iframe {
+					width: 100%;
+					height: 470px;
+				}
+			}
+			.aboutVideosDescriptionContainer {
+				@include inlineBlock();
+				width: 50%;
+				vertical-align: top;
+				.aboutVideosDescription {
+					border-bottom: 1px solid $textColor6;
+					padding-bottom: 30px;
+					margin-bottom: 30px;
+					.videosDescriptionTitle {
+						@include input-font($OswardFont, 30px, $textColor5, 0, normal);
+						margin-bottom: 30px;
+					}
+					p {
+						@include input-font($RalewayFont, 16px, $textColor6, 0, normal);
+					}
+				}
+				.aboutVideosStatistic {
+					.row {
+						.aboutVideosStatisticContainer {
+							-webkit-transition: all 0.4s ease-out 0s;
+							-moz-transition: all 0.4s ease-out 0s;
+							-o-transition: all 0.4s ease-out 0s;
+							transition: all 0.4s ease-out 0s;
+							text-align: center;
+							h4 {
+								@include input-font($regularFont, 55px, $textColor6, 0, normal);
+								margin-bottom: 5px;
+								cursor: default;
+							}
+							p {
+								@include input-font($RalewayFont, 16px, $newsTextColor, 0, normal);
+								cursor: default;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.contactUsBtn {
+		background-color: $bgPartnersColor;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		.contactbtnContainer {
+			width: 90%;
+			margin: auto;
+			text-align: justify;
+			line-height: 0;
+			h4 {
+				@include input-font($OswardFont, 30px, $textColor5, 1px, 400);
+				@include inlineBlock();
+				padding: 47px 0;
+				margin: 0;
+			}
+			.contactUsBtn {
+				@include inlineBlock();
+				vertical-align: middle;
+				.contactBtn {
+					@include input-font($RobotoRegularFont, 14px, #fff, 0, normal);
+					@include inlineBlock();
+					transition: all .4s;
+					float: right;
+					height: 50px;
+					width: 180px;
+					background-color: rgb(28,28,28);
+					line-height: 50px;
+					text-align: center;
+					margin-top: -15px;
+					text-decoration: none;
+					text-transform: capitalize;
+				}
+				.contactBtn:hover {
+					background-color: $mainColor;
+					color: rgb(28,28,28);
+				}
+			}
+		}
+		.contactbtnContainer:after {
+			content: '';
+			width: 100%;
+			display: inline-block;
+		}
+	}
+}
+
+
+
+
+
+//----- Sertificate gallery -----
+.sertificateGallery {
+	background-color: $bgPartnersColor;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 60px;
+	.row {
+		width: 90%;
+		margin: 0 auto;
+		overflow: hidden;
+		padding-bottom: 40px;
+		padding-top: 0!important;
+		.galleryTitle {
+			@include input-font($OswardFont, 30px, $textColor5, 0, 400);
+			padding-top: 75px;
+			margin-top: 0;
+			margin-bottom: 12px;
+		}
+		.slide {
+			padding-right: 5px;
+    		padding-left: 5px;
+			.my-gallery {
+				.displayNone {
+					display: none;
+				}
+				figure {
+					min-width: 220px;
+					a{
+						img {
+							width: 100%;
+							height: 280px;
+						}
+					}
+					figcaption {
+						padding: 0;
+						.nameProject {
+							@include input-font($OswardFont, 30px, $textColor3, 0, 300);
+							text-align: center;
+							margin: 20px auto 10px auto;
+							width: 70%;
+							text-shadow: $textColor5 0 0 2px;
+							word-spacing: 2px;
+							span {
+								font-weight: 800;
+							}
+						}
+					}
+					.descriptionProject {
+						@include input-font($RalewayFont, 14px, $textColor3, 0, 500);
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	.row:first-of-type {
+		padding-top: 50px;
+	}
+	.pswp__caption__center {
+		@include input-font($OswardFont, 30px, $textColor5, 0, normal);
+		text-align: center;
+		max-width: 750px;
+	}
+	.pswp__counter {
+		font-size: 15px;
+	}
+}
+//----- End sertificate gallery -----
+
+
+//----- Recomendation letters -----
+.aboutReccomendLetters {
+	background-color: $textColor3;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 60px;
+	.row {
+		width: 90%;
+		margin: 0 auto;
+		overflow: hidden;
+		padding-bottom: 40px;
+		padding-top: 0!important;
+		.galleryTitle {
+			@include input-font($OswardFont, 30px, $textColor5, 0, 400);
+			padding-top: 75px;
+			margin-top: 0;
+			margin-bottom: 12px;
+		}
+		.slide {
+			padding-right: 5px;
+    		padding-left: 5px;
+			.my-gallery {
+				.displayNone {
+					display: none;
+				}
+				figure {
+					min-width: 220px;
+					a{
+						img {
+							width: 100%;
+							height: 280px;
+						}
+					}
+					figcaption {
+						padding: 0;
+						.nameProject {
+							@include input-font($OswardFont, 30px, $textColor3, 0, 300);
+							text-align: center;
+							margin: 20px auto 10px auto;
+							width: 70%;
+							text-shadow: $textColor5 0 0 2px;
+							word-spacing: 2px;
+							span {
+								font-weight: 800;
+							}
+						}
+					}
+					.descriptionProject {
+						@include input-font($RalewayFont, 14px, $textColor3, 0, 500);
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	.row:first-of-type {
+		padding-top: 50px;
+	}
+	.pswp__caption__center {
+		@include input-font($OswardFont, 30px, $textColor5, 0, normal);
+		text-align: center;
+		max-width: 750px;
+	}
+	.pswp__counter {
+		font-size: 15px;
+	}
+}
+
+
+//----- End recomendation letters -----

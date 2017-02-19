@@ -1,0 +1,46 @@
+﻿@model ProductOverviewModel
+@using Nop.Core
+@using Nop.Core.Domain.Orders
+@using Nop.Core.Domain.Tax
+@using Nop.Core.Infrastructure
+@using Nop.Web.Models.Catalog;
+@{
+    var addtocomparelink = Url.RouteUrl("AddProductToCompare", new { productId = Model.Id });
+}
+
+
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 productItem">
+    <div class="productLink">
+        <a href="@Url.RouteUrl("Product", new { SeName = Model.SeName })" class="productLink">
+            <div class="addToCompareReact">
+                <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+            </div>
+            <img src="@Model.DefaultPictureModel.ImageUrl" alt="@Model.DefaultPictureModel.AlternateText">
+            <h3 class="productTitle">@Model.Name</h3>
+            @for (int i = 0; i < Model.SpecificationAttributeModels.Count; i++)
+            {
+                if (i < 3)
+                {
+                    <h5 class="productArea">@Model.SpecificationAttributeModels[i].SpecificationAttributeName: @Model.SpecificationAttributeModels[i].ValueRaw</h5>
+                }
+            }
+            <p class="productDescription">@Html.Raw(Model.ShortDescription)</p>
+        </a>
+        <div class="cart-button button-group">
+            <div class="buttons">
+                @if (!Model.ProductPrice.DisableAddToCompareListButton)
+                {
+                    <button type="button" title="@T("ShoppingCart.AddToCompareList")" class="btn btn-compare" data-urladd="@addtocomparelink">
+                        <i class="fa fa-bar-chart-o"></i>
+                    </button>
+                }
+                <a href="@Url.RouteUrl("Product", new { SeName = Model.SeName })">
+                    <div type="button" class="btn btn-cart">
+                        Подробнее
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+﻿@model BlogPostListModel
+@using Nop.Web.Models.Blogs;
+
+
+     <!-- --- DESCRIPTIONS --- -->
+<section class="descriptions parallax" data-parallax="scroll" data-image-src="/Themes/karelian-profile/img/homePage/main/descriptions/bg.jpg">
+    <div class="descriptionPosition">
+        <img class="iconDescription" src="/Themes/karelian-profile/img/homePage/main/descriptions/icon.png" alt="Карельский профильы">
+        <h3 class="descriptionTitle">@T("Blog")</h3>
+        <div class="row">
+            @foreach (var item in Model.BlogPosts)
+            {
+                <a href="@Url.RouteUrl("BlogPost", new {SeName = item.SeName})">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 descriptionItem">
+                        <h4 class="descriptionItemTitle">@item.Title</h4>
+                        <div class="descriptionItemDescription">@Html.Raw(item.BodyOverview)</div>
+                        <p class="descriptionItemDate">@item.CreatedOn.ToString("D")</p>
+                    </div>
+                </a>
+            }
+        </div>
+        <div class="linkToAllStock">
+            <div>
+                <a href="@Url.RouteUrl("Blog")" class="stockBtn">@T("Blog")</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- --- End descriptions --- -->

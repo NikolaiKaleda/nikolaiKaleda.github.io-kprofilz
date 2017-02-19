@@ -1,0 +1,591 @@
+﻿@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //page class
+    Html.AppendPageCssClassParts("html-home-page");
+}
+<div class="page home-page" data-creategallery="@Url.Action("GalleryList", "GalleryPublicInfo")">
+    <div class="page-body">
+        @Html.Widget("home_page_top")
+        @Html.Action("TopicBlock", "Topic", new { systemName = "FreeDelivery" })
+        @Html.Widget("home_page_before_categories")
+        @Html.Action("HomepageCategories", "Catalog")
+        @Html.Widget("home_page_before_news")
+        @Html.Action("HomePageNews", "News")
+        <!-- --- OUR ADVANTAGES --- -->
+        <section class="advantagesContainer">
+            <div class="advantagesText">
+                <h3 class="titleAdvantages">Наши преимущества</h3>
+                <p class="descriptionAdvantages">Гарантия качаства</p>
+            </div>
+            <div class="advantagesItems">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 advantageItem">
+                        <img src="~/Themes/karelian-profile/img/homePage/main/advantages/3.jpg" alt="Контроль качества">
+                        <h4 class="advantageItemTitle">Высокое качество</h4>
+                        <p class="advantageItemDescription">Простроганные доски проходят контроль качества, проверяются на прочность.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 advantageItem">
+                        <img src="~/Themes/karelian-profile/img/homePage/main/advantages/2.jpg" alt="Срок службы">
+                        <h4 class="advantageItemTitle">Долговечность</h4>
+                        <p class="advantageItemDescription">Срок службы при соблюдении правил и рекомендаций по эксплуатации 10 - 150 лет.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 advantageItem">
+                        <img src="~/Themes/karelian-profile/img/homePage/main/advantages/1.jpg" alt="Индивидуальный проект">
+                        <h4 class="advantageItemTitle">Индивидуальность</h4>
+                        <p class="advantageItemDescription">Технология каркасного домостроения позволяет выполнить любой индивидуальный проект дома.</p>
+                    </div>
+                </div>
+                <div class="moreAdvantagesBtn">
+                    <div>
+                        <a href="@Url.RouteUrl("Topic", new { SeName = "about-us" })" class="moreBtn">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --- End our advantages --- -->
+        @Html.Action("HomePageBlog", "Blog")
+
+
+
+        <!-- --- IMAGE GALLERY --- -->
+        <!-- --- IMAGE GALLERY --- -->
+        <section class="imageGallery">
+            <h3 class="galleryTitle">Наши проекты</h3>
+            <p class="gallerySubtitle">Выполненные работы</p>
+
+            <div class="row">
+                <!-- first slider -->
+                @*< <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 slide">
+                    <div class="grid my-gallery" itemscope>
+                        @*<!--1 image-->
+                        <figure class="effect-layla" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/1.jpg" itemprop="contentUrl" data-size="1024x1024">
+                                <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/1.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">
+                                <h2 class="nameProject">Проект <span> Вилга</span></h2>
+                                <p class="descriptionProject">180 м<sup>2</sup></p>
+                            </figcaption>
+                        </figure>
+                        <!--end 1 image-->
+                        <!--2 image-->
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                            <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/2.jpg" itemprop="contentUrl" data-size="964x1024">
+                                <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/2.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Площадь дома 180 м2.</figcaption>
+                        </figure>
+                        <!--end 2 image-->
+                        <!--3 image-->
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                            <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/3.jpg" itemprop="contentUrl" data-size="1024x683">
+                                <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/3.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Комплект каркасного дома, дополнительно: каркасный гараж на две машины, хозблок с баней и комплект заборных секций.</figcaption>
+                        </figure>
+                        <!--end 3 image-->
+                        <!--4 image-->
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                            <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/4.jpg" itemprop="contentUrl" data-size="1024x768">
+                                <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/4.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Отделка фасада каркасного дома кирпичом.</figcaption>
+                        </figure>
+                        <!--end 4 image-->
+                        <!--5 image-->
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                            <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/5.jpg" itemprop="contentUrl" data-size="1024x768">
+                                <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/5.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Фасады каркасного дома Вилга после сборки облицованы кирпичом.</figcaption>
+                        </figure>
+                        <!--end 5 image-->
+                        <!--6 image-->
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                            <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/6.jpg" itemprop="contentUrl" data-size="1024x768">
+                                <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/6.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Площадь дома 180 м2.</figcaption>
+                        </figure>
+                        <!--end 6 image-->
+                        <!--7 image-->
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                            <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/7.jpg" itemprop="contentUrl" data-size="1024x768">
+                                <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/1/7.jpg" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Строительство каркасного дома Вилга производилось в 2009 году в Прионежском районе, Республики Карелия.</figcaption>
+                        </figure>
+                        <!--end 7 image-->
+                                    </div>
+                                </div>*@
+                <!-- end first slider -->
+                <!-- second slider -->
+                @*<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 slide">
+                        <div class="grid my-gallery" itemscope>
+                            <!--1 image-->
+                            <figure class="effect-layla" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/1.jpg" itemprop="contentUrl" data-size="1024x1024">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/1.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">
+                                    <h2 class="nameProject">Проект <span> Ладва</span></h2>
+                                    <p class="descriptionProject">200 м<sup>2</sup></p>
+                                </figcaption>
+                            </figure>
+                            <!--end 1 image-->
+                            <!--2 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/2.jpg" itemprop="contentUrl" data-size="1024x683">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/2.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Отделка фасадов каркасного дома - блок-хаус.</figcaption>
+                            </figure>
+                            <!--end 2 image-->
+                            <!--3 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/3.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/3.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Строительство каркасного дома Ладва производилось своими руками в Ленинградской области, Всевложском районе.</figcaption>
+                            </figure>
+                            <!--end 3 image-->
+                            <!--4 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/4.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/4.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">2011 г.</figcaption>
+                            </figure>
+                            <!--end 4 image-->
+                            <!--5 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/5.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/5.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Дом под ключ был построен в течение 4 месяцев.</figcaption>
+                            </figure>
+                            <!--end 5 image-->
+                            <!--6 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/6.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/6.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Строительство каркасного дома Ладва.</figcaption>
+                            </figure>
+                            <!--end 6 image-->
+                            <!--7 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/7.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/7.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Отделка фасадов каркасного дома - блок-хаус.</figcaption>
+                            </figure>
+                            <!--end 7 image-->
+                            <!--8 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/8.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/8.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Строительство каркасного дома Ладва производилось своими руками в Ленинградской области, Всевложском районе.</figcaption>
+                            </figure>
+                            <!--end 8 image-->
+                            <!--9 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/9.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/9.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">2011 г.</figcaption>
+                            </figure>
+                            <!--end 9 image-->
+                            <!--10 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/10.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/10.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Дом под ключ был построен в течение 4 месяцев.</figcaption>
+                            </figure>
+                            <!--end 10 image-->
+                            <!--11 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/11.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/11.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Отделка фасадов каркасного дома - блок-хаус.</figcaption>
+                            </figure>
+                            <!--end 11 image-->
+                            <!--12 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/12.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/2/12.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Дом под ключ был построен в течение 4 месяцев.</figcaption>
+                            </figure>
+                            <!--end 12 image-->
+                        </div>
+                    </div>*@
+                <!-- end second slider -->
+                <!-- third slide -->
+                @*<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 slide">
+                        <div class="grid my-gallery" itemscope>
+                            <!--1 image-->
+                            <figure class="effect-layla" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/1.jpg" itemprop="contentUrl" data-size="1024x1024">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/1.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">
+                                    <h2 class="nameProject">Проект <span> Косалма</span></h2>
+                                    <p class="descriptionProject">200 м<sup>2</sup></p>
+                                </figcaption>
+                            </figure>
+                            <!--end 1 image-->
+                            <!--2 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/2.jpg" itemprop="contentUrl" data-size="1024x683">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/2.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Каркасный дом "Косалма" в Республике Карелия.</figcaption>
+                            </figure>
+                            <!--end 2 image-->
+                            <!--3 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/3.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/3.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Каркасный дом "Косалма" в Республике Карелия.</figcaption>
+                            </figure>
+                            <!--end 3 image-->
+                            <!--4 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/4.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/4.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Каркасный дом "Косалма" в Республике Карелия.</figcaption>
+                            </figure>
+                            <!--end 4 image-->
+                            <!--5 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/5.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/5.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Каркасный дом "Косалма" в Республике Карелия.</figcaption>
+                            </figure>
+                            <!--end 5 image-->
+                            <!--6 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/6.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/6.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Каркасный дом "Косалма" в Республике Карелия.</figcaption>
+                            </figure>
+                            <!--end 6 image-->
+                            <!--7 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/7.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/3/7.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Каркасный дом "Косалма" в Республике Карелия.</figcaption>
+                            </figure>
+                            <!--end 7 image-->
+                        </div>
+                    </div>*@
+                <!-- end third slide -->
+            </div>
+
+            @*<div class="row">
+                    <!-- fourth slider -->
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 slide">
+                        <div class="grid my-gallery" itemscope>
+                            <!--1 image-->
+                            <figure class="effect-layla" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/1.jpg" itemprop="contentUrl" data-size="1024x1024">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/1.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">
+                                    <h2 class="nameProject">Выставка <span> Open Village</span></h2>
+                                    <p class="descriptionProject">ТМ "Карельский профиль".</p>
+                                </figcaption>
+                            </figure>
+                            <!--end 1 image-->
+                            <!--2 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/2.jpg" itemprop="contentUrl" data-size="964x1024">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/2.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Фотографии одного дня посещения выставки- презентации.</figcaption>
+                            </figure>
+                            <!--end 2 image-->
+                            <!--3 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/3.jpg" itemprop="contentUrl" data-size="1024x683">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/3.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Первая полномасштабная ярмарка недвижимости Open Village 2017.</figcaption>
+                            </figure>
+                            <!--end 3 image-->
+                            <!--4 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/4.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/4.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Откроет свои двери с 15 июля по 15 августа 2017 года.</figcaption>
+                            </figure>
+                            <!--end 4 image-->
+                            <!--5 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/5.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/5.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Комплект несущего каркаса ТМ "Карельский профиль".</figcaption>
+                            </figure>
+                            <!--end 5 image-->
+                            <!--6 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/6.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/6.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Площадь дома 180 м2.</figcaption>
+                            </figure>
+                            <!--end 6 image-->
+                            <!--7 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/7.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/4/7.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">В Чеховском районе Московской области.</figcaption>
+                            </figure>
+                            <!--end 7 image-->
+                        </div>
+                    </div>
+                    <!-- end fourth slider -->
+                    <!-- fifth slider -->
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 slide">
+                        <div class="grid my-gallery" itemscope>
+                            <!--1 image-->
+                            <figure class="effect-layla" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/5/1.jpg" itemprop="contentUrl" data-size="964x1024">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/5/1.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">
+                                    <h2 class="nameProject">Проект <span> Алаярви</span></h2>
+                                    <p class="descriptionProject">63 м<sup>2</sup></p>
+                                </figcaption>
+                            </figure>
+                            <!--end 1 image-->
+                            <!--2 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/5/2.jpg" itemprop="contentUrl" data-size="1024x683">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/5/2.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Дом площадью 63м2.</figcaption>
+                            </figure>
+                            <!--end 2 image-->
+                            <!--3 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/5/3.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/5/3.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Собран в течение 1 недели.</figcaption>
+                            </figure>
+                            <!--end 3 image-->
+                            <!--4 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/5/4.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/5/4.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Место строительства Республика Карелия.</figcaption>
+                            </figure>
+                            <!--end 4 image-->
+                            <!--5 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/5/5.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/5/5.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">2016 г.</figcaption>
+                            </figure>
+                            <!--end 5 image-->
+                        </div>
+                    </div>
+                    <!-- end fifth slider -->
+                    <!-- sixth slide -->
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 slide">
+                        <div class="grid my-gallery" itemscope>
+                            <!--1 image-->
+                            <figure class="effect-layla" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/1.jpg" itemprop="contentUrl" data-size="964x1024">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/1.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">
+                                    <h2 class="nameProject">Проект <span> Леппикоски</span></h2>
+                                    <p class="descriptionProject">115 м<sup>2</sup></p>
+                                </figcaption>
+                            </figure>
+                            <!--end 1 image-->
+                            <!--2 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/2.jpg" itemprop="contentUrl" data-size="1024x683">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/2.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Дом построен около Санкт-Петербурга (Всеволжский район, Ленинградская область) весной 2010 года.</figcaption>
+                            </figure>
+                            <!--end 2 image-->
+                            <!--3 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/3.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/3.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Бюджет строительства – 1 650 000 руб.</figcaption>
+                            </figure>
+                            <!--end 3 image-->
+                            <!--4 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/4.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/4.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Фундамент каркасного дома - утепленная монолитная ж/б плита по финской технологии.</figcaption>
+                            </figure>
+                            <!--end 4 image-->
+                            <!--5 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/5.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/5.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Утепление стен – базальтовый утеплитель Paroc UNS37 200мм.</figcaption>
+                            </figure>
+                            <!--end 5 image-->
+                            <!--6 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/6.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/6.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Каркас дома Леппикоски, полностью собран за четыре дня бригадой из четырех человек, т.к технология каркасного домостроения, позволяет осуществлять сборку дома в любое время года.</figcaption>
+                            </figure>
+                            <!--end 6 image-->
+                            <!--7 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/7.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/7.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Площадь дома: 115 м2.</figcaption>
+                            </figure>
+                            <!--end 7 image-->
+                            <!--8 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/8.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/8.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Наружная облицовка фасада - блок-хаус 28х145, кровля - металлочерепица.</figcaption>
+                            </figure>
+                            <!--end 8 image-->
+                            <!--9 image-->
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="displayNone">
+                                <a href="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/9.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="/Themes/karelian-profile/img/homePage/main/imageGallery/imageHouse/6/9.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Сроки строительства : 10 марта – 25 мая 2010г.</figcaption>
+                            </figure>
+                            <!--end 9 image-->
+                        </div>
+                    </div>
+                    <!-- end sixth slide -->
+                </div>*@
+
+
+            <!-- Root element of PhotoSwipe. Must have class pswp. -->
+            <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                <!-- Background of PhotoSwipe.
+                 It's a separate element, as animating opacity is faster than rgba(). -->
+                <div class="pswp__bg"></div>
+                <!-- Slides wrapper with overflow:hidden. -->
+                <div class="pswp__scroll-wrap">
+                    <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                    <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+                    <div class="pswp__container">
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                    </div>
+                    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                    <div class="pswp__ui pswp__ui--hidden">
+                        <div class="pswp__top-bar">
+                            <!--  Controls are self-explanatory. Order can be changed. -->
+                            <div class="pswp__counter"></div>
+                            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                            <button class="pswp__button pswp__button--share" title="Share"></button>
+                            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                            <!-- element will get class pswp__preloader--active when preloader is running -->
+                            <div class="pswp__preloader">
+                                <div class="pswp__preloader__icn">
+                                    <div class="pswp__preloader__cut">
+                                        <div class="pswp__preloader__donut"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                            <div class="pswp__share-tooltip"></div>
+                        </div>
+                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                        <div class="pswp__caption">
+                            <div class="pswp__caption__center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- --- End image gallery --- -->
+        <!-- --- End image gallery --- -->
+        @Html.Action("HomePageReview", "Product")
+
+        <!-- --- OUR PARTNERS --- -->
+        <section class="ourPartners">
+            <div class="ourPartnersPosition">
+                <h3 class="ourPartnersTitle">Наши партнеры</h3>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 ourPartnersItem">
+                        <a href="http://www.metallprofil.by" class="ourPartnersLink">
+                            <div class="partnerIcon">
+                                <img src="/Themes/karelian-profile/img/homePage/main/ourPartners/mprofil.png" alt="Металл профиль">
+                                <div class="partnerIconBackground">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 ourPartnersItem">
+                        <a href="http://10ka.by/" class="ourPartnersLink">
+                            <div class="partnerIcon">
+                                <img src="/Themes/karelian-profile/img/homePage/main/ourPartners/10ka.png" alt="Десятка строй">
+                                <div class="partnerIconBackground">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 ourPartnersItem">
+                        <a href="http://kprofil.ru/" class="ourPartnersLink">
+                            <div class="partnerIcon">
+                                <img src="/Themes/karelian-profile/img/homePage/main/ourPartners/kprofil.png" alt="Карельский профиль">
+                                <div class="partnerIconBackground">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 ourPartnersItem">
+                        <a href="http://lesok.by/" class="ourPartnersLink">
+                            <div class="partnerIcon">
+                                <img src="/Themes/karelian-profile/img/homePage/main/ourPartners/lesok.png" alt="Лесок">
+                                <div class="partnerIconBackground">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --- End our partners --- -->
+        @Html.Widget("home_page_bottom")
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿@using GalleryModel = Nop.Plugin.Widgets.Gallery.Models.ConfigurationGalleryModel;
+
+@model Nop.Plugin.Widgets.Gallery.Models.ConfigurationGalleryModel
+@{
+    Layout = "/Administration/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+    //page title
+    ViewBag.Title = T("Plugin.Widgets.Gallery.AddNew").Text;
+}
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "gallery-form" }))
+{
+    <div class="section-header">
+        <div class="title">
+            <img src="@Url.Content("/Administration/Content/images/ico-catalog.png")" alt="" />
+            @T("Plugin.Widgets.Gallery.AddNew") @Html.ActionLink("(" + T("Plugin.Widgets.Gallery.BackToList") + ")", "List")
+        </div>
+        <div class="options">
+            <input type="submit" name="save" class="k-button" value="@T("Plugin.Widgets.Gallery.Save")" />
+        </div>
+    </div>
+    @Html.Partial("~/Plugins/Widgets.Gallery/Views/GalleryConfigure/_CreateOrUpdate.cshtml", Model)
+}

@@ -1,0 +1,57 @@
+﻿@model HomePageNewsItemsModel
+@using Nop.Web.Models.News;
+
+@if (Model.NewsItems.Count > 0)
+{
+    var item = Model.NewsItems.FirstOrDefault();
+     <!-- --- ENGINEER REVIEW --- -->
+    <section class="engineerReview parallax" data-parallax="scroll" data-image-src="/Themes/karelian-profile/img/homePage/main/engineerReview/bg.jpg">
+        <div class="obliqueBg">
+            <img src="/Themes/karelian-profile/img/homePage/main/engineerReview/obliqueBg.png" alt="">
+        </div>
+        <div class="engineerReviewTextContainer">
+            <div class="engineerReviewText">
+                <h2 class="engineerReviewTitle">@item.Title</h2>
+                <h4 class="engineerReviewSubtitle">@Html.Raw(item.Short)</h4>
+                @*<p class="engineerReviewDescription">Снижение цен на  продукцию "Карельский профиль" в строительный сезон 2016г.</p>
+                    <p class="engineerReviewDescription">* актуальность цен уточняйте в офисах продаж</p>*@
+                <div class="linkToNews">
+                    <a href="@Url.RouteUrl("NewsArchive")" class="btnToNews">@T("News.ViewAll")</a>
+                </div>
+            </div>
+        </div>
+        <div class="obliqueBgBottom">
+            <img src="/Themes/karelian-profile/img/homePage/main/engineerReview/obliqueBgBottom.png" alt="">
+        </div>
+    </section>
+    <!-- --- End engineer review --- -->
+
+
+
+    @*<div class="news-list-homepage">
+        <div class="title">
+            <strong>@T("News")</strong>
+        </div>
+        <div class="news-items">
+            @foreach (var item1 in Model.NewsItems)
+            {
+                <div class="news-item">
+                    <div class="news-head">
+                        <a class="news-title" href="@Url.RouteUrl("NewsItem", new { SeName = item.SeName })">@item.Title</a>
+                        <span class="news-date">-@item.CreatedOn.ToString("D")</span>
+                    </div>
+                    <div class="news-body">
+                        @Html.Raw(item.Short)
+                    </div>
+                    <div class="buttons">
+                        <a href="@Url.RouteUrl("NewsItem", new { SeName = item.SeName })" class="read-more">@T("News.MoreInfo")</a>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="view-all">
+            <a href="@Url.RouteUrl("NewsArchive")">@T("News.ViewAll")</a>
+        </div>
+    </div>*@
+
+}

@@ -1,0 +1,32 @@
+﻿@model Nop.Plugin.Widgets.Gallery.Models.PublicInfoGalleryModel
+@using Nop.Web.Framework.UI
+@{
+    Layout = "~/Views/Shared/_Root.cshtml";
+
+    Html.AddScriptParts("~/Plugins/Widgets.Gallery/Scripts/slimbox2.js");
+    Html.AddCssFileParts("~/Plugins/Widgets.Gallery/Content/Gallery.css");
+
+    //title
+    Html.AddTitleParts(@T("Plugin.Widgets.Gallery").Text);
+}
+
+<div class="mainContent">
+    <div class="wrapper grid3 gallery">
+        @foreach (var item in Model.ImageGallery)
+        {
+            <article class="col">
+                <div class="thumbnail">
+                    <div class="gallery-image-center" >
+                        <a href="@Url.Action("Gallery","GalleryPublicInfo",new{id=item.Id})">
+                            <img src="@item.ImageGalleryPictureModel.ImageUrl"  title="@item.ImageGalleryPictureModel.Title"/>
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <h3>@item.ImageGalleryPictureModel.Title</h3>
+                    </div>
+                </div>
+            </article>
+        }
+    </div>
+    @Html.Action("Paging","GalleryPublicInfo")
+</div>

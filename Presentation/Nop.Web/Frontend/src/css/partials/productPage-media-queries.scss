@@ -1,0 +1,805 @@
+@media only screen and (min-width:1680px) {
+.productPage {
+	max-width: 1920px;
+	margin: 0 auto;
+	font-size: 19px;
+    .breadCrumbs {
+        ul {
+            li {
+                a {
+                    margin-right: 20px;
+                    margin-left: 20px;
+                }
+                img {
+                    height: 18px;
+                }
+            }
+        }
+    }
+    .topMainInfo {
+        .row {
+            div {
+                .slide {
+                    .productGallery {
+                        .slide {
+                            .grid {	
+                                .smallImg {
+                                    margin-bottom: 45px;
+                                }
+                            }
+                        }
+                        .pswp {
+                            .pswp__scroll-wrap {
+								.pswp__ui {
+									.pswp__top-bar {
+										.pswp__button {
+											height: 50px;
+											width: 50px;
+										}
+									}
+								}
+                            }
+                        }
+                    }
+                }
+            }
+            .rightProductDescription {
+                .packageSeries {
+                    table {
+                        tbody {
+                            tr {
+                                .leftTitle {
+									width: 300px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .kit {
+                    h3 {
+                        margin-top: 45px;
+                    }
+                    ul {
+                        padding-left: 45px;
+                    }
+                }
+                .characteristics {
+                    table {
+                        margin-top: 45px;
+                        tbody {
+                            tr {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detailInfo {
+        .reviewsDetails {
+			.addReview {
+				form {
+					.form-group {
+						textarea, input {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:1680px) {
+.productPage {
+	font-size: 15px;
+    .breadCrumbs {
+        margin-top: 25px;
+        ul {
+            li {
+                a {
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+                img {
+                    height: 12px;
+                }
+            }
+        }
+    }
+    .topMainInfo {
+        .row {
+            width: 95%;
+            div {
+                .slide {
+                    .productGallery {
+                        .slide {
+                            .grid {
+                                .firstImg {
+                                    margin-right: 2%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .rating {
+                    .title {
+                        font-size: 2em;
+                    }
+                }
+            }
+            .rightProductDescription {
+                .productTitle {
+                    font-size: 3em;
+                    text-align: center;
+                    margin-top: 30px;
+                    margin-bottom: 25px;
+                }
+                .packageSeries {
+                    table {
+                        margin-top: 50px;
+                        tbody {
+                            tr {
+                                th {
+                                    font-size: 1.1em;
+                                }
+                            }
+                        }
+                    }
+                }
+                .kit {
+                    h3 {
+                        font-size: 1.7em;
+                    }
+                    ul {
+                        padding-left: 30px;
+                    }
+                }
+                .characteristics {
+                    table {
+                        tbody {
+                            tr {
+                                th {
+                                    font-size: 1.15em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detailInfo {
+        width: 95%;
+        margin-top: 50px;
+        .navigation {
+            .nav {
+                li {
+                    a {
+                        font-size: 1.15em;
+                    }
+                }
+            }
+        }
+        .plansDetail {
+            .row {
+                .footage {
+                    table {
+                        tbody {
+                            tr {
+                                .floorNumber {
+                                    font-size: 1.4em;
+                                }
+                                th {
+                                    font-size: 1.2em;
+                                }
+                                td {
+                                    font-size: 1.3em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .facadeDetails {
+            margin-top: 50px;
+            .facadeDescription {
+                h3 {
+                    font-size: 1.7em;
+                }
+                p {
+                    font-size: 1.2em;
+                }
+            }
+        }
+        .standartDetails, .logicDetails, .northDetails, .seismicDetails {
+            .topImg {
+                margin-top: 50px;
+                margin-bottom: 25px;
+            }
+            .description {
+                p {
+                    font-size: 1.1em;
+                }
+                table {
+                    tbody {
+                        tr {
+                            th, td {
+                                font-size: 1.1em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .reviewsDetails {
+            .authorReview {
+                width: 800px;
+				.nameAuthor {
+					margin-left: 30px;
+				}
+				.authorRating {
+					margin-right: 30px;
+					.fa {
+						font-size: 1.1em;
+					}
+				}
+				.reviewText {
+					font-size: 1.1em;
+				}
+            }
+			.addReview {
+				form {
+					.form-group {
+						textarea, input {
+							font-size: 1.1em;
+						}
+					}
+				}
+			}
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:1370px) {
+.productPage {
+	font-size: 13px;
+    .breadCrumbs {
+        ul {
+            li {
+                a {
+                    margin:0 5px;
+                    font-size: 0.9em;
+                }
+                img {
+                    height: 11px;
+                }
+            }
+        }
+    }
+    .topMainInfo {
+        .row {
+            div {
+                .rating {
+                    .title {
+                        margin-top: 25px;
+                    }
+                    .fa {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+            .rightProductDescription {
+                .productTitle {
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                }
+                .packageSeries {
+                    table {
+                        margin-top: 45px;
+                        tbody {
+                            tr {
+                                th {
+                                    font-size: 1em;
+                                }
+                                .topTitle {
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                    }
+                }
+                .characteristics {
+                    table {
+                        tbody {
+                            tr {
+                                th {
+                                    font-size: 1.05em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detailInfo {
+        margin-top: 40px;
+        .navigation {
+            .nav {
+                li {
+                    a {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+		.descriptionDetail {
+			p {
+				font-size: 1.1em;
+			}
+		}
+        .plansDetail {
+            margin-top: 45px;
+            .row {
+                .footage {
+                    table {
+                        tbody {
+                            tr {
+                                .floorNumber {
+                                    font-size: 1.3em;
+                                }
+                                th {
+                                    font-size: 1.1em;
+                                }
+                                td {
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .facadeDetails {
+            margin-top: 45px;
+            .facadeDescription {
+                p {
+                    font-size: 1.1em;
+                }
+            }
+        }
+        .standartDetails, .logicDetails, .northDetails, .seismicDetails {
+            .topImg {
+                margin-top: 45px;
+            }
+        }
+        .reviewsDetails {
+            .detailsTitle {
+                margin-top: 45px;
+            }
+			.addReview {
+				padding: 50px;
+				form {
+					.addReviewTitle {
+						.title {
+							margin-top: 0;
+							margin-bottom: 40px;
+						}
+					}
+					.form-group {
+						margin-bottom: 25px;
+					}
+					.ratingContainer {
+						margin-bottom: 45px;
+					}
+				}
+			}
+        }
+    }
+}
+}
+
+@media only screen and (max-width:1199px) {
+.productPage {
+	font-size: 12px;
+    .topMainInfo {
+        .row {
+            width: 100%;
+            .rightProductDescription {
+                .productTitle {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .detailInfo {
+        .navigation {
+            .nav {
+                li {
+                    a {
+						font-size: 1.05em;
+                        padding: 6px;
+                    }
+                }
+            }
+        }
+        .plansDetail {
+            .row {
+                .footage {
+                    table {
+                        tbody {
+                            tr {
+                                .floorNumber {
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .facadeDetails {
+            margin-top: 30px;
+        }
+        .reviewsDetails {
+            .authorReview {
+                width: 700px;
+            }
+			.addReview {
+				padding: 45px;
+				margin-top: 45px;
+				form {
+					.addReviewTitle {
+						.title {
+							margin-bottom: 30px;
+						}
+					}
+					.form-group {
+						margin-bottom: 15px;
+					}
+					.ratingContainer {
+						margin-bottom: 30px;
+					}
+					.submitBtn {
+						font-size: 1.3em;
+						padding: 15px 54px;
+					}
+				}
+			}
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:992px) {
+.productPage {
+    .topMainInfo {
+		.titleForDevice {
+			display: block;
+		}
+        .row {
+            .rightProductDescription {
+                .productTitle {
+                    display: none;
+                }
+                .packageSeries {
+                    table {
+                        tbody {
+                            tr {
+                                th {
+                                    font-size: 1.1em;
+                                }
+                                .topTitle {
+                                    font-size: 1.3em;
+                                }
+                                td {
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                    }
+                }
+                .kit {
+                    h3 {
+                        font-size: 1.8em;
+                    }
+                    ul {
+                        li {
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+                .characteristics {
+                    table {
+                        tbody {
+                            tr {
+                                th {
+                                    font-size: 1.2em;
+                                }
+                                td {
+                                    font-size: 1.3em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detailInfo {
+        .navigation {
+            .nav {
+                li {
+					width: 100%;
+                    a {
+                        font-size: 1.3em;
+                        padding: 3px;
+                    }
+                }
+            }
+        }
+        .detailContent {
+			margin-top: 60px;
+        }
+        .plansDetail {
+            .row {
+                .plansImg {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .reviewsDetails {
+			.addReview {
+				width: 80%;
+			}
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:768px) {
+.productPage {
+    .topMainInfo {
+        .row {
+            .rightProductDescription {
+                .packageSeries {
+                    table {
+                        tbody {
+                            tr {
+                                th {
+                                    font-size: 1em;
+                                }
+                                .topTitle {
+                                    font-size: 1.2em;
+                                }
+                                td {
+                                    font-size: 1.1em;
+                                }
+                            }
+                        }
+                    }
+                }
+                .characteristics {
+                    table {
+                        margin-top: 30px;
+                        background-color: $mainColor;
+                        tbody {
+                            tr {
+                                th {
+                                    font-size: 1.1em;
+                                }
+                                td {
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detailInfo {
+        .detailContent {
+			margin-top: 50px;
+            .descriptionDetail {
+                p {
+                    font-size: 1.1em;
+					text-align: justify;
+                }
+            }
+        }
+		.facadeDetails {
+			.row {
+				.facadeDescription {
+					p {
+						text-align: justify;
+					}
+				}
+			}
+		}
+        .standartDetails, .logicDetails, .northDetails, .seismicDetails {
+            .topImg {
+				img {
+					width: 100%;
+				}
+            }
+			.description {
+				p {
+					text-align: justify;
+				}
+			}
+        }
+        .reviewsDetails {
+            .authorReview {
+				width: 100%;
+				.nameAuthor {
+					margin-left: 15px;
+				}
+				.authorRating {
+					margin-right: 15px;
+				}
+				.reviewText {
+					text-align: justify;
+				}
+				.reviewDate {
+					margin-right: 30px;
+				}
+            }
+			.addReview {
+				width: 90%;
+				padding: 30px;
+				form {
+					.addReviewTitle {
+						.title {
+							margin-bottom: 20px;
+						}
+					}
+					.form-group {
+						margin-bottom: 10px;
+					}
+				}
+			}
+        }
+    }
+}
+}
+
+@media only screen and (max-width:500px) {
+.productPage {
+    .breadCrumbs {
+        margin-top: 15px;
+        ul {
+            li {
+                a {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .topMainInfo {
+        .row {
+            .rightProductDescription {
+                .packageSeries {
+                    table {
+                        tbody {
+                            tr {
+                                th {
+                                    font-size: 0.9em;
+                                }
+                                .leftTitle {
+                                    width: 100%;
+                                }
+                                .topTitle {
+                                    font-size: 1em;
+                                }
+                                td {
+                                    font-size: 1em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detailInfo {
+        .navigation {
+            .nav {
+                li {
+                    a {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+        .reviewsDetails {
+			.addReview {
+				width: 100%;
+				padding: 15px;
+				form {
+					.addReviewTitle {
+						.title {
+							margin-bottom: 15px;
+						}
+					}
+					.form-group {
+						margin-bottom: 5px;
+						label {
+							font-size: 1.3em;
+						}
+					}
+					.ratingContainer {
+						margin-bottom: 15px;
+						.radio {
+							.ratingTitle {
+								font-size: 1.3em;
+							}
+							.ratingNumber {
+								font-size: 1.2em;
+							}
+							label {
+								margin-right: 5px;
+								input {
+									margin: 0 0 0 5px;
+									width: 15px;
+									height: 15px;
+								}
+							}
+						}
+					}
+					.submitBtn {
+						padding: 10px 45px;
+					}
+				}
+			}
+        }
+    }
+}
+}
+
+@media only screen and (max-width:350px) {
+.productPage {
+	font-size: 11px;
+    .topMainInfo {
+        .row {
+            .rightProductDescription {
+                .packageSeries {
+                    table {
+                        tbody {
+                            tr {
+                                td {
+                                    font-size: 0.9em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

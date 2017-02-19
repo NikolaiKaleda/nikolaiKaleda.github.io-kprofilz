@@ -1,0 +1,29 @@
+﻿@model Nop.Web.Models.Media.PictureModel
+@using Nop.Web.Framework.UI
+@{
+    Layout = "~/Views/Shared/_Root.cshtml";
+    Html.AddCssFileParts("~/Plugins/Widgets.Gallery/Content/Gallery.css");
+
+    //title
+    Html.AddTitleParts(@T("Plugin.Widgets.Gallery").Text);
+}
+
+@if (ViewBag.ShowGalleries)
+{
+    @Html.Action("LeftSideMenu", "GalleryPublicInfo")
+}
+
+
+<div class="mainContent">
+    <div class="wrapper grid3 gallery">
+      @if (ViewBag.ShowGalleries)
+        {
+            @Html.Action("SingleImageBreadcrumb", "GalleryPublicInfo", new { id = ViewBag.Id, imageTitle = Model.Title })
+        }
+        <div class="gallery-singleimage">
+            <img src="@Model.FullSizeImageUrl"  title="@Model.Title"/>
+        </div>
+
+        @Html.Action("ShareButton", "Catalog")
+    </div>
+</div>

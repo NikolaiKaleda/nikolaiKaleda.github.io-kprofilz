@@ -1,0 +1,34 @@
+﻿@model List<string>
+@using Nop.Web.Framework.UI
+@{
+    Layout = "~/Views/Shared/_Root.cshtml";
+
+    Html.AddScriptParts("~/Plugins/Widgets.Gallery/Scripts/galleria-1.3.5.min.js");
+    Html.AddCssFileParts("~/Plugins/Widgets.Gallery/Content/Gallery.css");
+    Html.AddScriptParts("~/Plugins/Widgets.Gallery/Content/Galleria/galleria.classic.min.js");
+    Html.AddCssFileParts("~/Plugins/Widgets.Gallery/Content/Galleria/galleria.classic.css");
+
+    //title
+    Html.AddTitleParts(@T("Plugin.Widgets.Gallery").Text);
+}
+
+
+<div class="mainContent">
+    @Html.Action("GalleryBreadcrumb", "GalleryPublicInfo")
+    <div id="galleria">
+        @foreach (var item in Model)
+        {
+               <a href="@item"><span class="video">Watch this video</span></a>
+        }
+    </div>
+
+</div>
+
+
+
+<script>
+    // Initialize Galleria
+    Galleria.run('#galleria', {
+        height: 520, //--I made heights match
+    });
+</script>

@@ -1,0 +1,62 @@
+﻿@model ContactUsModel
+@using Nop.Web.Models.Common;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.ContactUs").Text);
+    //page class
+    Html.AppendPageCssClassParts("html-contact-page");
+}
+
+<div class="contactsPage">
+    <section class="contactsTitleContainer parallax" data-parallax="scroll" data-image-src="/Themes/karelian-profile/img/contactsPage/title_bg.jpg">
+        <h3 class="contactsTitle">@T("PageTitle.ContactUs")</h3>
+    </section>
+    @Html.Widget("contactus_top")
+    @Html.Action("Contacts", "Common")
+    <section class="askQuestion">
+        @if (Model.SuccessfullySent)
+        {
+            <div class="result">
+                @Model.Result
+            </div>
+        }
+        else
+        {
+            using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                var validationSummary = Html.ValidationSummary(true);
+                if (!MvcHtmlString.IsNullOrEmpty(validationSummary))
+                {
+                    <div class="message-error">@validationSummary</div>
+                }
+                <div class="askQuestionTitle">
+                    <h3 class="title">Обратная связь</h3>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FullName)
+                    @Html.RequiredHint()
+                    @Html.TextBoxFor(model => model.FullName, new { @class = "form-control", placeholder = T("ContactUs.FullName.Hint") })
+                    @Html.ValidationMessageFor(model => model.FullName)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email)
+                    @Html.RequiredHint()
+                    @Html.TextBoxFor(model => model.Email, new { @class = "email form-control", placeholder = T("ContactUs.Email.Hint") })
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Enquiry)
+                    @Html.RequiredHint()
+                    @Html.TextAreaFor(model => model.Enquiry, new { @class = "review-text form-control", placeholder = T("ContactUs.Enquiry.Hint") })
+                    @Html.ValidationMessageFor(model => model.Enquiry)
+                </div>
+                <button type="submit" class="btn btn-default submitBtn">@T("ContactUs.Button")</button>
+                @*<input type="submit" name="send-email" class="button-1 contact-us-button" value="@T("ContactUs.Button")" />*@
+            }
+        }
+    </section>
+    @Html.Widget("contactus_bottom")
+</div>

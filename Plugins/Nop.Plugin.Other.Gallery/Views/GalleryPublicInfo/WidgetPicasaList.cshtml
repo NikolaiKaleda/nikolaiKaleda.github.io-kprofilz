@@ -1,0 +1,24 @@
+﻿@using Nop.Web.Framework.UI
+@{
+    Html.AddScriptParts("~/Plugins/Widgets.Gallery/Scripts/galleria-1.3.5.min.js");
+    Html.AddScriptParts("~/Plugins/Widgets.Gallery/Scripts/galleria.picasa.min.js");
+    Html.AddCssFileParts("~/Plugins/Widgets.Gallery/Content/Gallery.css");
+    Html.AddScriptParts("~/Plugins/Widgets.Gallery/Content/Galleria/galleria.classic.min.js");
+    Html.AddCssFileParts("~/Plugins/Widgets.Gallery/Content/Galleria/galleria.classic.css");
+}
+
+
+
+    <div id="galleria">
+    </div>
+
+
+<script>
+    // Initialize Galleria
+    Galleria.run('#galleria', {
+        height: 520, //--I made heights match
+        // The user & album. This example fetches the album "Demo" from the user "galleriajs"
+        // picasa: 'useralbum:galleriajs/Demo'
+        picasa: '@ViewBag.PicasaKeyword'
+    });
+</script>

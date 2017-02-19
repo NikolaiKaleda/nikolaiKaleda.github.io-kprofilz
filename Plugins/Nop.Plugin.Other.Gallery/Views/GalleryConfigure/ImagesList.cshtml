@@ -1,0 +1,95 @@
+﻿@using Nop.Web.Framework
+@using GalleryModel = Nop.Plugin.Widgets.Gallery.Models.ConfigurationGalleryImagesModel;
+@using Nop.Core.Infrastructure
+
+@model Nop.Plugin.Widgets.Gallery.Models.ConfigurationGalleryImagesListModel
+@{
+    Layout = "/Administration/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{
+    var defaultGridPageSize = EngineContext.Current.Resolve<Nop.Core.Domain.Common.AdminAreaSettings>().DefaultGridPageSize;
+    var gridPageSizes = EngineContext.Current.Resolve<Nop.Core.Domain.Common.AdminAreaSettings>().GridPageSizes;
+
+    //page title
+    ViewBag.Title = T("Plugin.Widgets.GalleryImages").Text;
+}
+
+@Html.AntiForgeryToken()
+<div class="content-header clearfix">
+    <h1 class="pull-left">
+        @T("Plugin.Widgets.GalleryImages") - @Html.ActionLink("(" + T("Plugin.Widgets.Gallery.BackToConfigure") + ")", "Configuration", "GalleryConfigure",null, new { area = ""})
+    </h1>
+    <div class="pull-right">
+        <a href="@Url.Action("CreateImage", new {area=""})" class="btn bg-blue">
+            <i class="fa fa-plus-square"></i>
+            @T("Admin.Common.AddNew")
+        </a>
+    </div>
+</div>
+
+<div class="content">
+    <div class="form-horizontal">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div id="gallery-images-grid"></div>
+                    <script>
+                        $(document).ready(function() {
+                            $("#gallery-images-grid").kendoGrid({
+                                dataSource: {
+                                    type: "json",
+                                    transport: {
+                                        read: {
+                                            url: "@Html.Raw(Url.Action("ImagesList", "GalleryConfigure"))",
+                                            type: "POST",
+                                            dataType: "json"
+                                        }
+                                    },
+                                    schema: {
+                                        data: "Data",
+                                        total: "Total",
+                                        errors: "Errors"
+                                    },
+                                    error: function(e) {
+                                        display_kendoui_grid_error(e);
+                                        // Cancel the changes
+                                        this.cancelChanges();
+                                    },
+                                    pageSize: @(defaultGridPageSize),
+                                    serverPaging: true,
+                                    serverFiltering: true,
+                                    serverSorting: true
+                                },
+                                pageable: {
+                                    refresh: true,
+                                    pageSizes: [@(gridPageSizes)]
+                                },
+                                editable: {
+                                    confirmation: "@T("Admin.Common.DeleteConfirmation")",
+                                    mode: "inline"
+                                },
+                                scrollable: false,
+                                columns: [
+                                {
+                                    field: "Name",
+                                    title: "@T("Admin.Catalog.Manufacturers.Fields.Name")"
+                                }, {
+                                    field: "DisplayOrder",
+                                    title: "@T("Admin.Catalog.Manufacturers.Fields.DisplayOrder")",
+                                    width: 150
+                                }, {
+                                    field: "Id",
+                                    title: "@T("Admin.Common.Edit")",
+                                    width: 100,
+                                    template: '<a href="@Url.RouteUrl("Plugin.Widgets.Gallery.EditImage")?id=#=Id#"> @T("Admin.Common.Edit")</a>'
+                                }
+                                ]
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

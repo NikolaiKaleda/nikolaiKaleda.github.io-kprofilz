@@ -1,0 +1,14 @@
+﻿@model CatalogPagingFilteringModel
+@using Nop.Web.Models.Catalog;
+
+<section class="sortProducts">
+    @if (Model.AllowProductSorting)
+    {
+        <div class="product-sorting sort">
+            <span class="sortTitle">@T("Catalog.OrderBy")</span>
+            @Html.DropDownList("products-orderby", Model.AvailableSortOptions, new { onchange = "setLocation(this.value)" })
+        </div>
+    }
+    @Html.Action("CurrencySelector", "Common")
+    @Html.Action("SearchBox", "Catalog")
+</section>

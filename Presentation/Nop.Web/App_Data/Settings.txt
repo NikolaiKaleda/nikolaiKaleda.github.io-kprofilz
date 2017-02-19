@@ -1,0 +1,2 @@
+DataProvider: sqlserver
+DataConnectionString: Data Source=SQL5023.myASP.NET;Initial Catalog=DB_9CB2E4_karprofile;Integrated Security=False;Persist Security Info=False;User ID=DB_9CB2E4_karprofile_admin;Password=test1234

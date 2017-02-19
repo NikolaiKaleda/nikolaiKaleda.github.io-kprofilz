@@ -1,0 +1,1145 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+
+//----- FONTS -----
+
+@font-face {
+    font-family: OpenSansRegular;
+    src: url(partials/fonts/open_sans_regular.otf);
+    src: local('☺'),
+    	url('partials/fonts/Exo2Regular.eot?') format('embedded-opentype'),
+        url('partials/fonts/Exo2Regular.woff') format('woff'),
+        url('partials/fonts/Exo2Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url(partials/fonts/Roboto-Regular.otf);
+    src: local('☺'),
+    	url('partials/fonts/Roboto-Regular.eot?') format('embedded-opentype'),
+        url('partials/fonts/Roboto-Regular.woff') format('woff'),
+        url('partials/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: OswaldRegular;
+    src: url(partials/fonts/Oswald-Regular.otf);
+    src: local('☺'),
+    	url('partials/fonts/Oswald-Regular.eot?') format('embedded-opentype'),
+        url('partials/fonts/Oswald-Regular.woff') format('woff'),
+        url('partials/fonts/Oswald-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RalewayRegular;
+    src: url(partials/fonts/Raleway-Regular.otf);
+    src: local('☺'),
+    	url('partials/fonts/Raleway-Regular.eot?') format('embedded-opentype'),
+        url('partials/fonts/Raleway-Regular.woff') format('woff'),
+        url('partials/fonts/Raleway-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//----- End fonts -----
+
+
+
+//----- Reset style -----
+
+body {
+    margin: 0;
+    padding: 0;
+	background-color: white;
+	width: 100%;
+}
+ul, li {
+	list-style: none;	
+}
+
+a {
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+}
+
+.topAnchor {
+	height: 0px;
+    margin: 0;
+}
+
+
+
+//----- PRELOADER -----
+#page-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: $mainColor;
+    z-index: 100500;
+	text-align: center;
+	h2 {
+		@include input-font($OswardFont, 3em, $textColor5, 1px, bold);
+		margin-top: 15%;
+		margin-left: 60px;
+		text-transform: uppercase;
+		vertical-align: middle;
+	}
+	img {
+		top: 0;
+		left: 50%;
+		margin-left: -135px;
+		margin-top: 30px;
+		position: absolute;
+	}
+	.spinner {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		left: 48.5%;
+		top: 50%;
+		background: url('../img/preloader/preloader.gif') no-repeat 50% 50%;
+		margin: -16px 0 0 -16px;
+	}
+}
+//----- End preloader -----
+
+
+
+//----- HEADER -----
+.topContacts {
+	background-color: $topMenuColor;
+	height: 35px;
+	line-height: 35px;
+	.emailContacts {
+		float: left;
+		.phone, .email, .skype {
+			@include inlineBlock();
+			height: 100%;
+			a {
+				@include input-font($regularFont, 1em, rgb(244,244,244), 0, normal);
+				height: 100%;
+				text-decoration: none;
+				float: left;
+				margin-right: 40px;
+				.phoneLinkIcon, .phoneLinkText, .emailLinkIcon, .emailLinkText, .skypeLinkIcon, .skypeLinkText {
+					@include inlineBlock();
+				}
+				.phoneLinkIcon, .emailLinkIcon, .skypeLinkIcon {
+					margin-right: 12px;
+					margin-left: 5px;
+				}
+				.phoneLinkText, .emailLinkText, .skypeLinkText {
+					margin: 0;
+				}
+			}
+			a:hover {
+				color: $mainColor;
+			}
+		}
+	}
+	.socialContacts {
+		float: right;
+		.facebook, .vk, .insta {
+			margin-right: 10px;
+			@include inlineBlock();
+			.facebookLink, .vkLink, .instaLink {
+				text-decoration: none;
+				color: rgb(244,244,244);
+			}
+			.facebookLink:hover, .vkLink:hover, .instaLink:hover {
+				color: $mainColor;
+			}
+		}
+	}
+    .headerMobile {
+        display: none;
+		color: $mainColor;
+    }
+}
+
+.navigationContainer {
+    height: 80px;
+    margin: 0;
+    position: relative;
+    background-color: #FFF;
+    .logotype {
+        left: 0;
+        clear: both;
+        position: absolute;
+        height: 100%;
+    }
+	.menu {
+		display: none;
+	}
+	.push {
+		display: none;
+	}
+    .navigation {
+        position: absolute;
+        height: 100%;
+        margin: 0;
+        right: 0;
+        ul {
+            height: 100%;
+            margin: 0;
+            border: 0;
+            li:first-of-type {
+                border-left: 1px solid #B3B3B3;
+            }
+			li:last-of-type {
+                border: none;
+            }
+            li {
+                height: 100%;
+                margin: 0;
+                border-right: 1px solid #B3B3B3;
+                .navLink {
+                    @include input-font($RobotoRegularFont, 0.9em, $textColor1, 0, normal);
+                    line-height: 4;
+                    height: 100%;
+                    margin: 0;
+                    width: 110px;
+                    text-align: center;
+                    padding: 10% 5%;
+                }
+                .underlineHover {
+                    display: inline-block;
+                    vertical-align: middle;
+                    -webkit-transform: translateZ(0);
+                    transform: translateZ(0);
+                    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    -moz-osx-font-smoothing: grayscale;
+                    position: relative;
+                    overflow: hidden;
+                }
+                .underlineHover:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    left: 50%;
+                    right: 50%;
+                    bottom: 0;
+                    background: $mainColor;
+                    height: 4px;
+                    -webkit-transition-property: left, right;
+                    transition-property: left, right;
+                    -webkit-transition-duration: 0.3s;
+                    transition-duration: 0.3s;
+                    -webkit-transition-timing-function: ease-out;
+                    transition-timing-function: ease-out;
+                }
+                .underlineHover:hover:before, .underlineHover:focus:before, .underlineHover:active:before {
+                    left: 0;
+                    right: 0;
+                }
+            }
+            .displayNoneMenuItem {
+                display: none!important;
+            }
+        }
+    }
+}
+//----- End header -----
+
+
+//----- TEMPORARILY CAP -----
+.temporarilyCap {
+    .title {
+        @include input-font($OswardFont, 3em, #c9302c, 5px, bold);
+        border-top: 1px solid #B3B3B3;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: $mainColor;
+    }
+}
+//----- End temporarily cap -----
+
+
+//----- TOP SLIDER -----
+.topSlider {
+	#my-slide {
+		.slide {
+			.titleTopSlider {
+				@include input-font($OswardFont, 5em, $textColor3, 5px, bold);
+				text-align: center;
+				margin-top: 30%;
+				text-transform: uppercase;
+			}
+			p {
+				@include input-font($OswardFont, 2em, $textColor4, 0px, normal);
+				text-align: center;
+				text-transform: capitalize;
+			}
+            a {
+                text-decoration: none;
+                .btnTopSlider {
+				    @include input-font($RobotoRegularFont, 1.3em, $textColor3, 0, normal);
+                    width: 30%;
+				    color: white;
+				    background-color: rgba(255,255,255,.2);
+				    text-align: center;
+				    display: block;
+				    margin: auto;
+				    text-transform: uppercase;
+				    transition: 0.4s;
+			    }
+            }
+			.btnTopSlider:hover {
+				background-color: rgba(255,255,255,.5);
+			}
+		}
+		.button-slider:hover {
+			opacity: 0.7!important;
+			-webkit-transition: all 0.4s ease-out 0s;
+			-moz-transition: all 0.4s ease-out 0s;
+			-o-transition: all 0.4s ease-out 0s;
+			transition: all 0.4s ease-out 0s;
+		}
+	}
+	.tabletSlide {
+		display: none;
+	}
+}
+//----- End top slider -----
+
+
+//----- QUICK BUTTON -----
+.quickBtnContainer {
+	background-color: $mainColor;
+	padding-top: 1%;
+    padding-bottom: 1%;
+	.positionQuickBtn {
+		width: 90%;
+		margin: auto;
+		text-align: justify;
+		line-height: 0;
+		h4 {
+			@include input-font($OswardFont, 2.2em, $textColor5, 1px, 400);
+			@include inlineBlock();
+			padding: 4% 0;
+			margin: 0;
+		}
+		div {
+			@include inlineBlock();
+			vertical-align: middle;
+			.quickBtn {
+				@include input-font($RobotoRegularFont, 1.2em, #fff, 0, normal);
+				@include inlineBlock();
+				transition: all .4s;
+				float: right;
+				height: 50px;
+				width: 200%;
+				background-color: rgb(28,28,28);
+				line-height: 50px;
+				text-align: center;
+				margin-top: -15px;
+				text-decoration: none;
+				text-transform: capitalize;
+			}
+			.quickBtn:hover {
+				background-color: #fff;
+				color: rgb(28,28,28);
+			}
+		}
+	}
+	.positionQuickBtn:after {
+		content: '';
+		width: 100%;
+		display: inline-block;
+	}
+}
+//----- End quick button -----
+
+
+//----- EVERYONETRUST -----
+.everyoneTrust {
+	padding-top: 7%;
+	padding-bottom: 0%;
+	.everyoneTrustTitle {
+		@include input-font($OswardFont, 3em, $textColor5, 0, normal);
+		margin-bottom: 1%;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.everyoneTrustSubtitle {
+		@include input-font($RalewayFont, 1.3em, $textColor5, 0, normal);
+		text-align: center;
+	}
+	.everyoneTrustSubtitle:first-letter {
+		text-transform:uppercase;
+	}
+	.everyoneTrustItems {
+		width: 100%;
+		.row {
+			width: 90%;
+			margin: 0 auto;
+			.everyoneTrustItem {
+				padding: 4% 1% 1%;
+				text-align: center;
+				.everyoneTrustLink {
+					text-decoration: none;
+					cursor: auto;
+					.everyoneTrustIconContainer {
+						display: block;
+                        img {
+                            width: 80%;
+                            height: 210px;
+                        }
+						.everyoneTrustIcon {
+                            display: none;
+							/*transition: 0.3s;
+							border-radius: 31px;
+							height: 62px;
+							width: 62px;
+							text-align: center;
+							color: $textColor5;
+							background-color: $textColor3;
+							border: $textColor5;
+							vertical-align: bottom;
+						}
+						.everyoneTrustIcon::before {
+							vertical-align: sub;*/
+						}
+					}
+					.everyoneTrustText {
+						@include inlineBlock();
+						width: 70%;
+    					margin-left: 5%;
+						.everyoneTrustTitle {
+							@include input-font($RobotoRegularFont, 1.8em, $textColor5, 0, normal);
+							text-transform: lowercase;
+						}
+						.everyoneTrustTitle:first-letter {
+							text-transform: uppercase;
+						}
+						.everyoneTrustDrscription {
+							@include input-font($RobotoRegularFont, 0.94em, $textColor5, 0, normal);
+							opacity: 0.7;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End everyonetrust -----
+
+
+//----- ENGINEER REVIEW -----
+.engineerReview {
+	position: relative;
+	width: 100%;
+	min-height: 640px;
+	.engineerReviewTextContainer {
+		width: 90%;
+		margin: 0 auto;
+		.engineerReviewText {
+			height: 100%;
+			width: 50%;
+			padding: 0 20px 40px 20px;
+			background-color: rgba(255,255,255,0.5);
+            .engineerReviewTitle {
+				@include input-font($OswardFont, 3.5em, $textColor5, 0, normal);
+				padding-top: 25%;
+				margin-bottom: 3%;
+				text-transform: uppercase;
+            }
+            .engineerReviewSubtitle {
+				@include input-font($RalewayFont, 1.2em, $textColor5, 0, 600);
+				line-height: 23px;
+				text-transform: uppercase;
+            }
+			.linkToNews {
+				text-decoration: none;
+				.btnToNews {
+					@include input-font($RobotoRegularFont, 1.2em, #fff, 0, normal);
+					transition: all .4s;
+					float: left;
+					height: 50px;
+					width: 50%;
+					background-color: rgb(28,28,28);
+					line-height: 50px;
+					text-align: center;
+					margin-top: 30px;
+					text-decoration: none;
+					text-transform: capitalize;
+				}
+				.btnToNews:hover {
+					background-color: #fff;
+					color: rgb(28,28,28);
+				}
+			}
+		}
+	}
+	.obliqueBg {
+		top: 0;
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		overflow: hidden;
+	}
+	.obliqueBgBottom {
+		bottom: 0;
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		overflow: hidden;
+	}
+}
+//----- End engineer reviews -----
+
+
+//----- OUR ADVANTAGES -----
+.advantagesContainer {
+	padding: 7% 0 0;
+	.advantagesText {
+		.titleAdvantages {
+			@include input-font($OswardFont, 3.2em, $textColor5, 0, normal);
+			margin-bottom: 1%;
+			text-align: center;
+		}
+		.descriptionAdvantages {
+			@include input-font($RobotoRegularFont, 1.3em, $textColor5, 0, normal);
+			text-align: center;
+		}
+	}
+	.advantagesItems {
+		padding: 4% 0 8.5%;
+		width: 90%;
+	    margin: 0 auto;
+		.row {
+			width: 100%;
+			margin: 0;
+			.advantageItem {
+				padding: 0 15px;
+				text-align: center;
+				.advantageItemTitle {
+					@include input-font($OswardFont, 1.3em, $textColor5, 0, 700);
+					margin-bottom: 30px;
+					text-transform: uppercase;
+				}
+				.advantageItemDescription {
+					@include input-font($RalewayFont, 1em, $textColor6, 0, normal);
+				}
+				img {
+					width: 100%;
+				}
+			}
+			.advantageItem:last-child {
+				padding-right: 0;
+				padding-left: 30px;
+				text-align: right;
+			}
+			.advantageItem:first-child {
+				padding-right: 30px;
+				padding-left: 0;
+				text-align: left;
+			}
+		}
+		.moreAdvantagesBtn {
+			text-align: center;
+			.moreBtn {
+				@include input-font($RobotoRegularFont, 1.2em, #fff, 0, normal);
+				@include inlineBlock();
+				transition: all .4s;
+				height: 50px;
+				width: 20%;
+				background-color: rgb(28,28,28);
+				line-height: 50px;
+				text-align: center;
+				margin-top: 50px;
+				text-decoration: none;
+				text-transform: capitalize;
+			}
+			.moreBtn:hover {
+				background-color: #fff;
+				color: rgb(28,28,28);
+				border: 1px solid rgb(28,28,28);
+			}
+		}
+	}
+}
+//----- End our advantages -----
+
+
+//----- DESCRIPTIONS -----
+.descriptions {
+	width: 100%;
+	.descriptionPosition {
+		padding-top: 4%;
+    	padding-bottom: 5%;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		.iconDescription {
+			width: 4%;	
+			float: left;
+		}
+		.descriptionTitle {
+			@include input-font($OswardFont, 3.4em, $textColor1, 0, normal);
+			text-transform: capitalize;
+			text-align: center;
+			padding-right: 50px;
+			margin-bottom: 20px;
+		}
+		.row {
+            a {
+                text-decoration: none;
+                .descriptionItem {
+                    width: 33%;
+                    height: 250px;
+                    margin: 1px;
+                    background-color: rgba(255,255,255,0.4);
+                    .descriptionItemTitle {
+                        @include input-font($RobotoRegularFont, 1.4em, $textColor5, 0, normal);
+                    }
+                    .descriptionItemDescription {
+                        @include input-font($RalewayFont, 1em, $textColor4, 0, normal);
+                    }
+                    .descriptionItemDate {
+                        @include input-font($RalewayFont, 0.9em, $newsTitleColor, 0, normal);
+                        position: absolute;
+                        bottom: 0;
+                        left: 40%;
+                    }
+                }
+            }
+			
+		}
+		.linkToAllStock {
+			text-align: center;
+			.stockBtn {
+				@include input-font($RobotoRegularFont, 1.2em, #fff, 0, normal);
+				@include inlineBlock();
+				transition: all .4s;
+				height: 50px;
+				width: 20%;
+				background-color: rgb(28,28,28);
+				line-height: 50px;
+				text-align: center;
+				margin-top: 50px;
+				text-decoration: none;
+				text-transform: capitalize;
+			}
+			.stockBtn:hover {
+				background-color: #fff;
+				color: rgb(28,28,28);
+			}
+		}
+	}
+}
+.parallax {
+    min-height: 400px;
+    background: transparent;
+}
+//----- End descriptions -----
+
+
+//----- IMAGE GALLERY -----
+.imageGallery {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 5%;
+	.galleryTitle {
+		@include input-font($OswardFont, 3.2em, $textColor5, 0, 400);
+		text-align: center;
+		padding-top: 6%;
+		margin-bottom: 1%;
+	}
+	.gallerySubtitle {
+		@include input-font($RobotoRegularFont, 1.3em, $textColor5, 0, 400);
+		text-align: center;
+		margin-bottom: 2%;
+	}
+	.row {
+		width: 90%;
+		margin: 0 auto;
+		overflow: hidden;
+		padding-bottom: 2%;
+		.slide {
+			padding-right: 0.5%;
+    		padding-left: 0.5%;
+			.grid {
+				.displayNone {
+					display: none;
+				}
+				figure {
+					a{
+						img {
+							width: 100%;
+							height: 280px;
+						}
+					}
+					.nameProject {
+						@include input-font($OswardFont, 1.7em, $textColor3, 0, 300);
+						text-align: center;
+						margin-top: 7%;
+						margin-bottom: 4%;
+						text-shadow: $textColor5 0 0 1px;
+						word-spacing: 2px;
+						span {
+							font-weight: 800;
+						}
+					}
+					.descriptionProject {
+						@include input-font($RalewayFont, 0.8em, $textColor3, 0, 500);
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	.row:first-of-type {
+		padding-top: 50px;
+	}
+	.pswp__caption__center {
+		@include input-font($RalewayFont, 1.1em, $textColor3, 0, 400);
+		text-align: center;
+		max-width: 750px;
+	}
+	.pswp__counter {
+		font-size: 15px;
+	}
+}
+
+// Hover image
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'feathericons';
+	src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
+	src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
+		url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
+		url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
+		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
+}
+
+.grid {
+	position: relative;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	//margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 250px;
+	//width: 48%;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/***** Layla *****/
+
+figure.effect-layla {
+	background: $mainColor;
+}
+
+figure.effect-layla img {
+	height: 390px;
+}
+
+figure.effect-layla figcaption {
+	padding: 3em;
+	padding-top: 0px;
+}
+
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after {
+	position: absolute;
+	content: '';
+	opacity: 0;
+}
+
+figure.effect-layla figcaption::before {
+	top: 50px;
+	right: 30px;
+	bottom: 50px;
+	left: 30px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+figure.effect-layla figcaption::after {
+	top: 30px;
+	right: 50px;
+	bottom: 30px;
+	left: 50px;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	-webkit-transform: scale(1,0);
+	transform: scale(1,0);
+	-webkit-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+}
+
+figure.effect-layla h2 {
+	padding-top: 26%;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.effect-layla p {
+	padding: 0.5em 2em;
+	text-transform: none;
+	opacity: 0;
+	-webkit-transform: translate3d(0,-10px,0);
+	transform: translate3d(0,-10px,0);
+}
+
+figure.effect-layla img,
+figure.effect-layla h2 {
+	-webkit-transform: translate3d(0,-30px,0);
+	transform: translate3d(0,-30px,0);
+}
+
+figure.effect-layla img,
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after,
+figure.effect-layla p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-layla:hover img {
+	opacity: 0.7;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-layla:hover figcaption::before,
+figure.effect-layla:hover figcaption::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-layla:hover figcaption::after,
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p,
+figure.effect-layla:hover img {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+// End hover image
+//----- End image gallery -----
+
+
+//----- CUSTOMER REVIEWS -----
+.customerReviews {
+	width: 100%;
+    background-image: url('/Themes/karelian-profile/img/homePage/main/customerReview/bg.jpg');
+	.customerReviewsPosition {
+		padding-top: 4%;
+    	padding-bottom: 1%;
+		width: 90%;
+		margin: 0 auto;
+		.customerReviewsTitle {
+			@include input-font($OswardFont, 3.2em, $textColor3, 0, 400);
+			text-align: center;
+		}
+		.cd-container{
+			.moreBtn {
+				@include input-font($RobotoRegularFont, 1.4em, $textColor3, 0, normal);
+				@include inlineBlock();
+				transition: all .4s;
+				height: 50px;
+				background-color: rgba(28,28,28,0);
+				border: 1px solid $textColor3;
+				line-height: 50px;
+				text-align: center;
+				width: 50%;
+    			margin-left: 25%;
+				margin-top: 50px;
+				text-decoration: none;
+				text-transform: capitalize;
+			}
+			.moreBtn:hover {
+				background-color: #fff;
+				color: rgb(28,28,28);
+				border: 1px solid rgb(28,28,28);
+			}
+		}
+	}
+}
+//----- End customer reviews -----
+
+//----- OUR PARTNERS -----
+.ourPartners {
+	padding: 6% 0 6%;
+	width: 100%;
+	.ourPartnersPosition {
+		width: 90%;
+		margin: 0 auto;
+		.ourPartnersTitle {
+			@include input-font($OswardFont, 3.2em, $textColor5, 0, 400);
+			text-transform: uppercase;
+			text-align: center;
+			padding-bottom: 5%;
+		}
+		.row {
+			.ourPartnersItem {
+				padding: 0 0.2% 0.2%;
+				margin: 0;
+				overflow: hidden;
+				.ourPartnersLink {
+					text-decoration: none;
+					.partnerIcon {
+						height: 7em;
+						overflow: hidden;
+						.partnerIconBackground {
+							background-color: $bgPartnersColor;
+							height: 100%;
+							-webkit-transition: all 0.4s ease-out 0s;
+							-moz-transition: all 0.4s ease-out 0s;
+							-o-transition: all 0.4s ease-out 0s;
+							transition: all 0.4s ease-out 0s;
+						}
+						img {
+							margin-left: 27%;
+							height: 100%;
+							float: left;
+    						opacity: 0.4;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End our partners -----
+
+
+//----- FOOTER -----
+.footer {
+	background-color: $bgFooterColor;
+	width: 100%;
+	padding: 5% 0;
+	.footerPosition {
+		width: 90%;
+		margin: 0 auto;
+		.row {
+			.footerBlock {
+				padding: 0 1.6%;
+				height: 300px;
+				border-right: 1px solid $borderFooterColor;
+				.footerSubtitle {
+					@include input-font($OswardFont, 1.1em, $textColor1, 0, normal);
+					margin-bottom: 7%;
+					text-transform: uppercase;
+				}
+			}
+			.footerBlock:last-child {
+				border-right: none;
+			}
+			.footerSiteNavigation {
+                .logotype {
+                    margin-bottom: 7%;
+                    a {
+                        display: block;
+                    }
+                }
+			}
+			.footerBuildType {
+				a {
+					display: block;
+				}
+			}
+			.footerContacts {
+				background: url(../img/homePage/footer/map-bg.png) 40px 55px no-repeat;
+                .footerLocation {
+                    .footerLocationLink {
+                        .footerLocationLinkText {
+                            width: 70%;
+                        }
+                    }
+                }
+			}
+		}
+	}
+	.copyright {
+		@include input-font($RobotoRegularFont, 0.8em, $footerTextColor, 0, normal);
+		text-align: center;
+		margin-top: 3%;
+	}
+	
+}
+
+.footerNavLink, .footerBuildTypeLink, .footerPhoneLink, .footerLocationLink, .footerEmailLink, .footerSkypeLink, .footerFacebookLink, .footerVkLink, .footerInstaLink {
+	@include input-font($RobotoRegularFont, 0.9em, $footerTextColor, 0, normal);
+    display: block;
+	margin: 1% 0;
+	text-decoration: none;
+}
+
+.footerPhoneLinkIcon, .footerLocationLinkIcon, .footerEmailLinkIcon, .footerSkypeLinkIcon, .facebookIconBorder, .vkIconBorder, .instaIconBorder {
+	@include inlineBlock();
+	margin-right: 4%;
+}
+
+.footerPhoneLinkText, .footerLocationLinkText, .footerEmailLinkText, .footerSkypeLinkText, .footerFacebookText, .footerVkText, .footerInstaText {
+	@include inlineBlock();
+}
+	
+.footerNavLink:hover, .footerBuildTypeLink:hover, .footerPhoneLink:hover, .footerLocationLink:hover, .footerEmailLink:hover, .footerSkypeLink:hover, .footerFacebookLink:hover, .footerVkLink:hover, .footerInstaLink:hover {
+	margin-left: 10px;
+	text-decoration: none;
+	color: $textColor3;
+}
+//----- End footer -----
+
+
+//----- SCROLL TO TOP -----
+#scroller {
+    position: fixed;
+    bottom: 5%;
+	right: 5%;
+    background-image: url(../img/homePage/scrollButton.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 3.7%;
+    height: 12%;
+    cursor: pointer;
+    opacity: 0.2;
+	-webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+}
+//----- End scroll to top -----
+
+.cd-testimonials {
+	li {
+		margin-left: -7px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

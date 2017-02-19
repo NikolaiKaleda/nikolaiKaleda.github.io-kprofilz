@@ -1,0 +1,2859 @@
+@media only screen and (min-width:1680px) {
+//----- PRELOADER -----
+#page-preloader {
+	h2 {
+		margin-top: 14%;
+	}
+}
+//----- End preloader -----
+body {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+//----- HEADER -----
+.topContacts {
+	height: 45px;
+	line-height: 45px;
+	.emailContacts {
+        margin-left: 40px;
+		.phone, .email, .skype {
+			a {
+                font-size: 20px;
+				margin-right: 40px;
+			}
+		}
+	}
+	.socialContacts {
+            margin-right: 20px;
+		.facebook, .vk, .insta {
+			margin-right: 20px;
+		}
+	}
+}
+
+.navigationContainer {
+    height: 80px;
+    .navigation {
+        ul {
+            li {
+                .navLink {
+                    font-size: 20px;
+                    width: 170px;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+}
+//----- End header -----
+    
+//----- TEMPORARILY CAP -----
+.temporarilyCap {
+    .title {
+        font-size: 3em;
+    }
+}
+//----- End temporarily cap -----
+
+//----- TOP SLIDER -----
+.topSlider {
+	#my-slide {
+		.slide {
+			.titleTopSlider {
+				font-size: 6em;
+				margin-top: 25%;
+			}
+			p {
+				font-size: 2.4em;
+			}
+			.btnTopSlider {
+				font-size: 1.7em;
+                padding: 20px;
+			}
+		}
+	}
+}
+//----- End top slider -----
+
+//----- QUICK BUTTON -----
+.quickBtnContainer {
+	.positionQuickBtn {
+		h4 {
+			font-size: 3.2em;
+		}
+		div {
+			.quickBtn {
+				font-size: 1.5em;
+				height: 65px;
+				line-height: 65px;
+			}
+		}
+	}
+}
+//----- End quick button -----
+    
+//----- EVERYONETRUST -----
+.everyoneTrust {
+	.everyoneTrustTitle {
+		font-size: 4em;
+	}
+	.everyoneTrustSubtitle {
+		font-size: 2em;
+	}
+	.everyoneTrustItems {
+		.row {
+			.everyoneTrustItem {
+				.everyoneTrustLink {
+					.everyoneTrustIconContainer {
+                        img {
+                            width: 80%;
+                            height: 300px;
+                        }
+						/*.everyoneTrustIcon {
+                            font-size: 5em;
+							border-radius: 49px;
+							height: 98px;
+							width: 98px;
+						}*/
+					}
+					.everyoneTrustText {
+						.everyoneTrustTitle {
+							font-size: 2.5em;
+						}
+						.everyoneTrustDrscription {
+							font-size: 1.4em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End everyonetrust -----
+    
+//----- ENGINEER REVIEW -----
+.engineerReview {
+	.engineerReviewTextContainer {
+		.engineerReviewText {
+			.engineerReviewTitle {
+				margin-bottom: 3%;
+                padding-top: 30%;
+			}
+			.engineerReviewSubtitle {
+				font-size: 1.4em;
+			}
+			.engineerReviewDescription {
+				font-size: 1.3em;
+				margin-top: 4%;
+			}
+			.linkToNews {
+				.btnToNews {
+					font-size: 1.5em;
+                    margin-bottom: 30px;
+				}
+			}
+		}
+	}
+	.obliqueBg {
+		top: -3px;
+	}
+	.obliqueBgBottom {
+		bottom: -5px;
+	}
+}
+//----- End engineer reviews -----
+
+//----- OUR ADVANTAGES -----
+.advantagesContainer {
+    padding: 5% 0 0;
+	.advantagesText {
+		.titleAdvantages {
+			font-size: 4.5em;
+		}
+		.descriptionAdvantages {
+			font-size: 1.8em;
+		}
+	}
+	.advantagesItems {
+		.row {
+			.advantageItem {
+				.advantageItemTitle {
+					font-size: 2em;
+				}
+				.advantageItemDescription {
+					font-size: 1.5em;
+				}
+			}
+		}
+		.moreAdvantagesBtn {
+			.moreBtn {
+				font-size: 1.6em;
+				height: 60px;
+				line-height: 60px;
+				margin-top: 60px;
+			}
+		}
+	}
+}
+//----- End our advantages -----
+
+//----- DESCRIPTIONS -----
+.descriptions {
+	.descriptionPosition {
+		padding-top: 6%;
+		.iconDescription {
+		}
+		.descriptionTitle {
+			font-size: 4.5em;
+			padding-right: 70px;
+			margin-bottom: 40px;
+		}
+		.row {
+            a {
+                .descriptionItem {
+                    overflow: hidden;
+                    height: 300px;
+                    .descriptionItemTitle {
+                        font-size: 1.5em;
+                        margin-bottom: 30px;
+                    }
+                    .descriptionItemDescription {
+                        font-size: 1.1em;
+                    }
+                    .descriptionItemDate {
+                        font-size: 1.3em;
+                    }
+                }
+            }
+		}
+		.linkToAllStock {
+			.stockBtn {
+				font-size: 1.6em;
+				height: 60px;
+				line-height: 60px;
+				margin-top: 65px;
+			}
+		}
+	}
+}
+//----- End descriptions -----
+
+//----- IMAGE GALLERY -----
+.imageGallery {
+	.galleryTitle {
+		font-size: 4.5em;
+	}
+	.gallerySubtitle {
+		font-size: 1.8em;
+	}
+	.row {
+		padding-bottom: 0%;
+		.slide {
+			padding-right: 0;
+    		padding-left: 0;
+			.my-gallery {
+				figure {
+                    max-width: 560px;
+                    max-height: 300px;
+					a{
+						img {
+							width: 100%;
+				            height: 350px;
+						}
+					}
+					.nameProject {
+						font-size: 2.2em;
+					}
+					.descriptionProject {
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
+	}
+	.pswp__caption__center {
+		font-size: 1.6em;
+		max-width: 800px;
+	}
+	.pswp__counter {
+		font-size: 20px;
+	}
+}
+
+// Hover image
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'feathericons';
+	src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
+	src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
+		url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
+		url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
+		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
+}
+
+.grid {
+	position: relative;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	//margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 250px;
+	//width: 48%;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/***** Layla *****/
+
+figure.effect-layla {
+	background: $mainColor;
+}
+
+figure.effect-layla img {
+	height: 390px;
+}
+
+figure.effect-layla figcaption {
+	padding: 3em;
+	padding-top: 0px;
+}
+
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after {
+	position: absolute;
+	content: '';
+	opacity: 0;
+}
+
+figure.effect-layla figcaption::before {
+	top: 50px;
+	right: 30px;
+	bottom: 50px;
+	left: 30px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+figure.effect-layla figcaption::after {
+	top: 30px;
+	right: 50px;
+	bottom: 30px;
+	left: 50px;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	-webkit-transform: scale(1,0);
+	transform: scale(1,0);
+	-webkit-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+}
+
+figure.effect-layla h2 {
+	padding-top: 26%;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.effect-layla p {
+	padding: 0.5em 2em;
+	text-transform: none;
+	opacity: 0;
+	-webkit-transform: translate3d(0,-10px,0);
+	transform: translate3d(0,-10px,0);
+}
+
+figure.effect-layla img,
+figure.effect-layla h2 {
+	-webkit-transform: translate3d(0,-30px,0);
+	transform: translate3d(0,-30px,0);
+}
+
+figure.effect-layla img,
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after,
+figure.effect-layla p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-layla:hover img {
+	opacity: 0.7;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-layla:hover figcaption::before,
+figure.effect-layla:hover figcaption::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-layla:hover figcaption::after,
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p,
+figure.effect-layla:hover img {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+// End hover image
+//----- End image gallery -----
+
+//----- CUSTOMER REVIEWS -----
+.customerReviews {
+	.customerReviewsPosition {
+		padding-top: 5%;
+		.customerReviewsTitle {
+			font-size: 4.5em;
+		}
+		.cd-container{
+			.moreBtn {
+				font-size: 1.6em;
+				height: 60px;
+				line-height: 60px;
+                margin-bottom: 30px;
+			}
+            .cd-testimonials {
+                li {
+                    p {
+                        font-size: 1.2em;
+                    }
+                    .cd-author {
+                        li {
+                            font-size: 17px;
+                        }
+                        li:first-child {
+                            font-size: 16px;
+                        }
+                        li:last-child {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+		}
+        .cd-testimonials-all {
+            .cd-testimonials-item {
+                p {
+                    font-size: 1.5em;
+                }
+                .cd-author {
+                    li {
+                        font-size: 1.4em;
+                    }
+                    li:first-child {
+                        font-size: 1.2em;
+                    }
+                    li:last-child {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+	}
+}
+//----- End customer reviews -----
+    
+//----- OUR PARTNERS -----
+.ourPartners {
+	.ourPartnersPosition {
+		.ourPartnersTitle {
+			font-size: 4.5em;
+		}
+		.row {
+			.ourPartnersItem {
+				.ourPartnersLink {
+					.partnerIcon {
+						height: 9em;
+						img {
+							margin-left: 28%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End our partners -----
+
+//----- FOOTER -----
+.footer {
+    padding-bottom: 2%;
+	.footerPosition {
+		.row {
+			.footerBlock {
+				height: 300px;
+				.footerSubtitle {
+					font-size: 25px;
+				}
+			}
+            .footerSiteNavigation {
+                .logotype {
+                    margin-bottom: 7%;
+                    a {
+                        display: block;
+                        img {
+                            height: 75px;
+                        }
+                    }
+                }
+			}
+		}
+	}
+	.copyright {
+		font-size: 16px;
+		margin-top: 60px;
+	}
+}
+
+.footerNavLink, .footerBuildTypeLink, .footerPhoneLink, .footerLocationLink, .footerEmailLink, .footerSkypeLink, .footerFacebookLink, .footerVkLink, .footerInstaLink {
+	font-size: 20px;
+}
+//----- End footer -----
+}
+
+
+@media only screen and (max-width:1680px) {
+//----- PRELOADER -----
+#page-preloader {
+	h2 {
+		margin-top: 13%;
+	}
+}
+//----- End preloader -----
+	
+//----- HEADER -----
+.topContacts {
+	height: 40px;
+	line-height: 40px;
+	.emailContacts {
+        margin-left: 20px;
+		.phone, .email, .skype {
+			a {
+				font-size: 15px;
+				margin-right: 35px;
+				.phoneLinkIcon, .emailLinkIcon, .skypeLinkIcon {
+					margin-right: 11px;
+					margin-left: 4px;
+				}
+			}
+		}
+	}
+}
+
+.navigationContainer {
+    .navigation {
+        ul {
+            li {
+                .navLink {
+                    font-size: 15px;
+                    line-height: 3;
+                    width: 130px;
+                    padding: 10% 4%;
+                }
+            }
+        }
+    }
+}
+//----- End header -----
+    
+//----- TEMPORARILY CAP -----
+.temporarilyCap {
+    .title {
+        font-size: 2.6em;
+    }
+}
+//----- End temporarily cap -----
+
+//----- TOP SLIDER -----
+.topSlider {
+	#my-slide {
+		.slide {
+			.titleTopSlider {
+				font-size: 4em;
+				margin-top: 30%;
+			}
+			p {
+				font-size: 1.8em;
+			}
+			.btnTopSlider {
+				font-size: 1.2em;
+                padding: 15px;
+			}
+		}
+	}
+}
+//----- End top slider -----
+
+//----- QUICK BUTTON -----
+.quickBtnContainer {
+	.positionQuickBtn {
+		h4 {
+            font-size: 2.5em;
+		}
+		div {
+			.quickBtn {
+				font-size: 1.3em;
+				height: 50px;
+				line-height: 50px;
+			}
+		}
+	}
+}
+//----- End quick button -----
+    
+//----- EVERYONETRUST -----
+.everyoneTrust {
+	.everyoneTrustTitle {
+		    font-size: 3.5em;
+	}
+	.everyoneTrustSubtitle {
+        font-size: 1.7em;
+	}
+	.everyoneTrustItems {
+		.row {
+			.everyoneTrustItem {
+				.everyoneTrustLink {
+					.everyoneTrustIconContainer {
+                        img {
+                            width: 80%;
+                            height: 260px;
+                        }
+						/*.everyoneTrustIcon {
+							font-size: 4em;
+							border-radius: 40px;
+							height: 80px;
+							width: 80px;
+						}*/
+					}
+					.everyoneTrustText {
+						.everyoneTrustTitle {
+							font-size: 2.0em;
+						}
+						.everyoneTrustDrscription {
+							font-size: 1.1em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End everyonetrust -----
+    
+//----- ENGINEER REVIEW -----
+.engineerReview {
+	.engineerReviewTextContainer {
+		.engineerReviewText {
+			.engineerReviewTitle {
+				font-size: 3.1em;
+				padding-top: 35%;
+			}
+			.engineerReviewSubtitle {
+				font-size: 1.2em;
+			}
+			.engineerReviewDescription {
+                font-size: 1.1em;
+				margin-top: 3.5%;
+			}
+			.linkToNews {
+				.btnToNews {
+					font-size: 1.3em;
+					height: 45px;
+					line-height: 45px;
+				}
+			}
+		}
+	}
+	.obliqueBg {
+		top: -3px;
+	}
+	.obliqueBgBottom {
+		bottom: -5px;
+	}
+}
+//----- End engineer reviews -----
+
+//----- OUR ADVANTAGES -----
+.advantagesContainer {
+	.advantagesText {
+		.titleAdvantages {
+			font-size: 3.5em;
+		}
+		.descriptionAdvantages {
+			font-size: 1.7em;
+		}
+	}
+	.advantagesItems {
+		.row {
+			.advantageItem {
+				.advantageItemTitle {
+					font-size: 1.9em;
+					margin-bottom: 25px;
+				}
+				.advantageItemDescription {
+					font-size: 1.1em;
+				}
+			}
+		}
+		.moreAdvantagesBtn {
+			.moreBtn {
+				font-size: 1.3em;
+				height: 55px;
+				line-height: 55px;
+			}
+		}
+	}
+}
+//----- End our advantages -----
+
+//----- DESCRIPTIONS -----
+.descriptions {
+	.descriptionPosition {
+		.descriptionTitle {
+			font-size: 3.5em;
+		}
+		.row {
+			.descriptionItem {
+				height: 300px;
+				.descriptionItemTitle {
+					font-size: 1.6em;
+                    margin-bottom: 20px;
+				}
+				.descriptionItemDescription {
+					font-size: 1.2em;
+				}
+				.descriptionItemDate {
+					font-size: 1.1em;
+				}
+			}
+		}
+		.linkToAllStock {
+			.stockBtn {
+				font-size: 1.3em;
+				height: 55px;
+				line-height: 55px;
+			}
+			.stockBtn:hover {
+				background-color: #fff;
+				color: rgb(28,28,28);
+			}
+		}
+	}
+}
+//----- End descriptions -----
+
+//----- IMAGE GALLERY -----
+.imageGallery {
+	.galleryTitle {
+		font-size: 3.5em;
+		padding-top: 5%;
+	}
+	.gallerySubtitle {
+		font-size: 1.7em;
+		margin-bottom: 0%;
+	}
+	.row {
+		padding-bottom: 0%;
+		.slide {
+            padding-right: 3px;
+            padding-left: 3px;
+			.my-gallery {
+				figure {
+					.nameProject {
+						font-size: 2em;
+						margin-top: 20%;
+					}
+					.descriptionProject {
+						font-size: 1em;
+					}
+				}
+			}
+		}
+	}
+	.pswp__caption__center {
+		font-size: 1.4em;
+		max-width: 750px;
+	}
+	.pswp__counter {
+		font-size: 15px;
+	}
+}
+//----- End image gallery -----
+
+//----- CUSTOMER REVIEWS -----
+.customerReviews {
+	.customerReviewsPosition {
+		padding-top: 5%;
+		.customerReviewsTitle {
+			font-size: 3.5em;
+		}
+		.cd-container{
+			.moreBtn {
+				font-size: 1.5em;
+				height: 55px;
+				line-height: 55px;
+			}
+		}
+        .cd-testimonials {
+                li {
+                    p {
+                        font-size: 1.1em;
+                    }
+                    .cd-author {
+                        li {
+                            font-size: 15px;
+                        }
+                        li:first-child {
+                            font-size: 16px;
+                        }
+                        li:last-child {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+		}
+        .cd-testimonials-all {
+            .cd-testimonials-item {
+                p {
+                    font-size: 1.3em;
+                }
+                .cd-author {
+                    li {
+                        font-size: 1.3em;
+                    }
+                    li:first-child {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+	}
+}
+//----- End customer reviews -----
+
+//----- OUR PARTNERS -----
+.ourPartners {
+	.ourPartnersPosition {
+		.ourPartnersTitle {
+			font-size: 3.5em;
+			padding-bottom: 4%;
+		}
+		.row {
+			.ourPartnersItem {
+				.ourPartnersLink {
+					.partnerIcon {
+						height: 8em;
+                        img {
+                            margin-left: 23%;
+                        }
+					}
+				}
+			}
+		}
+	}
+}
+//----- End our partners -----
+
+//----- FOOTER -----
+.footer {
+	.footerPosition {
+		.row {
+			.footerBlock {
+				height: 300px;
+				.footerSubtitle {
+					font-size: 18px;
+				}
+			}
+            .footerSiteNavigation {
+                .logotype {
+                    a {
+                        img {
+                            height: 65px;
+                        }
+                    }
+                }
+            }
+		}
+	}
+	.copyright {
+		font-size: 13px;
+	}
+}
+
+.footerNavLink, .footerBuildTypeLink, .footerPhoneLink, .footerLocationLink, .footerEmailLink, .footerSkypeLink, .footerFacebookLink, .footerVkLink, .footerInstaLink {
+	font-size: 15px;
+}
+//----- End footer -----
+}
+
+
+@media only screen and (max-width:1370px) {
+//----- PRELOADER -----
+#page-preloader {
+	h2 {
+		margin-top: 10%;
+	}
+}
+//----- End preloader -----
+	
+//----- HEADER -----
+.topContacts {
+	height: 35px;
+	line-height: 35px;
+	.emailContacts {
+        margin-left: 0;
+		.phone, .email, .skype {
+			a {
+				font-size: 13px;
+				margin-right: 30px;
+				.phoneLinkIcon, .emailLinkIcon, .skypeLinkIcon {
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+    .socialContacts {
+        margin-right: 0;
+    }
+}
+.navigationContainer {
+    height: 60px;
+    .logotype {
+        left: 0;
+        clear: both;
+        position: absolute;
+        height: 100%;
+        img {
+            height: 100%;
+            padding: 5px;
+        }
+    }
+    .navigation {
+        ul {
+            li {
+                .navLink {
+                    font-size: 13px;
+                    line-height: 4;
+                    width: 105px;
+                    padding: 5% 2%;
+                }
+            }
+        }
+    }
+}
+//----- End header -----
+    
+//----- TEMPORARILY CAP -----
+.temporarilyCap {
+    .title {
+        font-size: 2.2em;
+    }
+}
+//----- End temporarily cap -----
+
+//----- TOP SLIDER -----
+.topSlider {
+	#my-slide {
+		.slide {
+			.titleTopSlider {
+				font-size: 3.7em;
+			}
+			p {
+				font-size: 1.6em;
+			}
+			.btnTopSlider {
+				font-size: 1.1em;
+                padding: 10px;
+			}
+		}
+	}
+}
+//----- End top slider -----
+
+//----- QUICK BUTTON -----
+.quickBtnContainer {
+	.positionQuickBtn {
+		h4 {
+			font-size: 2em;
+		}
+		div {
+			.quickBtn {
+                font-size: 1.1em;
+				height: 45px;
+				line-height: 45px;
+			}
+		}
+	}
+}
+//----- End quick button -----
+
+//----- EVERYONETRUST -----
+.everyoneTrust {
+	padding-top: 6%;
+	.everyoneTrustTitle {
+		font-size: 3em;
+	}
+	.everyoneTrustSubtitle {
+		font-size: 1.5em;
+	}
+	.everyoneTrustItems {
+		.row {
+			.everyoneTrustItem {
+				.everyoneTrustLink {
+					.everyoneTrustIconContainer {
+                        img {
+                            width: 80%;
+                            height: 200px;
+                        }
+						/*.everyoneTrustIcon {
+							font-size: 3em;
+							border-radius: 30px;
+							height: 60px;
+							width: 60px;
+						}*/
+					}
+					.everyoneTrustText {
+                        margin-left: 0%;
+						.everyoneTrustTitle {
+							font-size: 1.7em
+						}
+						.everyoneTrustDrscription {
+							font-size: 1em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End everyonetrust -----
+
+//----- ENGINEER REVIEW -----
+.engineerReview {
+	min-height: 600px;
+	.engineerReviewTextContainer {
+		.engineerReviewText {
+            padding: 20px 10px 40px;
+			.engineerReviewTitle {
+				font-size: 3em;
+			}
+			.engineerReviewSubtitle {
+				font-size: 1.1em;
+			}
+			.engineerReviewDescription {
+				font-size: 1em;
+				margin-top: 3%;
+			}
+			.linkToNews {
+				.btnToNews {
+					font-size: 1.2em;
+				}
+			}
+		}
+	}
+}
+//----- End engineer reviews -----
+
+//----- OUR ADVANTAGES -----
+.advantagesContainer {
+	padding: 6% 0 0;
+	.advantagesText {
+		.titleAdvantages {
+			font-size: 3em;
+		}
+		.descriptionAdvantages {
+			font-size: 1.5em;
+		}
+	}
+	.advantagesItems {
+		.row {
+			.advantageItem {
+				padding: 0 10px;
+				.advantageItemTitle {
+					font-size: 1.5em;
+                    margin-bottom: 20px;
+				}
+			}
+			.advantageItem:last-child {
+				padding-left: 20px;
+			}
+			.advantageItem:first-child {
+				padding-right: 20px;
+			}
+		}
+		.moreAdvantagesBtn {
+			.moreBtn {
+				font-size: 1.1em;
+				height: 45px;
+				line-height: 45px;
+				margin-top: 45px;
+			}
+		}
+	}
+}
+//----- End our advantages -----
+
+//----- DESCRIPTIONS -----
+.descriptions {
+	.descriptionPosition {
+		.iconDescription {
+			width: 5%;	
+		}
+		.descriptionTitle {
+			font-size: 3em;
+		}
+		.row {
+			.descriptionItem {
+				.descriptionItemTitle {
+					font-size: 1.5em;
+				}
+				.descriptionItemDescription {
+					font-size: 1.1em;
+				}
+				.descriptionItemDate {
+					font-size: 1em;
+				}
+			}
+		}
+		.linkToAllStock {
+			.stockBtn {
+				font-size: 1.1em;
+				height: 45px;
+				line-height: 45px;
+			}
+		}
+	}
+}
+.parallax {
+    min-height: 600px;
+}
+//----- End descriptions -----
+
+//----- IMAGE GALLERY -----
+.imageGallery {
+	.galleryTitle {
+		font-size: 3em;
+	}
+	.gallerySubtitle {
+		font-size: 1.3em;
+	}
+	.row {
+		padding-bottom: 1%;
+		.slide {
+			.my-gallery {
+				.displayNone {
+				}
+				figure {
+                    max-height: 240px;
+                    min-width: 200px;
+					a{
+						img {
+							height: 280px;
+						}
+					}
+					.nameProject {
+						font-size: 1.7em;
+						margin-top: 20%;
+					}
+				}
+			}
+		}
+	}
+	.row:first-of-type {
+		padding-top: 30px;
+	}
+	.pswp__caption__center {
+		font-size: 1em;
+	}
+	.pswp__counter {
+		font-size: 13px;
+	}
+}
+//----- End image gallery -----
+
+//----- CUSTOMER REVIEWS -----
+.customerReviews {
+	.customerReviewsPosition {
+		.customerReviewsTitle {
+			font-size: 3em;
+		}
+		.cd-container{
+			.moreBtn {
+				font-size: 1.1em;
+				height: 45px;
+				line-height: 45px;
+    			margin-left: 25%;
+				margin-top: 45px;
+			}
+		}
+        .cd-testimonials {
+            li {
+                .cd-author {
+                    li {
+                        font-size: 14px;
+                    }
+                    li:first-child {
+                        font-size: 15px;
+                    }
+                    li:last-child {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+	}
+}
+//----- End customer reviews -----
+
+//----- OUR PARTNERS -----
+.ourPartners {
+	.ourPartnersPosition {
+		.ourPartnersTitle {
+			font-size: 3.5em;
+			padding-bottom: 4%;
+		}
+		.row {
+			.ourPartnersItem {
+				.ourPartnersLink {
+					.partnerIcon {
+						height: 8em;
+                        img {
+                            margin-left: 23%;
+                        }
+					}
+				}
+			}
+		}
+	}
+}
+//----- End our partners -----
+
+//----- FOOTER -----
+.footer {
+    padding: 5% 0;
+	.footerPosition {
+		.row {
+			.footerBlock {
+                padding: 0 1%;
+				height: 210px;
+				.footerSubtitle {
+					font-size: 17px;
+				}
+			}
+            .footerSiteNavigation {
+                .logotype {
+                    a {
+                        img {
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+		}
+	}
+	.copyright {
+		font-size: 13px;
+	}
+}
+
+.footerNavLink, .footerBuildTypeLink, .footerPhoneLink, .footerLocationLink, .footerEmailLink, .footerSkypeLink, .footerFacebookLink, .footerVkLink, .footerInstaLink {
+	font-size: 14px;
+}
+//----- End footer -----
+}
+
+@media only screen and (max-width:1199px) {
+//----- PRELOADER -----
+#page-preloader {
+	margin-top: 15px;
+}
+//----- End preloader -----
+	
+//----- OUR PARTNERS -----
+.ourPartners {
+	.ourPartnersPosition {
+		.row {
+			.ourPartnersItem {
+				.ourPartnersLink {
+					.partnerIcon {
+                        img {
+                            margin-left: 34%;
+                        }
+					}
+				}
+			}
+		}
+	}
+}
+//----- End our partners -----
+}
+
+
+@media only screen and (max-width:1024px) {
+    //----- HEADER -----
+.topContacts {
+	.emailContacts {
+		.phone, .email, .skype {
+			a {
+				margin-right: 25px;
+			}
+		}
+	}
+	.socialContacts {
+		.facebook, .vk, .insta {
+			margin-right: 10px;
+		}
+	}
+}
+
+.navigationContainer {
+    height: 70px;
+    .navigation {
+        ul {
+            li {
+                .navLink {
+                    line-height: 5;
+                    width: 100px;
+                    padding: 0 0;
+                }
+            }
+        }
+    }
+}
+//----- End header -----
+    
+//----- TEMPORARILY CAP -----
+.temporarilyCap {
+    .title {
+        font-size: 2em;
+    }
+}
+//----- End temporarily cap -----
+	
+//----- TOP SLIDER -----
+.topSlider {
+	/*#my-slide {
+		display: none;
+	}*/
+	.tabletSlide {
+		//display: block;
+		position: relative;
+		text-align: center;
+		img {
+			width: 100%;
+		}
+		.titleTabletSlideTop {
+			@include input-font($OswardFont, 2.5em, $textColor3, 5px, bold);
+			text-transform: uppercase;
+			width: 100%;
+			position: absolute;
+    		top: 40%;
+		}
+		.titleTabletSlideBottom {
+			@include input-font($OswardFont, 2.5em, $textColor3, 5px, bold);
+			text-transform: uppercase;
+			width: 100%;
+			position: absolute;
+			top: 55%;
+		}
+	}
+}
+//----- End top slider -----
+
+//----- EVERYONETRUST -----
+.everyoneTrust {
+	padding-top: 7%;
+	padding-bottom: 0%;
+	.everyoneTrustTitle {
+		font-size: 2.8em;
+	}
+	.everyoneTrustSubtitle {
+		font-size: 1.2em;
+	}
+	.everyoneTrustItems {
+		.row {
+			.everyoneTrustItem {
+				.everyoneTrustLink {
+                    .everyoneTrustIconContainer {
+                        img {
+                            width: 80%;
+                            height: 195px;
+                        }
+                    }
+					.everyoneTrustText {
+						width: 80%;
+					}
+				}
+			}
+		}
+	}
+}
+//----- End everyonetrust -----
+
+//----- ENGINEER REVIEW -----
+.engineerReview {
+	.engineerReviewTextContainer {
+		.engineerReviewText {
+			.linkToNews {
+				.btnToNews {
+					font-size: 1.1em;
+				}
+			}
+		}
+	}
+}
+//----- End engineer reviews -----
+
+//----- OUR ADVANTAGES -----
+.advantagesContainer {
+	.advantagesText {
+		.descriptionAdvantages {
+			font-size: 1.2em;
+		}
+	}
+	.advantagesItems {
+		.row {
+			.advantageItem {
+				.advantageItemTitle {
+					font-size: 1.4em;
+				}
+				.advantageItemDescription {
+					font-size: 1em;
+				}
+			}
+		}
+		.moreAdvantagesBtn {
+			.moreBtn {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+//----- End our advantages -----
+
+//----- DESCRIPTIONS -----
+.descriptions {
+	.descriptionPosition {
+		.row {
+            a {
+                .descriptionItem {
+                    height: 290px;
+                    .descriptionItemTitle {
+                        font-size: 1.4em;
+                    }
+                    .descriptionItemDescription {
+                        font-size: 1em;
+                    }
+                }
+                .descriptionItemDate {
+                    font-size: 0.9em;
+                }
+            }
+		}
+		.linkToAllStock {
+			.stockBtn {
+				font-size: 1.1em;
+				margin-top: 50px;
+			}
+		}
+	}
+}
+.parallax {
+    min-height: 380px;
+}
+//----- End descriptions -----
+
+//----- IMAGE GALLERY -----
+.imageGallery {
+	.gallerySubtitle {
+		font-size: 1.2em;
+	}
+	.row {
+		.slide {
+			.my-gallery {
+				figure {
+					a{
+						img {
+							height: 270px;
+						}
+					}
+					.nameProject {
+						font-size: 1.6em;
+						margin-top: 25%;
+					}
+					.descriptionProject {
+						font-size: .8em;
+					}
+				}
+			}
+		}
+	}
+	.pswp__caption__center {
+		font-size: 1.1em;
+		max-width: 550px;
+	}
+}
+//----- End image gallery -----
+
+//----- CUSTOMER REVIEWS -----
+.customerReviews {
+	.customerReviewsPosition {
+		.cd-testimonials-wrapper{
+			height: 330px;
+			margin-top: 0;
+			.flex-viewport {
+				.cd-testimonials {
+					li {
+						p {
+							font-size: 1.1em;
+						}
+						div {
+							ul {
+								li {
+									font-size: 14px;
+								}
+								li:first-child {
+									font-size: 15px;
+								}
+								li:last-child {
+									font-size: 13px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End customer reviews -----
+
+//----- OUR PARTNERS -----
+.ourPartners {
+	padding: 5% 0;
+	.ourPartnersPosition {
+		.ourPartnersTitle {
+			font-size: 3em;
+		}
+		.row {
+			.ourPartnersItem {
+				.ourPartnersLink {
+					.partnerIcon {
+						height: 7em;
+					}
+				}
+			}
+		}
+	}
+}
+//----- End our partners -----
+
+//----- FOOTER -----
+.footer {
+	padding: 4% 0;
+	.footerPosition {
+		.row {
+			.footerBlock {
+				.footerSubtitle {
+					font-size: 15px;
+				}
+			}
+			.footerContacts {
+				background: url(../img/homePage/footer/map-bg.png) 5px 55px no-repeat;
+			}
+		}
+	}
+	.copyright {
+		font-size: 12px;
+	}
+	
+}
+
+
+.footerPhoneLinkIcon, .footerLocationLinkIcon, .footerEmailLinkIcon, .footerSkypeLinkIcon, .facebookIconBorder, .vkIconBorder, .toutubeIconBorder {
+	margin-right: 3%;
+}
+	
+.footerNavLink:hover, .footerBuildTypeLink:hover, .footerPhoneLink:hover, .footerLocationLink:hover, .footerEmailLink:hover, .footerSkypeLink:hover, .footerFacebookLink:hover, .footerVkLink:hover, .footerInstaLink:hover {
+	margin-left: 8px;
+}
+//----- End footer -----
+}
+
+
+@media only screen and (max-width:992px) {
+//----- PRELOADER -----
+#page-preloader {
+	img {
+		margin-top: 10px;
+	}
+}
+//----- End preloader -----
+	
+//----- HEADER -----
+.topContacts {
+	height: 40px;
+	line-height: 40px;
+	.emailContacts {
+		.phone, .email, .skype {
+			a {
+				margin-right: 20px;
+			}
+		}
+        .email {
+            display: none;
+        }
+	}
+	.socialContacts {
+		.facebook, .vk, .insta {
+			margin-right: 15px;
+		}
+	}
+}
+
+.navigationContainer {
+	.push {
+		display: block;
+		a {
+			i {
+				padding: 5px 30px;
+				border: 1px solid $textColor3;
+				background-color: $topMenuColor;
+				color: $textColor3;
+				-webkit-transition: all 0.4s ease-out 0s;
+				-moz-transition: all 0.4s ease-out 0s;
+				-o-transition: all 0.4s ease-out 0s;
+				transition: all 0.4s ease-out 0s;
+			}
+			i:hover {
+				border: 1px solid $topMenuColor;
+				background-color: $textColor3;
+				color: $topMenuColor;
+			}
+		}
+	}
+    .navigation {
+		display: none;
+    }
+}
+//----- End header -----
+    
+//----- TEMPORARILY CAP -----
+.temporarilyCap {
+    .title {
+        font-size: 1.4em;
+    }
+}
+//----- End temporarily cap -----
+
+//----- QUICK BUTTON -----
+.quickBtnContainer {
+	.positionQuickBtn {
+		width: 95%;
+		div {
+			.quickBtn {
+				width: 180%;
+			}
+		}
+	}
+}
+//----- End quick button -----
+
+//----- EVERYONETRUST -----
+.everyoneTrust {
+	.everyoneTrustTitle {
+		font-size: 2.5em;
+	}
+	.everyoneTrustItems {
+		.row {
+			.everyoneTrustItem {
+				padding: 3% 1% 1%;
+				.everyoneTrustLink {
+					.everyoneTrustIconContainer {
+						display: block;
+                        img {
+                            width: 50%;
+                            height: 250px;
+                        }
+						/*.everyoneTrustIcon {
+							border-radius: 40px;
+							height: 80px;
+							width: 80px;
+							font-size: 4em;
+						}*/
+					}
+					.everyoneTrustText {
+						@include inlineBlock();
+						width: 90%;
+						.everyoneTrustTitle {
+							font-size: 2em;
+						}
+						.everyoneTrustDrscription {
+							font-size: 1.1em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End everyonetrust -----
+
+//----- ENGINEER REVIEW -----
+.engineerReview {
+	.engineerReviewTextContainer {
+		width: 95%;
+		.engineerReviewText {
+			padding: 50px 10px 40px;
+			.engineerReviewTitle {
+				font-size: 2.5em;
+			}
+			.linkToNews {
+				.btnToNews {
+					width: 45%;
+				}
+			}
+		}
+	}
+}
+//----- End engineer reviews -----
+
+//----- OUR ADVANTAGES -----
+.advantagesContainer {
+	.advantagesText {
+		.titleAdvantages {
+			font-size: 2.5em;
+		}
+	}
+	.advantagesItems {
+		padding: 3% 0 8.5%;
+		width: 95%;
+		.row {
+			.advantageItem {
+				padding: 0 40px;
+				text-align: center;
+				.advantageItemTitle {
+					font-size: 2em;
+					margin-bottom: 10px;
+				}
+				.advantageItemDescription {
+					font-size: 1.1em;
+				}
+				img {
+					width: 75%;
+				}
+			}
+			.advantageItem:last-child {
+				padding: 0 40px;
+				text-align: center;
+			}
+			.advantageItem:first-child {
+				padding: 0 40px;
+				text-align: center;
+			}
+		}
+		.moreAdvantagesBtn {
+			.moreBtn {
+				font-size: 1.2em;
+				width: 30%;
+			}
+		}
+	}
+}
+//----- End our advantages -----
+
+//----- DESCRIPTIONS -----
+.descriptions {
+	.descriptionPosition {
+		padding-top: 4%;
+		width: 95%;
+		.iconDescription {
+			width: 7%;	
+		}
+		.descriptionTitle {
+			font-size: 2.5em;
+			margin-bottom: 20px;
+		}
+		.row {
+            a {
+                .descriptionItem {
+                    padding-right: 10px;
+                    padding-left: 10px;
+                    .descriptionItemTitle {
+                        font-size: 1.3em;
+                    }
+                    .descriptionItemDescription {
+                        font-size: 1.1em;
+                        margin-bottom: 5px;
+                    }
+                    .descriptionItemDate {
+                        left: 35%;
+                    }
+                }
+            }
+		}
+		.linkToAllStock {
+			.stockBtn {
+				font-size: 1.2em;
+				width: 30%;
+				margin-top: 30px;
+			}
+		}
+	}
+}
+//----- End descriptions -----
+
+//----- IMAGE GALLERY -----
+.imageGallery {
+	.galleryTitle {
+		font-size: 2.5em;
+	}
+	.gallerySubtitle {
+		font-size: 1.2em;
+	}
+	.row {
+		width: 72%;
+		padding-bottom: 0;
+		.slide {
+			.my-gallery {
+                display: flex;
+				figure {
+                    margin: 0 auto;
+					a{
+						img {
+							text-align: center;
+							width: 100%;
+							height: 280px;
+						}
+					}
+					.nameProject {
+						font-size: 2em;
+						margin-top: 0;
+						margin-bottom: 2%;
+					}
+					.descriptionProject {
+						font-size: 1em;
+					}
+				}
+			}
+		}
+	}
+	.row:first-of-type {
+		padding-top: 20px;
+	}
+}
+//----- End image gallery -----
+
+//----- CUSTOMER REVIEWS -----
+.customerReviews {
+	.customerReviewsPosition {
+		padding-top: 2%;
+		.customerReviewsTitle {
+			font-size: 2.5em;
+		}
+		.cd-container{
+			.moreBtn {
+				font-size: 1.2em;
+			}
+		}
+		.cd-testimonials-all {
+			.cd-testimonials-item {
+				p {
+					font-size: 1.1em;
+				}
+			}
+		}
+	}
+}
+//----- End customer reviews -----
+
+//----- OUR PARTNERS -----
+.ourPartners {
+	.ourPartnersPosition {
+		width: 60%;
+		.ourPartnersTitle {
+			font-size: 2.5em;
+			padding-bottom: 3%;
+		}
+		.row {
+			.ourPartnersItem {
+				.ourPartnersLink {
+					.partnerIcon {
+						height: 5em;
+						img {
+							margin-left: 40%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End our partners -----
+
+//----- FOOTER -----
+.footer {
+	.footerPosition {
+		width: 95%;
+		.row {
+			.footerBlock {
+				height: 220px;
+				.footerSubtitle {
+					font-size: 15px;
+				}
+			}
+            .footerSiteNavigation {
+                .logotype {
+                    display: block;
+                    a {
+                        
+                        img {
+                            height: 43px;
+                        }
+                    }
+                }
+            }
+			.footerContacts {
+				background: url(../img/homePage/footer/map-bg.png) -15px 55px no-repeat;
+			}
+		}
+	}
+}
+
+.footerPhoneLinkIcon, .footerLocationLinkIcon, .footerEmailLinkIcon, .footerSkypeLinkIcon, .facebookIconBorder, .vkIconBorder, .toutubeIconBorder {
+	margin-right: 1%;
+}
+	
+.footerNavLink:hover, .footerBuildTypeLink:hover, .footerPhoneLink:hover, .footerLocationLink:hover, .footerEmailLink:hover, .footerSkypeLink:hover, .footerFacebookLink:hover, .footerVkLink:hover, .footerInstaLink:hover {
+	margin-left: 10px;
+	text-decoration: none;
+	color: $textColor3;
+}
+	
+.footerContacts {
+	.footerPhoneLinkIcon {
+		display: none;
+	}
+	.footerLocationLinkIcon {
+		display: none;
+	}
+    .footerLocationLinkText {
+        width: 85%;
+    }
+}
+//----- End footer -----
+
+//----- SCROLL TO TOP -----
+#scroller {
+    width: 6%;
+    height: 20%;
+}
+//----- End scroll to top -----
+}
+
+
+@media only screen and (max-width:768px) {
+//----- PRELOADER -----
+#page-preloader {
+	h2 {
+		margin-top: 12%;
+	}
+}
+//----- End preloader -----
+	
+//----- HEADER -----
+.topContacts {
+	height: 35px;
+	line-height: 35px;
+	.emailContacts {
+		.skype {
+			display: none;
+		}
+		.phone, .email, .skype {
+			a {
+				margin-right: 10px;
+				i {
+					margin-right: 0px;
+				}
+			}
+		}
+	}
+}
+//----- End header -----
+    
+//----- TEMPORARILY CAP -----
+.temporarilyCap {
+    .title {
+        font-size: 1.3em;
+    }
+}
+//----- End temporarily cap -----
+	
+//----- TOP SLIDER -----
+.topSlider {
+	/*#my-slide {
+		display: none;
+	}*/
+	.tabletSlide {
+		//display: block;
+		position: relative;
+		text-align: center;
+		img {
+			width: 100%;
+		}
+		.titleTabletSlideTop {
+			@include input-font($OswardFont, 2em, $textColor3, 1px, 400);
+    		top: 30%;
+		}
+		.titleTabletSlideBottom {
+			@include input-font($OswardFont, 2em, $textColor3, 1px, 400);
+			top: 50%;
+		}
+	}
+}
+//----- End top slider -----
+
+//----- QUICK BUTTON -----
+.quickBtnContainer {
+	.positionQuickBtn {
+		width: 98%;
+		h4 {
+			font-size: 1.3em;
+		}
+		div {
+			.quickBtn {
+				font-size: 1em;
+				width: 150%;
+				height: 40px;
+    			line-height: 40px;
+				margin-top: -7px;
+			}
+		}
+	}
+}
+//----- End quick button -----
+
+//----- EVERYONETRUST -----
+.everyoneTrust {
+	.everyoneTrustTitle {
+		font-size: 1.8em;
+	}
+	.everyoneTrustSubtitle {
+		font-size: 1.1em;
+	}
+	.everyoneTrustItems {
+		.row {
+			width: 95%;
+			.everyoneTrustItem {
+				padding: 2% 1% 0;
+				.everyoneTrustLink {
+					.everyoneTrustIconContainer {
+                        img {
+                            width: 70%;
+                            height: 280px;
+                        }
+						/*.everyoneTrustIcon {
+							border-radius: 30px;
+							height: 60px;
+							width: 60px;
+							font-size: 3em;
+						}*/
+					}
+					.everyoneTrustText {
+						.everyoneTrustTitle {
+							font-size: 1.4em;
+						}
+						.everyoneTrustDrscription {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End everyonetrust -----
+
+//----- ENGINEER REVIEW -----
+.engineerReview {
+	.engineerReviewTextContainer {
+		width: 95%;
+		.engineerReviewText {
+			width: 100%;
+			padding: 50px 10px 15px;
+			.engineerReviewTitle {
+				padding-top: 10%;
+				font-size: 2em;
+			}
+			.engineerReviewSubtitle {
+				font-size: 1em;
+			}
+			.linkToNews {
+				.btnToNews {
+					font-size: 1em;
+					width: 40%;
+					height: 40px;
+    				line-height: 40px;
+				}
+			}
+		}
+	}
+	.obliqueBg {
+		margin-top: -70px;
+	}
+}
+//----- End engineer reviews -----
+
+//----- OUR ADVANTAGES -----
+.advantagesContainer {
+	.advantagesText {
+		.titleAdvantages {
+			font-size: 2em;
+		}
+		.descriptionAdvantages {
+			font-size: 1.1em;
+		}
+	}
+	.advantagesItems {
+		padding: 2% 0 11.5%;
+		.row {
+			.advantageItem {
+				padding: 0 50px;
+				.advantageItemTitle {
+					font-size: 1.3em;
+					margin-bottom: 5px;
+				}
+				.advantageItemDescription {
+					font-size: 1.1em;
+				}
+			}
+		}
+		.moreAdvantagesBtn {
+			.moreBtn {
+				font-size: 1em;
+				width: 40%;
+			}
+		}
+	}
+}
+//----- End our advantages -----
+
+//----- DESCRIPTIONS -----
+.descriptions {
+	.descriptionPosition {
+		padding-top: 3%;
+		width: 90%;
+		.iconDescription {
+			width: 11%;	
+		}
+		.descriptionTitle {
+			font-size: 2em;
+			margin-bottom: 15px;
+		}
+		.row {
+            a {
+                .descriptionItem {
+                    height: 360px;
+                    width: 100%;
+                    padding-right: 0px;
+                    padding-left: 0px;
+                    .descriptionItemTitle {
+                        font-size: 1.8em;
+                    }
+                    .descriptionItemDescription {
+                        font-size: 1.3em;
+                    }
+                    .descriptionItemDate {
+                        font-size: 1.1em;
+                        left: 40%;
+                    }
+                }
+            }
+		}
+		.linkToAllStock {
+			.stockBtn {
+				font-size: 1em;
+				width: 40%;
+			}
+		}
+	}
+}
+//----- End descriptions -----
+
+//----- IMAGE GALLERY -----
+.imageGallery {
+	.galleryTitle {
+		font-size: 2em;
+	}
+	.gallerySubtitle {
+		font-size: 1.1em;
+	}
+	.row {
+		padding-top: 10px;
+		.slide {
+			.my-gallery {
+				figure {
+					a{
+						img {
+							height: 270px;
+						}
+					}
+					.nameProject {
+						font-size: 1.8em;
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+//----- End image gallery -----
+
+//----- CUSTOMER REVIEWS -----
+.customerReviews {
+	.customerReviewsPosition {
+		padding-top: 1%;
+		padding-bottom: 0;
+		.customerReviewsTitle {
+			font-size: 2em;
+		}
+		.cd-container {
+			p {
+				font-size: 1em;
+			}
+			.cd-container {
+				li {
+					font-size: 1em;
+				}
+				li:first-type  {
+					font-size: 13px;
+				}
+				li:last-child {
+					font-size: 12px;
+				}
+			}
+		}
+		.cd-container{
+			.moreBtn {
+				font-size: 1.3em;
+                margin-bottom: 30px;
+			}
+		}
+	}
+}
+//----- End customer reviews -----
+
+//----- OUR PARTNERS -----
+.ourPartners {
+	padding: 2% 0 10% 0;
+	.ourPartnersPosition {
+		width: 65%;
+		.ourPartnersTitle {
+			font-size: 2em;
+			padding-bottom: 2%;
+		}
+		.row {
+			.ourPartnersItem {
+				.ourPartnersLink {
+					.partnerIcon {
+						height: 4em;
+					}
+				}
+			}
+		}
+	}
+}
+//----- End our partners -----
+
+//----- FOOTER -----
+.footer {
+	text-align: center;
+	.footerPosition {
+		.row {
+            width: 100%;
+			.footerBlock {
+				height: 250px;
+				.footerSubtitle {
+					font-size: 20px;
+				}
+			}
+            .footerBuildType {
+                border: 0;
+                width: 49%;
+            }
+            .footerSocial {
+                width: 49%;
+            }
+            .footerSiteNavigation {
+                .logotype {
+                    display: block;
+                    a {
+                        
+                        img {
+                            height: 45px;
+                        }
+                    }
+                }
+            }
+			.footerContacts {
+				background: url(../img/homePage/footer/map-bg.png) 10px 55px no-repeat;
+			}
+		}
+	}
+}
+	
+.footerNavLink:hover, .footerBuildTypeLink:hover, .footerPhoneLink:hover, .footerLocationLink:hover, .footerEmailLink:hover, .footerSkypeLink:hover, .footerFacebookLink:hover, .footerVkLink:hover, .footerInstaLink:hover {
+	margin-left: 0;
+}
+	
+.footerContacts {
+	.footerPhoneLinkIcon {
+		display: block;
+	}
+	.footerLocationLinkIcon {
+		display: block;
+	}
+}
+//----- End footer -----
+
+//----- SCROLL TO TOP -----
+#scroller {
+    width: 8%;
+    height: 12%;
+}
+//----- End scroll to top -----
+}
+
+@media only screen and (max-width:500px) {
+//----- PRELOADER -----
+#page-preloader {
+	img {
+		margin-top: 0;
+	}
+	h2 {
+		margin-top: 20%;
+	}
+}
+//----- End preloader -----
+	
+//----- HEADER -----
+.topContacts {
+	.emailContacts {
+		.skype {
+			display: none;
+		}
+	}
+    .socialContacts {
+        display: none;
+    }
+}
+.navigationContainer {
+	height: 50px;
+	.push {
+		padding: 5px 0px 5px;
+	}
+}
+//----- End header -----
+    
+//----- TEMPORARILY CAP -----
+.temporarilyCap {
+    .title {
+        font-size: 1.2em;
+    }
+}
+//----- End temporarily cap -----
+	
+//----- TOP SLIDER -----
+.topSlider {
+	.tabletSlide {
+		.titleTabletSlideTop {
+			font-size: 1.5em;
+    		top: 25%;
+		}
+		.titleTabletSlideBottom {
+			font-size: 1.5em;
+		}
+	}
+}
+//----- End top slider -----
+
+//----- QUICK BUTTON -----
+.quickBtnContainer {
+	.positionQuickBtn {
+		width: 98%;
+		text-align: center;
+		h4 {
+			text-align: center;
+    		display: block;
+		}
+		div {
+			display: block;
+			.quickBtn {
+    			float: none;
+				margin: 0 auto;
+				font-size: 1em;
+				width: 70%;
+				margin-top: 0;
+			}
+		}
+	}
+}
+//----- End quick button -----
+
+//----- EVERYONETRUST -----
+.everyoneTrust {
+	.everyoneTrustTitle {
+		font-size: 1.5em;
+	}
+	.everyoneTrustItems {
+		.row {
+			width: 95%;
+            .everyoneTrustItem {
+                .everyoneTrustLink {
+                    .everyoneTrustIconContainer {
+                        img {
+                            width: 90%;
+                            height: 260px;
+                        }
+                    }
+                }
+            }
+		}
+	}
+}
+//----- End everyonetrust -----
+
+
+//----- ENGINEER REVIEW -----
+.engineerReview {
+	.engineerReviewTextContainer {
+		.engineerReviewText {
+			padding: 50px 10px 0px;
+			.engineerReviewTitle {
+				padding-top: 10%;
+				font-size: 1.5em;
+			}
+			.linkToNews {
+				.btnToNews {
+					width: 55%;
+				}
+			}
+		}
+	}
+}
+//----- End engineer reviews -----
+
+//----- OUR ADVANTAGES -----
+.advantagesContainer {
+	.advantagesText {
+		.titleAdvantages {
+			font-size: 1.5em;
+		}
+	}
+	.advantagesItems {
+		.row {
+			.advantageItem {
+				padding: 0 0;
+				.advantageItemTitle {
+					font-size: 1.3em;
+					margin-bottom: 0px;
+				}
+			}
+			.advantageItem:first-child {
+				padding: 0 0;
+			}
+			.advantageItem:last-child {
+				padding: 0 0;
+			}
+		}
+		.moreAdvantagesBtn {
+			.moreBtn {
+				font-size: 1.1em;
+				width: 70%;
+			}
+		}
+	}
+}
+//----- End our advantages -----
+
+//----- DESCRIPTIONS -----
+.descriptions {
+	.descriptionPosition {
+		.iconDescription {
+			width: 19%;	
+		}
+		.descriptionTitle {
+			font-size: 1.5em;
+		}
+		.row {
+			.descriptionItem {
+				height: 220px;
+				width: 100%;
+				.descriptionItemDate {
+					margin-top: 25px;
+					position: initial;
+					text-align: center;
+				}
+			}
+		}
+		.linkToAllStock {
+			.stockBtn {
+				width: 70%;
+				margin-top: 15px;
+			}
+		}
+	}
+}
+//----- End descriptions -----
+
+//----- IMAGE GALLERY -----
+.imageGallery {
+	.galleryTitle {
+		font-size: 1.5em;
+	}
+	.gallerySubtitle {
+		font-size: 1.1em;
+	}
+	.row {
+		padding-top: 0px;
+		width: 100%;
+		.slide {
+			.my-gallery {
+				padding: 0.3em 0 1em;
+				figure {
+					.nameProject {
+						font-size: 1.5em;
+					}
+				}
+			}
+		}
+	}
+	.row:first-child {
+		padding-top: 0;
+	}
+}
+//----- End image gallery -----
+
+//----- CUSTOMER REVIEWS -----
+.customerReviews {
+	.customerReviewsPosition {
+		width: 100%;
+		.customerReviewsTitle {
+			font-size: 1.5em;
+		}
+		.cd-container {
+			margin: 0 auto;
+			p {
+				font-size: 1em;
+			}
+			.cd-author {
+				display: none;
+			}
+		}
+		.cd-container{
+			.moreBtn {
+				width: 70%;
+				font-size: 1em;
+				margin-left: 15%;
+			}
+		}
+	}
+}
+//----- End customer reviews -----
+
+//----- OUR PARTNERS -----
+.ourPartners {
+	overflow: hidden;
+	.ourPartnersPosition {
+		width: 100%;
+		.ourPartnersTitle {
+			font-size: 1.5em;
+		}
+		.row {
+			.ourPartnersItem {
+				padding: 0.2% .2% .2%;
+				.ourPartnersLink {
+					.partnerIcon {
+						img {
+							margin-left: 38%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End our partners -----
+
+
+//----- FOOTER -----
+.footer {
+	overflow: hidden;
+	.footerPosition {
+		.row {
+			.footerBlock {
+				height: 250px;
+			}
+            .footerSiteNavigation {
+                .logotype {
+                    display: block;
+                    a {
+                        img {
+                            height: 3.3em;
+                            height: 3.3em;
+                        }
+                    }
+                }
+            }
+			.footerContacts {
+				background: url(../img/homePage/footer/map-bg.png) -15px 55px no-repeat;
+				.footerLocation {
+					.footerLocationLink {
+						.footerLocationLinkText {
+							br {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			.footerBuildType {
+				border: 0;
+			}
+		}
+	}
+	.copyright {
+		margin-top: 30px;
+	}
+}
+//----- End footer -----
+
+
+//----- SCROLL TO TOP -----
+#scroller {
+    width: 12%;
+    height: 12%;
+}
+//----- End scroll to top -----
+}
+
+@media only screen and (max-width:350px) {
+//----- PRELOADER -----
+#page-preloader {
+	img {
+		width: 90%;
+	}
+	h2 {
+		margin-top: 40%;
+		margin-left: 20px;
+	}
+	#spinner {
+		left: 40%;
+	}
+}
+//----- End preloader -----
+	
+.header {
+    .emailContacts {
+        display: none;
+    }
+    .headerMobile {
+        width: 100%;
+        display: block;
+        margin: 0;
+        h2 {
+            font-size: 18px;
+            margin: 0;
+            text-align: center;
+            padding-top: 6px;
+        }
+    }
+}
+    
+.quickBtnContainer {
+    .positionQuickBtn {
+        div {
+            text-align: center;
+        }
+    }
+}
+    
+.engineerReview {
+    min-height: 280px;
+    .engineerReviewTextContainer {
+        .engineerReviewText {
+            .linkToNew {
+                .engineerReviewTitle {
+                    font-size: 2em;
+                    padding-top: 4%;
+                    margin-bottom: 0%;
+                }
+                .engineerReviewSubtitle {
+                    font-size: 1.1em;
+                    line-height: 15px;
+                    margin: 0;
+                }
+                .engineerReviewDescription {
+                    line-height: 20px;
+                    margin: 0;
+                }
+            }
+            .linkToNewsBtn {
+                .btnToNews {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+    
+.customerReviews {
+    .customerReviewsPosition {
+        .cd-testimonials-wrapper {
+            height: 240px;
+        }
+    }
+}
+    
+.ourPartners {
+    .ourPartnersPosition {
+        .ourPartnersTitle {
+            padding-top: 90px;
+        }
+    }
+}
+    
+//----- TEMPORARILY CAP -----
+.temporarilyCap {
+    .title {
+        font-size: 1.1em;
+    }
+}
+//----- End temporarily cap -----]
+    
+//----- EVERYONETRUST -----
+.everyoneTrust {
+	.everyoneTrustItems {
+		.row {
+            .everyoneTrustItem {
+                .everyoneTrustLink {
+                    .everyoneTrustIconContainer {
+                        img {
+                            width: 100%;
+                            height: 235px;
+                        }
+                    }
+                }
+            }
+		}
+	}
+}
+//----- End everyonetrust -----
+
+//----- DESCRIPTIONS -----
+.descriptions {
+	.descriptionPosition {
+		padding-top: 10%;
+		.iconDescription {
+			margin-bottom: 3%;
+		}
+	}
+}
+//----- End descriptions -----
+	
+//----- FOOTER -----
+.footer {
+	.footerPosition {
+		.row {
+			.footerBlock {
+				height: 290px;
+			}
+		}
+	}
+}
+//----- End footer -----
+}

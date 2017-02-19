@@ -1,0 +1,23 @@
+﻿@model Nop.Plugin.Widgets.Gallery.Models.GalleryNavModel
+@using Nop.Web.Framework.UI
+
+<div class="side-2">
+    <div class="block">
+        <div class="title leftmenu-title">@T("plugin.widgets.galleries")</div>
+        <div class="listbox">
+            <ul class="list">
+                @foreach (var item in Model.MenuItems)
+                {
+                    if (item.Key == Model.CurrentID)
+                    {
+                    <li class="active"><a href="@Url.Action("Gallery", "GalleryPublicInfo", new { id = item.Key })">@item.Value</a></li>
+                    }
+                    else
+                    {
+                    <li class="inactive"><a href="@Url.Action("Gallery", "GalleryPublicInfo", new { id = item.Key })">@item.Value</a></li>
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</div>

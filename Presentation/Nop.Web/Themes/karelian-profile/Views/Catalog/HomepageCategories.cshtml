@@ -1,0 +1,36 @@
+﻿@model IList<CategoryModel>
+
+@using Nop.Web.Models.Catalog;
+@if (Model.Count > 0)
+{
+    <!-- --- EVERYONETRUST --- -->
+    <section class="everyoneTrust">
+        <h3 class="everyoneTrustTitle">Карельский профиль: Каркасные дома</h3>
+        <h5 class="everyoneTrustSubtitle">Проекты каркасных домов</h5>
+        <div class="everyoneTrustItems">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    <div class="row">
+                        @foreach (var item in Model.Skip(i).Take(3))
+                        {
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 everyoneTrustItem">
+                                <a href="@Url.RouteUrl("Category", new { SeName = item.SeName })" class="everyoneTrustLink">
+                                    <div class="everyoneTrustIconContainer">
+                                        <img src="@item.PictureModel.ImageUrl" alt="@item.PictureModel.AlternateText" class="projectImg">
+                                    </div>
+                                    <div class="everyoneTrustText">
+                                        <h5 class="everyoneTrustTitle">@item.Name</h5>
+                                        @*<div class="everyoneTrustDrscription">@Html.Raw(item.Description)</div>*@
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </section>
+    <!-- --- End everyonetrust --- -->
+}

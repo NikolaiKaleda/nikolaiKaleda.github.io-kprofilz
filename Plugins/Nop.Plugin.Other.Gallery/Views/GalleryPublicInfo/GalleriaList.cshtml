@@ -1,0 +1,48 @@
+﻿@model Nop.Plugin.Widgets.Gallery.Models.PublicInfoGalleryModel
+@using Nop.Web.Framework.UI
+@{
+    Layout = "~/Views/Shared/_Root.cshtml";
+
+    Html.AddScriptParts("~/Plugins/Widgets.Gallery/Scripts/galleria-1.3.5.min.js");
+    Html.AddCssFileParts("~/Plugins/Widgets.Gallery/Content/Gallery.css");
+    Html.AddScriptParts("~/Plugins/Widgets.Gallery/Content/Galleria/galleria.classic.min.js");
+    Html.AddCssFileParts("~/Plugins/Widgets.Gallery/Content/Galleria/galleria.classic.css");
+
+    //title
+    Html.AddTitleParts(@T("Plugin.Widgets.Gallery").Text);
+}
+
+
+<div class="mainContent">
+
+        @if (Model.ShowGallery)
+        {
+            @Html.Action("CenterMenu", "GalleryPublicInfo")
+        }
+
+        @if (Model.ShowGallery)
+        {
+            @Html.Action("GalleryBreadcrumb", "GalleryPublicInfo")
+        }
+        <div id="galleria">
+            @foreach (var item in Model.ImageModel)
+            {
+                <a href="@item.ImageGalleryPictureModel.FullSizeImageUrl">
+                    <img 
+                    src="@item.ImageGalleryPictureModel.ImageUrl",
+                    data-big="@item.ImageGalleryPictureModel.FullSizeImageUrl"
+                    data-title="@item.ImageGalleryPictureModel.Title"
+                    data-description="@item.ImageGalleryPictureModel.AlternateText"
+                    >
+                </a>
+            }
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        Galleria.run('#galleria', {
+            height: 520 //--I made heights match
+        });
+    </script>

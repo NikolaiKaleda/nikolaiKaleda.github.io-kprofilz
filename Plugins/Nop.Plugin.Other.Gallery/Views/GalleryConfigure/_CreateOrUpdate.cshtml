@@ -1,0 +1,251 @@
+﻿@using GalleryModel = Nop.Plugin.Widgets.Gallery.Models.ConfigurationGalleryModel;
+@using GalleryLocalizedModel = Nop.Plugin.Widgets.Gallery.Models.GalleryLocalizedModel;
+@using Nop.Web.Framework;
+@using Nop.Web.Framework.Events
+
+@model Nop.Plugin.Widgets.Gallery.Models.ConfigurationGalleryModel
+
+@Html.ValidationSummary(false)
+@Html.AntiForgeryToken()
+@Html.HiddenFor(model => model.Id)
+
+
+<script>
+    $(document).ready(function () {
+        bindBootstrapTabSelectEvent('manufacturer-edit');
+    });
+</script>
+
+
+<div class="content">
+    <div class="form-horizontal">
+        <div id="gallery-edit" class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+                @Html.RenderBootstrapTabHeader("tab-info", @T("Plugin.Widgets.Gallery.Info"), true)
+            </ul>
+            <div class="tab-content">
+                @Html.RenderBootstrapTabContent("tab-info", @TabInfo(), true)
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    //custom tabs
+    var eventMessage = new AdminTabStripCreated(this.Html, "gallery-edit");
+    Nop.Core.Infrastructure.EngineContext.Current.Resolve<Nop.Services.Events.IEventPublisher>().Publish(eventMessage);
+    foreach (var eventBlock in eventMessage.BlocksToRender)
+    {
+        @eventBlock
+    }
+}
+
+@*save selected tab name*@
+<input type="hidden" id="selected-tab-name" name="selected-tab-name" value="@(Html.GetSelectedTabName())">
+
+@helper TabInfo()
+{ 
+    @(Html.LocalizedEditor<GalleryModel, GalleryLocalizedModel>("gallery-info-localized",
+                @<table class="adminContent">
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.Locales[item].Name):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => Model.Locales[item].Name)
+                            @Html.ValidationMessageFor(model => model.Locales[item].Name)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.Locales[item].Description):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.Locales[item].Description, "RichEditor")
+                            @Html.ValidationMessageFor(model => model.Locales[item].Description)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            @Html.HiddenFor(model => model.Locales[item].LanguageId)
+                        </td>
+                    </tr>
+                </table>
+                ,
+                @<table class="adminContent">
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.Name):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.Name)
+                            @Html.ValidationMessageFor(model => model.Name)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.Description):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(x => x.Description, "RichEditor")
+                            @Html.ValidationMessageFor(model => model.Description)
+                        </td>
+                    </tr>
+                </table>
+            ))
+    <table class="adminContent">
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.PictureId)
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.PictureId)
+                @Html.ValidationMessageFor(model => model.PictureId)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.DisplayOrder):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.DisplayOrder)
+                @Html.ValidationMessageFor(model => model.DisplayOrder)
+            </td>
+        </tr>
+
+        @if (Model.SliderGallery)
+        {
+            <tr>
+                <td class="adminTitle">
+                    @Html.NopLabelFor(model => model.GalleryType):
+                </td>
+                <td class="adminData">
+                    @if (Model.GalleryType != "SimpleGallery")
+                    {
+                        @Html.RadioButtonFor(model => model.GalleryType, "SimpleGallery", 1)
+                        @Html.LabelFor(model => model.SimpleGallery)
+                    }
+                    else
+                    {
+                        @Html.RadioButtonFor(model => model.GalleryType, "SimpleGallery", new { Checked = "checked" })
+                        @Html.LabelFor(model => model.SimpleGallery)
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td class="adminTitle"></td>
+                <td class="adminData">
+                    @if (Model.GalleryType != "FlickrGallery")
+                    {
+                        @Html.RadioButtonFor(model => model.GalleryType, "FlickrGallery", 2)
+                        @Html.LabelFor(model => model.FlickrGallery)
+                    }
+                    else
+                    {
+                        @Html.RadioButtonFor(model => model.GalleryType, "FlickrGallery", new { Checked = "checked" })
+                        @Html.LabelFor(model => model.FlickrGallery)
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td class="adminTitle"></td>
+                <td class="adminData">
+                    @if (Model.GalleryType != "PicasaGallery")
+                    {
+                        @Html.RadioButtonFor(model => model.GalleryType, "PicasaGallery", 3)
+                        @Html.LabelFor(model => model.PicasaGallery)
+                    }
+                    else
+                    {
+                        @Html.RadioButtonFor(model => model.GalleryType, "PicasaGallery", new { Checked = "checked" })
+                        @Html.LabelFor(model => model.PicasaGallery)
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td class="adminTitle"></td>
+                <td class="adminData">
+                    @if (Model.GalleryType != "VideoGallery")
+                    {
+                        @Html.RadioButtonFor(model => model.GalleryType, "VideoGallery", 4)
+                        @Html.LabelFor(model => model.VideoGallery)
+                    }
+                    else
+                    {
+                        @Html.RadioButtonFor(model => model.GalleryType, "VideoGallery", new { Checked = "checked" })
+                        @Html.LabelFor(model => model.VideoGallery)
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td class="adminTitle">
+                    @Html.NopLabelFor(model => model.FlickrKeyword):
+                </td>
+                <td class="adminData">
+                    @Html.EditorFor(model => model.FlickrKeyword)
+                </td>
+            </tr>
+            <tr>
+                <td class="adminTitle">
+                    @Html.NopLabelFor(model => model.PicasaKeyword):
+                </td>
+                <td class="adminData">
+                    @Html.EditorFor(model => model.PicasaKeyword)
+                </td>
+            </tr>
+            <tr style="border-top: 3px solid #a6d9f4;border-right: 3px solid #a6d9f4;border-left: 3px solid #a6d9f4;">
+                <td class="adminTitle">
+                    @Html.NopLabelFor(model => model.VideoLinkPart):
+                </td>
+                <td class="adminData">
+                    @Html.EditorFor(model => model.VideoLinkPart)
+                    @Html.HiddenFor(model => model.VideoLink)
+                </td>
+            </tr>
+            <tr style="border-right: 3px solid #a6d9f4;border-left: 3px solid #a6d9f4;">
+                <td class="adminData"></td>
+
+                <td class="adminData">
+                    <button type="button" class="addBtn">@T("Plugin.Widgets.Gallery.ConfigurationGalleryModel.Add")</button>  
+                    <button type="button" class="removeBtn">@T("Plugin.Widgets.Gallery.ConfigurationGalleryModel.Remove")</button>
+                </td>
+            </tr>
+            <tr style="border-bottom: 3px solid #a6d9f4;border-right: 3px solid #a6d9f4;border-left: 3px solid #a6d9f4;">
+                <td class="adminData"></td>
+                <td class="adminData">
+                    @Html.ListBoxFor(x => x.SelectedOptions, Model.VideoLinks, new { Multiple = "multiple", style = "width:100%;", @class = "videolinks-list" })
+                    @Html.ValidationMessageFor(model => model.VideoLink)
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+
+<script>
+    $(document).ready(function () {
+        $(".addBtn").click(function () {
+            var text = $('#VideoLinkPart').val();
+            var videoLink = $('#VideoLink').val();
+            videoLink = videoLink + "%,%" + text;
+            $('#VideoLink').val(videoLink);
+            var option = '<option value="' + text + '">' + text + '</option>';
+            $('.videolinks-list').append(option);
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $(".removeBtn").click(function () {
+            var text = $('#VideoLinkPart').val();
+            var videoLink = $('#VideoLink').val();
+            var replaced = videoLink.replace("%,%" + text, "");
+            $('#VideoLink').val(replaced);
+
+
+            $('.videolinks-list option:selected').remove();
+            $('.videolinks-list').change();
+        });
+    });
+</script>

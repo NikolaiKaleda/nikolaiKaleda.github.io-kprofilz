@@ -1,0 +1,97 @@
+﻿@model Nop.Web.Models.Common.SocialModel
+
+<section class="contactsIcons">
+    <div class="contactsDataItems">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 contactItem">
+                <a href="#" class="contactLink">
+                    <div class="contactIconContainer">
+                        <i class="fa fa-map-marker fa-3x contactIcon" aria-hidden="true"></i>
+                    </div>
+                    <div class="contactText">
+                        <h5 class="contactDataTitle">Адрес</h5>
+                        <p class="contactDataDescription">@Model.Address</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 contactItem">
+                <a href="#" class="contactLink">
+                    <div class="contactIconContainer">
+                        <i class="fa fa-envelope fa-3x contactIcon" aria-hidden="true"></i>
+                    </div>
+                    <div class="contactText">
+                        <h5 class="contactDataTitle">Электронная почта</h5>
+                        <p class="contactDataDescription">@Model.Email</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 contactItem">
+                <a href="#" class="contactLink">
+                    <div class="contactIconContainer">
+                        <i class="fa fa-phone fa-3x contactIcon" aria-hidden="true"></i>
+                    </div>
+                    <div class="contactText">
+                        <h5 class="contactDataTitle">Телефон</h5>
+                        <p class="contactDataDescription">@Model.Phone1</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 socialItem">
+                <a href="#" class="socialLink">
+                    <div class="socialIconContainer">
+                        <i class="fa fa-skype fa-3x contactIcon" aria-hidden="true"></i>
+                    </div>
+                    <div class="socialText">
+                        <p class="socialTitle">@Model.Skype</p>
+                    </div>
+                </a>
+            </div>
+            @if (!string.IsNullOrEmpty(Model.FacebookLink))
+            {
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 socialItem">
+                    <a href="@Model.FacebookLink" class="socialLink">
+                        <div class="socialIconContainer">
+                            <i class="fa fa-facebook-square fa-3x contactIcon" aria-hidden="true"></i>
+                        </div>
+                        @*<div class="socialText">
+                                <p class="socialTitle">@Model.FacebookLink</p>
+                            </div>*@
+                    </a>
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(Model.VkLink))
+            {
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 socialItem">
+                    <a href="@Model.VkLink" class="socialLink">
+                        <div class="socialIconContainer">
+                            <i class="fa fa-twitter-square fa-3x contactIcon" aria-hidden="true"></i>
+                        </div>
+                        @*<div class="socialText">
+                                <p class="socialTitle">id=100011433786925</p>
+                            </div>*@
+                    </a>
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(Model.InstagramLink))
+            {
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 socialItem">
+                    <a href="@Model.InstagramLink" class="socialLink">
+                        <div class="socialIconContainer">
+                            <i class="fa fa-youtube-play fa-3x contactIcon" aria-hidden="true"></i>
+                        </div>
+                        @*<div class="socialText">
+                                <p class="socialTitle">id=100011433786925</p>
+                            </div>*@
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="contactsMap">
+    <div class="overlay" onclick="style.pointerEvents='none'"></div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.8162768797906!2d27.64942831536367!3d53.86391484351848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcdf969e6481b%3A0xa88b01291e4c57c1!2z0KbQtdC90YLRgNCw0LvRjNC90LDRjyDRg9C7LiAxLCDQnNC40L3RgdC6LCDQkdC10LvQsNGA0YPRgdGM!5e0!3m2!1sru!2sru!4v1472565250970" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+</section>

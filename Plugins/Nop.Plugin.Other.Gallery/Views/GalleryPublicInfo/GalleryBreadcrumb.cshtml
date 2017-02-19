@@ -1,0 +1,21 @@
+﻿@model Nop.Plugin.Widgets.Gallery.Models.GalleryNavModel
+@using Nop.Core.Domain.Common
+@using Nop.Core.Infrastructure
+@using Nop.Web.Framework.UI
+@{
+    var breadcrumbDelimiter = EngineContext.Current.Resolve<CommonSettings>().BreadcrumbDelimiter;
+}
+<div class="breadcrumb">
+    <ul>
+        <li>
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="@Url.RouteUrl("GalleryPlugin")" itemprop="url"><span itemprop="title">@T("Plugin.Widgets.Gallery")</span></a>
+            </span>
+            <span class="delimiter">@breadcrumbDelimiter</span>
+        </li>
+        <li>
+            <strong class="current-item">@Model.CurrentName</strong>
+        </li>
+
+    </ul>
+</div>

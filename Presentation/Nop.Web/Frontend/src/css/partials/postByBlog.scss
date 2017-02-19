@@ -1,0 +1,217 @@
+.postBlogPageContainer {
+    border-top: 1px solid #B3B3B3;
+    .titleBlogContainer {
+        margin-top: 45px;
+        padding: 30px 60px;
+        background-color: $lightBgColor;
+        .postBlogTitle {
+            @include inlineBlock();
+            text-transform: uppercase;
+            .title {
+                @include input-font($OswardFont, 2.5em, $textColor5, 1px, normal);
+                margin: 0;
+            }
+        }
+        .breadCrumbs {
+            @include inlineBlock();
+            float: right;
+            margin-top: 15px;
+            ul {
+                padding: 0;
+                li {
+                    @include inlineBlock();
+                    a {
+                        @include input-font($RobotoRegularFont, 0.9em, $textColor2, 0, normal);
+                        margin-right: 5px;
+                        margin-left: 5px;
+                        text-decoration: none;
+                    }
+                    a:hover {
+                        color: $mainColor;
+                    }
+                    img {
+                        height: 15px;
+                    }
+                    .activeProduct {
+                        color: $newsTextColor;
+                    }
+                }
+            }
+        }
+    }
+    .postBlogPage {
+        width: 85%;
+        margin: 60px auto;
+        .titleImgContainer {
+            text-align: center;
+            margin-top: 30px;
+            .titleImg {
+                height: 500px;
+            }
+        }
+        .postBlogText {
+            margin-top: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid $mainColor;
+            .row {
+                .mainText {
+                    padding-right: 45px;
+                    .mainSubtitle {
+                        @include input-font($RalewayFont, 1.4em, $textColor5, 0, bold);
+                        margin-bottom: 20px;
+                        border-bottom: 1px solid $mainColor;
+                    }
+                    .text {
+                        @include input-font($RalewayFont, 1em, $textColor4, 0, normal);
+                    }
+                    .textSubtitle {
+                        @include input-font($RalewayFont, 1.2em, $textColor4, 0, bold);
+                    }
+                }
+                .infoAboutPost {
+                    padding: 0;
+                    .infoTitle {
+                        @include input-font($RobotoRegularFont, 1.1em, $textColor4, 0, normal);
+                    }
+                    .details {
+                        margin-bottom: 30px;
+                        .nameAuthor, .datePost, .tag, .comments {
+                            @include input-font($RalewayFont, 1em, $lightTextColor, 0, normal);
+                            -webkit-transition: all 0.4s ease-out 0s;
+                            -moz-transition: all 0.4s ease-out 0s;
+                            -o-transition: all 0.4s ease-out 0s;
+                            transition: all 0.4s ease-out 0s;
+                            i, p {
+                                @include inlineBlock();
+                            }
+                            i {
+                                margin-right: 10px;
+                            }
+                        }
+                        .nameAuthor:hover, .datePost:hover, .tag:hover, .comments:hover {
+                            color: $mainColor;
+                        }
+                    }
+                    .share {
+                        .shareTitle {
+                            @include input-font($RobotoRegularFont, 1.1em, $textColor4, 0, normal);
+                        }
+                        .socialList {
+                            padding: 0;
+                            li {
+                                @include inlineBlock();
+                                text-align: center;
+                                height: 30px;
+                                line-height: 30px;
+                                width: 30px;
+                                border: 1px solid rgba(1, 1, 1, 0);
+                                a {
+                                    color: white;
+                                    text-decoration: none;
+                                }
+                            }
+                            .facebook {
+                                background-color: #46639f;
+                            }
+                            .twitter {
+                                background-color: #0084b4;
+                            }
+                            .dribble {
+                                background-color: #c73b6f;
+                            }
+                            .tumblr {
+                                background-color: #36465d;
+                            }
+                            li:hover {
+                                border: 1px solid $textColor5;
+                                background-color: white;
+                                a {
+                                    color: $textColor5;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .postComments {
+            width: 80%;
+            margin-top: 60px;
+            padding-bottom: 45px;
+            border-bottom: 1px solid $mainColor;
+            margin-bottom: 60px;
+            .commentsTitle {
+                @include input-font($OswardFont, 2em, $textColor5, 0, normal);
+            }
+            .commentContainer {
+                background-color: $lightBgColor;
+                margin-top: 45px;
+                .nameAuthor {
+                    @include input-font($RobotoRegularFont, 1.3em, $textColor4, 0, normal);
+                }
+                .commentDate {
+                    @include input-font($RalewayFont, 1em, $newsTextColor, 0, normal);
+                    i, p {
+                        @include inlineBlock();
+                    }
+                }
+                .commentTextContainer {
+                    .commentText {
+                        @include input-font($RalewayFont, 0.9em, $lightTextColor, 0, normal);
+                    }
+                }
+            }
+        }
+        .addComment {
+            .leaveCommentTitle {
+                @include input-font($OswardFont, 2em, $textColor5, 0, normal);
+                margin-bottom: 45px;
+            }
+            form {
+                .form-group {
+                    margin-bottom: 30px;
+                    label {
+                        @include input-font($RobotoRegularFont, 1.2em, $textColor4, 0, normal);
+                        margin-bottom: 15px;
+                    }
+                    .name, .commentText {
+                        border-radius: 0;
+                        background-color: $lightBgColor;
+                    }
+                }
+                .submitBtn {
+                    @include input-font($RobotoRegularFont, 1.2em, #fff, 0, normal);
+                    background-color: rgb(28,28,28);
+                    transition: all .4s;
+                    width: 20%;
+                    padding: 10px 0;
+                    border-radius: 0;
+                    margin-top: 15px;
+                }
+                .submitBtn:hover {
+					background-color: #fff;
+					color: rgb(28,28,28);
+				}
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

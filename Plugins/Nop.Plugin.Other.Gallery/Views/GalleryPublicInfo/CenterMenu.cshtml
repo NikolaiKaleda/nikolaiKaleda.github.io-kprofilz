@@ -1,0 +1,24 @@
+﻿@model Nop.Plugin.Widgets.Gallery.Models.GalleryNavModel
+@using Nop.Web.Framework.UI
+
+<div class="center-side">
+    <div class="block-centermenu">
+        <div class="listbox-center">
+            <input type="checkbox" id="listbox-button">
+            <label for="listbox-button" onclick>@T("plugin.widgets.galleries")</label>
+            <ul class="list-center">
+                @foreach (var item in Model.MenuItems)
+                {
+                    if (item.Key == Model.CurrentID)
+                    {
+                    <li class="active"><a href="@Url.Action("Gallery", "GalleryPublicInfo", new { id = item.Key })">@item.Value</a></li>
+                    }
+                    else
+                    {
+                    <li class="inactive"><a href="@Url.Action("Gallery", "GalleryPublicInfo", new { id = item.Key })">@item.Value</a></li>
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</div>

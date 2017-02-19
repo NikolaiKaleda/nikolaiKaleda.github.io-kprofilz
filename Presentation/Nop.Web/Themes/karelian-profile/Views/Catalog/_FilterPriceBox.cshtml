@@ -1,0 +1,52 @@
+﻿@model CatalogPagingFilteringModel.PriceRangeFilterModel
+@using Nop.Web.Models.Catalog;
+@{
+    var selectedItem = Model.Items.FirstOrDefault(x => x.Selected);
+}
+@helper FormatPriceRangeText(CatalogPagingFilteringModel.PriceRangeFilterItem filterItem)
+{
+    string rangeText = "";
+    if (String.IsNullOrWhiteSpace(filterItem.From))
+    {
+        rangeText = string.Format(T("Filtering.PriceRangeFilter.Under").Text, string.Format("<span class=\"PriceRange\">{0}</span>", filterItem.To));
+    }
+    else if (String.IsNullOrWhiteSpace(filterItem.To))
+    {
+        rangeText = string.Format(T("Filtering.PriceRangeFilter.Over").Text, string.Format("<span class=\"PriceRange\">{0}</span>", filterItem.From));
+    }
+    else
+    {
+        rangeText = string.Format("<span class=\"PriceRange\">{0}</span> - <span class=\"PriceRange\">{1}</span>", filterItem.From, filterItem.To);
+    }
+    <text>@Html.Raw(rangeText)</text>
+}
+@if (Model.Enabled)
+{
+    <div class="buildPrice form-group">
+        <p>
+            <label for="amount">@T("Filtering.PriceRangeFilter")</label>
+            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+        <div id="slider-range"></div>
+        @if (selectedItem == null)
+        {
+            foreach (var item in Model.Items)
+            {
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" class="priceCheckbox" value="option1" data-price="@item.FilterParam" aria-label="...">@FormatPriceRangeText(item)
+                    </label>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="filtered-items">
+                <span class="item">@FormatPriceRangeText(selectedItem)</span>
+            </div>
+            <div class="remove-filter">
+                <a href="@Model.RemoveFilterUrl">@T("Filtering.PriceRangeFilter.Remove")</a>
+            </div>
+        }
+    </div>
+}

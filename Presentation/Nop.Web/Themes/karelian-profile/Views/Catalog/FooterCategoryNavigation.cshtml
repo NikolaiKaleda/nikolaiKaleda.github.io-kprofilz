@@ -1,0 +1,10 @@
+﻿@model CategoryNavigationModel
+@using Nop.Web.Models.Catalog;
+
+<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 footerBlock footerBuildType">
+    <h4 class="footerSubtitle">@T("Categories")</h4>
+    @foreach (var category in Model.Categories)
+    {
+        <a class="footerBuildTypeLink" href="@Url.RouteUrl("Category", new { SeName = category.SeName })">@category.Name</a>
+    }
+</div>

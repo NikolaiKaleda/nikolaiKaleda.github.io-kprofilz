@@ -1,0 +1,171 @@
+﻿@model ProductDetailsModel
+@using Nop.Core.Domain.Seo;
+@using Nop.Core.Infrastructure;
+@using Nop.Web.Models.Catalog;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(!String.IsNullOrEmpty(Model.MetaTitle) ? Model.MetaTitle : Model.Name);
+    //meta
+    Html.AddMetaDescriptionParts(Model.MetaDescription);
+    Html.AddMetaKeywordParts(Model.MetaKeywords);
+    //page class
+    Html.AppendPageCssClassParts("html-product-details-page");
+
+    var seoSettings = EngineContext.Current.Resolve<SeoSettings>();
+
+    //canonical URL
+    if (seoSettings.CanonicalUrlsEnabled)
+    {
+        var productUrl = Url.RouteUrl("Product", new { SeName = Model.SeName }, this.Request.Url.Scheme);
+        Html.AddCanonicalUrlParts(productUrl);
+    }
+
+    //open graph META tags
+    if (seoSettings.OpenGraphMetaTags)
+    {
+        Html.AddHeadCustomParts("<meta property=\"og:type\" content=\"product\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:title\" content=\"" + Html.Encode(Model.Name) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:description\" content=\"" + Html.Encode(Nop.Core.Html.HtmlHelper.StripTags(Model.MetaDescription)) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:site_name\" content=\"" + Html.Encode(Model.CurrentStoreName) + "\" />");
+    }
+
+    //Twitter META tags
+    if (seoSettings.TwitterMetaTags)
+    {
+        Html.AddHeadCustomParts("<meta property=\"twitter:card\" content=\"summary\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:site\" content=\"" + Html.Encode(Model.CurrentStoreName) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:title\" content=\"" + Html.Encode(Model.Name) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:description\" content=\"" + Html.Encode(Nop.Core.Html.HtmlHelper.StripTags(Model.MetaDescription)) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:image\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+    }
+}
+
+<div class="productPage">
+    <div class="productsPagePosition container-fluid">
+        @Html.Partial("_ProductBreadcrumb", Model.Breadcrumb)
+        @Html.Widget("productdetails_after_breadcrumb", Model.Id)
+        <section class="topMainInfo">
+            @Html.Widget("productdetails_top", Model.Id)
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    @Html.Widget("productdetails_before_pictures", Model.Id)
+                    <!--product pictures-->
+                    @Html.Partial("_ProductDetailsPictures", Model)
+                    @Html.Widget("productdetails_after_pictures", Model.Id)
+                    <!--product reviews-->
+                    @Html.Partial("_ProductReviewOverview", Model.ProductReviewOverview)
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <section class="rightProductDescription">
+                        <h2 class="productTitle">@Model.Name</h2>
+                        @{
+                            var panelTypeAttribute = Model.ProductAttributes.FirstOrDefault(item => item.ProductAttributeId == 10);
+                        }
+                        @if (panelTypeAttribute != null)
+                        {
+                            <div class="packageSeries">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th class="topTitle">Серия</th>
+                                            @foreach (var attribut in panelTypeAttribute.Values)
+                                            {
+                                                <th class="topTitle">@attribut.Name</th>
+                                            }
+                                        </tr>
+                                        @foreach (var variant in Model.AssociatedProducts)
+                                        {
+                                            var dataClass = "product-" + variant.Id;
+                                            var dataUrl = "href-" + variant.Id;
+                                            <tr>
+                                                <th class="leftTitle"><a href="#@dataUrl" class="linkToDetail" data-item="@dataClass">@variant.Name</a></th>
+                                                @{
+                                                      var variantAttribut = variant.ProductAttributes.FirstOrDefault(item => item.ProductAttributeId == 10);
+                                                }
+                                                @if (variantAttribut != null)
+                                                {
+                                                    foreach (var attribut in variantAttribut.Values)
+                                                    {
+                                                        var price = variant.ProductPrice.PriceValue + attribut.PriceAdjustmentValue;
+                                                        <th class="topTitle">@price.ToString("####") @variant.ProductPrice.CurrencyCode</th>
+                                                    }
+                                                }
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        <div class="kit">
+                            @if (!String.IsNullOrEmpty(Model.ShortDescription))
+                            {
+                                @Html.Raw(Model.ShortDescription)
+                            }
+                        </div>
+                        <div class="characteristics">
+                            <table class="table">
+                                <tbody>
+                                    @foreach (var spec in Model.ProductSpecifications)
+                                    {
+                                        <tr>
+                                            <th>@spec.SpecificationAttributeName:</th>
+                                            <td>@spec.ValueRaw</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <section class="detailInfo">
+            <div class="navigation">
+                <ul class="nav nav-tabs">
+                    <li class="active description productDetailBtn" data-item="descriptionDetail"><a data-toggle="tab" href="#details" aria-expanded="true">Описание</a></li>
+                    @foreach (var variant in Model.AssociatedProducts)
+                    {
+                        var dataClass = "product-" + variant.Id;
+                        var dataUrl = "href-" + variant.Id;
+                        <li class="standart productDetailBtn" data-item="@dataClass">
+                            <a data-toggle="tab" href="#@dataUrl" aria-expanded="false">
+                                @variant.Name
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="detailContent">
+                <div class="descriptionDetail detailsItem">
+                    @if (!String.IsNullOrEmpty(Model.FullDescription))
+                    {
+                        @Html.Raw(Model.FullDescription)
+                    }
+                </div>
+                @foreach (var variant in Model.AssociatedProducts)
+                {
+                    var dataClass = "product-" + variant.Id;
+                    var dataUrl = "href-" + variant.Id;
+                    <div class="@dataClass detailsItem">
+                        <div id="@dataUrl"></div>
+                        <h3 class="detailsTitle">@variant.Name</h3>
+                        @if (variant.DefaultPictureModel != null && !string.IsNullOrEmpty(variant.DefaultPictureModel.FullSizeImageUrl))
+                        {
+                            <div class="topImg">
+                                <img src="@variant.DefaultPictureModel.FullSizeImageUrl" alt="@variant.DefaultPictureModel.AlternateText">
+                            </div>
+                        }
+                        <div class="description">
+                            @Html.Raw(variant.FullDescription)
+                        </div>
+                    </div>
+                }
+            </div>
+        </section>
+    </div>
+</div>

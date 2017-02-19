@@ -1,0 +1,174 @@
+@media only screen and (min-width:1680px) {
+body {
+    max-width: 1920px;
+    font-size: 22px;
+    margin: 0 auto;
+}
+}
+
+
+@media only screen and (max-width:1680px) {
+.blogPage {
+    .blogPost {
+        .postTitleContainer {
+            .postLink {
+                .postTitle {
+                    font-size: 1.8em;
+                }
+            }
+        }
+        .postDate {
+            .date {
+                font-size: 0.8em;
+            }
+        }
+        .postText {
+            .text {
+                font-size: 0.9em;
+                text-align: justify;
+            }
+        }
+        .tags {
+            a, p {
+                font-size: 0.8em;
+            }
+        }
+        .readMoreBtnContainer {
+            .btn {
+                font-size: 0.9em;
+                padding: 0.5em 2em;
+            }
+        }
+    }
+    .blogPagination {
+        margin-top: 3em;
+        margin-bottom: 1.5em;
+        .pagination {
+			li {
+				a {
+				    font-size: 0.9em;
+				}
+			}
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:1370px) {
+.blogPage {
+    .blogPost {
+        width: 90%;
+    }
+}
+}
+
+@media only screen and (max-width:1199px) {
+.blogPage {
+    .blogPost {
+        margin: 3em auto 0;
+    }
+}
+}
+
+
+@media only screen and (max-width:992px) {
+.blogPage {
+    .blogPost {
+        .bgImg {
+            a {
+                img {
+                    height: 15em;
+                }
+            }
+        }
+    }
+    .postTitle {
+        margin-bottom: 0.4em;
+    }
+    .postText {
+        margin-bottom: 1em;
+    }
+    .postDate {
+        margin-bottom: 1em;
+    }
+}
+}
+
+
+@media only screen and (max-width:768px) {
+.blogPage {
+    .blogPost {
+        .postTitleContainer {
+            .postLink {
+                .postTitle {
+                    font-size: 2em;
+                }
+            }
+        }
+        .postDate {
+            .date {
+                font-size: 1em;
+            }
+        }
+        .postText  {
+            .text {
+                font-size: 1em;
+            }
+        }
+        .tags {
+            a {
+                font-size: 1em;
+            }
+        }
+        .readMoreBtnContainer  {
+            .btn {
+                font-size: 1em;
+            }
+        }
+    }
+}
+}
+
+@media only screen and (max-width:500px) {
+.blogPage {
+    .blogPost {
+        text-align: center;
+        .bgImg {
+            a {
+                img {
+                    height: 11em;
+                }
+            }
+        }
+        .readMoreBtnContainer {
+            float: none;
+            margin: 0;
+        }
+    }
+}
+}
+
+@media only screen and (max-width:350px) {
+.blogPage {
+    .blogTitleContainer {
+        .title {
+            padding: 130px 0;
+        }
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

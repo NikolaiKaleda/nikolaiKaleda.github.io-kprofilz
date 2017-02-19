@@ -1,0 +1,235 @@
+.comparePage {
+    width: 100%;
+	border-top: 1px solid #B3B3B3;
+	padding-bottom: 6%;
+	overflow: hidden;
+    .compareTitleContainer {
+        position: relative;
+        min-height: 200px;
+        height: 300px;
+        .compareTitle {
+            @include input-font($OswardFont, 4.5em, $textColor5, 5px, bold);
+			text-transform: uppercase;
+			text-align: center;
+            position: absolute;
+			margin-top: 7%;
+			margin-bottom: 4%;
+            width: 100%;
+            background-color: rgba(255,255,255,0.5);
+            padding: 10px;
+        }
+    }
+    .compareNavigation {
+        margin-bottom: 30px;
+        .row {
+            .compareLinkContainer {
+                .row {
+                    .linkToProduct {
+                        text-decoration: none;
+                        .linkTextContainer:last-child {
+                            border: 1px solid #B3B3B3;
+                        }
+                        .linkTextContainer {
+                            text-align: center;
+                            padding: 0;
+                            margin: 0;
+                            border: 1px solid #B3B3B3;
+                            border-right: none;
+                            -webkit-transition: all 0.4s ease-out 0s;
+                            -moz-transition: all 0.4s ease-out 0s;
+                            -o-transition: all 0.4s ease-out 0s;
+                            transition: all 0.4s ease-out 0s;
+                            .linkText {
+                                @include input-font($RobotoRegularFont, 1em, $textColor5, 0, normal);
+                                line-height: 4;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .comparePagePosition {
+        width: 90%;
+        margin: 0 auto;
+        .breadCrumbs {
+            ul {
+                padding: 0;
+                li {
+                    @include inlineBlock();
+                    a {
+                        margin-right: 15px;
+                        margin-left: 15px;
+                        @include input-font($RobotoRegularFont, 1em, $textColor5, 0, normal);
+                        text-decoration: none;
+                    }
+                    a:hover {
+                        color: $mainColor;
+                        //background-color: $textColor6;
+                    }
+                    img {
+                        height: 15px;
+                    }
+                    .activeProduct {
+                        color: $newsTextColor;
+                    }
+                }
+            }
+        }
+        .sortProducts {
+            margin-top: 40px;
+            margin-left: 15px;
+            .sort {
+                @include inlineBlock();
+                margin-right: 15px;
+                .sortTitle {
+                    @include input-font($RobotoRegularFont, 0.9em, $textColor5, 0, normal);
+                    display: block;
+                }
+                #sortBy {
+                    @include input-font($RalewayFont, 1.1em, $textColor4, 0, normal);
+                    width: 150px;
+                }
+            }
+            .currency {
+                @include inlineBlock();
+                .currencyTitle {
+                    @include input-font($RobotoRegularFont, 0.9em, $textColor5, 0, normal);
+                    display: block;
+                }
+                #currencyBy {
+                    @include input-font($RalewayFont, 1.1em, $textColor4, 0, normal);
+                    width: 150px;
+                }
+            }
+            .search {
+                @include inlineBlock();
+                float: right;
+                form {
+                    position: relative;
+                    width: 350px;
+                    margin: 0 auto;
+                    background: $mainColor;
+                    input, button {
+                        border: none;
+                        outline: none;
+                        background: transparent;
+                    }
+                    input {
+                        width: 100%;
+                        height: 42px;
+                        padding-left: 15px;
+                    }
+                    button {
+                        height: 42px;
+                        width: 42px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        cursor: pointer;
+                    }
+                    button:before {
+                        content: "\f002";
+                        font-family: FontAwesome;
+                        font-size: 16px;
+                        color: $textColor5;
+                    }
+                }
+            }
+        }
+        .compareProducts {
+            border-top: 1px solid rgba(132,132,132, 0.5);
+            margin-top: 55px;
+            .productToCompareTopBlock {
+                margin-top: 55px;
+                .compareProductsTitle {
+                    @include input-font($OswardFont, 3em, $textColor5, 1px, normal);
+                    @include inlineBlock();
+                    margin: 0 0 30px 15px;
+                }
+                .clearCompareList {
+                    @include inlineBlock();
+                    float: right;
+                    .btn {
+                        @include input-font($RobotoRegularFont, 1em, $mainColor, 0, normal);
+                        transition: all .4s;
+                        border-radius: 0;
+                        height: 40px;
+                        background-color: $textColor5;
+                        text-align: center;
+                        text-decoration: none;
+                        .fa {
+                            padding-left: 10px;
+                        }
+                    }
+                    .btn:hover {
+                        background-color: #fff;
+                        color: rgb(28,28,28);
+                        border: 1px solid rgb(28,28,28);
+                    }
+                }
+            }
+            .compareProductItems {
+                .table {
+                    tbody {
+                        tr {
+                            th {
+                                @include input-font($OswardFont, 1.2em, $textColor5, 1px, normal);
+                                border-right: 1px solid #ddd;
+                                width: 250px;
+                                }
+                            td {
+                                @include input-font($RalewayFont, 1em, $textColor5, 1px, normal);
+                                border-right: 1px solid #ddd;
+                                text-align: center;
+                                background-color: white;
+                                -webkit-transition: all 0.4s ease-out 0s;
+                                -moz-transition: all 0.4s ease-out 0s;
+                                -o-transition: all 0.4s ease-out 0s;
+                                transition: all 0.4s ease-out 0s;
+                                a {
+                                    text-decoration: none;
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                                .projectName {
+                                    @include input-font($OswardFont, 1.2em, $textColor5, 1px, normal);
+                                }
+                                .deleteCompareItemTop {
+                                    float: right;
+                                }
+                                .deleteCompareItem, .deleteCompareItemTop {
+                                    color: $textColor5;
+                                    display: block;
+                                }
+                            }
+                            .deleteCompareItemBottom:hover {
+                                background-color: #d9534f;
+                            }
+                            td:last-child {
+                                border-right: none;
+                            }
+                            td:hover {
+                                background-color: $mainColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .no-data {
+            @include input-font($OswardFont, 2.5em, $textColor5, 0, normal);
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Карельский профиль поиск товара</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/png">
+    
+    <!-- CSS -->
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <!--<link rel="stylesheet" href="css/media-queries.css" type="text/css">-->
+        
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="js/jquery.js" type="text/javascript"></script>-->
+    <!-- Java sqript -->
+    <script src="../js/main.js" type="text/javascript"></script>
+    <!--<script src="js/jquery.scrollify.js" type="text/javascript"></script>-->
+</head>
+
+<body>
+   <p class="topAnchor"><a name="topAnchor"></a></p>
+   
+   
+    <div id="page-preloader">
+    	<h2>Загрузка ...</h2>
+    	<img src="../img/preloader/logo_kprofil.png" alt="ЛКарельский профиль запад">
+    	<span class="spinner"></span>
+    </div>
+   
+   
+   <!-- --- HEADER --- -->
+    //= template/header.html
+    <!-- --- End header --- -->
+
+   
+    <main>
+    	<div class="searchPage">
+            <section class="searchTitleContainer parallax" data-parallax="scroll" data-image-src="../img/productsByCategory/bg.jpg">
+                <h2 class="searchTitle">Финские дома</h2>
+            </section>
+            <nav class="searchNavigation container-fluid">
+                <div class="row">
+    		        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 navLinkContainer">
+                        <div class="row">
+                            <a href="#" class="linkToProduct">
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 linkTextContainer">
+                                    <p class="linkText">Финские дома</p>
+                                </div>
+                            </a>
+                            <a href="#" class="linkToProduct">
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 linkTextContainer">
+                                    <p class="linkText">Канадские дома</p>
+                                </div>
+                            </a>
+                            <a href="#" class="linkToProduct">
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 linkTextContainer">
+                                    <p class="linkText">Hi-tech дома</p>
+                                </div>
+                            </a>
+                            <a href="#" class="linkToProduct">
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 linkTextContainer">
+                                    <p class="linkText">Дома модерн</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 navLinkContainer">
+                    <div class="row">
+                            <a href="#" class="linkToProduct">
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 linkTextContainer">
+                                    <p class="linkText">Дуплексы, гостиницы</p>
+                                </div>
+                            </a>
+                            <a href="#" class="linkToProduct">
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 linkTextContainer">
+                                    <p class="linkText">Дачные и садовые</p>
+                                </div>
+                            </a>
+                            <a href="#" class="linkToProduct">
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 linkTextContainer">
+                                    <p class="linkText">Гаражи, хозблоки, бани</p>
+                                </div>
+                            </a>
+                            <a href="#" class="linkToProduct">
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 linkTextContainer">
+                                    <p class="linkText">Рамные конструкции</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+    		    </div>
+            </nav>
+    		<div class="searchPagePosition container-fluid">
+    		    <section class="breadCrumbs">
+                    <ul>
+                        <li>
+                            <a href="index.html">Главная</a>
+                            <img src="../img/productsByCategory/breadcrums/separator.png" alt=">">
+                        </li>
+                        <li>
+                            <a href="projects.html">Каталог</a>
+                            <img src="../img/productsByCategory/breadcrums/separator.png" alt=">">
+                        </li>
+                        <li>
+                            <a href="productsByCategory.html" class="activeProduct">Финские дома</a>
+                        </li>
+                    </ul>
+    		    </section>
+    		    
+    		    <section class="sortProducts">
+                    <div class="product-sorting sort">
+                        <span class="sortTitle">Сортировать по</span>
+                        <select id="sortBy" name="products-orderby" onchange="setLocation(this.val())"> 
+                            <option selected="selected" value="http://demo.nopcommerce.com/camera-photo?orderby=0">Цене</option>
+                            <option value="http://demo.nopcommerce.com/camera-photo?orderby=5">Площади</option>
+                            <option value="http://demo.nopcommerce.com/camera-photo?orderby=6">Названию</option>
+                        </select>
+                    </div>
+                    <div class="product-sorting currency">
+                        <span class="currencyTitle">Выберите валюту</span>
+                        <select id="currencyBy" name="products-orderby" onchange="setLocation(this.val())"> 
+                            <option selected="selected" value="http://demo.nopcommerce.com/camera-photo?orderby=0">BYN</option>
+                            <option value="http://demo.nopcommerce.com/camera-photo?orderby=5">USD</option>
+                        </select>
+                    </div>
+    		        <div class="search">
+    		            <form>
+                            <input type="search" placeholder="Поиск ...">
+                            <button type="submit"></button>
+                            <div class="advancedSearch">
+                            	<p>Расширенный поиск</p>
+                            </div>
+                            <div class="hiddenBlock">
+                            	<div class="inputs">
+                                    <label for="cid">Категории:</label>
+                                    <select data-val="true" data-val-number="The field Category must be a number." id="cid" name="cid" class="valid"><option selected="selected" value="0">Все</option>
+										<option value="1">Коттеджи</option>
+										<option value="2">Коттеджи &gt;&gt; Финские</option>
+										<option value="3">Дачи</option>
+									</select>
+                                </div>
+                                <div class="inputs reversed">
+                                    <input id="isc" name="isc" type="checkbox" value="true"><input name="isc" type="hidden" value="false">
+                                    <label for="isc">Автоматический поиск подкатегории</label>
+                                </div>
+								<div class="inputs">
+                                    <label for="mid">Проект:</label>
+                                    <select data-val="true" data-val-number="The field Manufacturer must be a number." id="mid" name="mid">
+                                    	<option selected="selected" value="0">Все</option>
+										<option value="1">Калевала</option>
+										<option value="2">Суоми</option>
+										<option value="3">Калевала</option>
+									</select>
+                                </div>
+                                <div class="inputs">
+									<label>Цена:</label>
+									<span class="price-range">
+										От
+										<input class="price-from" id="pf" name="pf" type="text" value="">
+										До
+										<input class="price-to" id="pt" name="pt" type="text" value="">
+									</span>
+								</div>
+							    <div class="inputs reversed">
+									<input id="sid" name="sid" type="checkbox" value="true"><input name="sid" type="hidden" value="false">
+									<label for="sid">Искать в описании товаров</label>
+								</div>
+                            </div>
+                            <div class="buttons">
+								<input type="submit" class="button-1 search-button" value="Найти">
+							</div>
+                        </form>
+    		        </div>
+    		    </section>
+                <section class="products">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 filtersProductContainer">
+                            <div class="filtersProduct">
+                                <form action="#" class="smartfilter">
+                                    <div class="buildType form-group">
+                                        <h3 class="typeTitle">Тип постройки</h3>
+                                        <ul class="listBuildings">
+                                            <li class="active buildItem">
+                                                <a href="#">Дома</a>
+                                                <ul class="sublist">
+                                                    <li class="active buildSubItem">
+                                                        <a href="#">Финские дома</a>
+                                                    </li>
+                                                    <li class="inactive buildSubItem">
+                                                        <a href="#">Канадские дома</a>
+                                                    </li>
+                                                    <li class="inactive buildSubItem">
+                                                        <a href="#">Hi-tech дома</a>
+                                                    </li>
+                                                    <li class="inactive buildSubItem">
+                                                        <a href="#">Дома модерн</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="inactive buildItem">
+                                                <a href="#">Дуплексы</a>
+                                            </li>
+                                            <li class="inactive buildItem">
+                                                <a href="#">Дачные дома и садовые постройки</a>
+                                            </li>
+                                            <li class="inactive buildItem">
+                                                <a href="/digital-downloads">Рамные конструкции</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="buildPrice form-group">
+                                        <p>
+                                            <label for="amount">Цена:</label>
+                                            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                        </p>
+                                        <div id="slider-range"></div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">Менее 1000
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">1000 - 2000
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">2000 - 3000
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">более 3000
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="floorCount form-group">
+                                        <h3 class="floorTitle">Количество этажей</h3>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">Одноэтажный
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">Одноэтажный с мансардой
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">Двухэтажный
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="buildArea form-group">
+                                        <p>
+                                            <label for="amount-area">Общая площадь (м<sup>2</sup>) :</label>
+                                            <input type="text" id="amount-area" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                        </p>
+                                        <div id="slider-range-area"></div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">Менее 50
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">50 - 100
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">100 - 150
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">Более 150
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="submit form-group">
+                                        <button type="submit" class="btn btn-default set_filter">Показать</button>
+                                        <input class="btn btn-link" type="submit" id="del_filter" name="del_filter" value="Сбросить">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="recentlyProducts">
+                                <h3 class="recentlyTitle">Недавно просмотренные продукты</h3>
+                                <div class="recentlyItem">
+                                    <a href="#" class="recentlyLink">
+                                        <div class="recentlyImg">
+                                            <img src="../img/productsByCategory/recentlyProducts/nurmes.jpg" alt="Нурмес">
+                                        </div>
+                                        <div class="recentlyText">
+                                            <h4>Нурмес</h4>
+                                            <p>Lorem ipsum dolor sit amet...</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="recentlyItem">
+                                    <a href="#" class="recentlyLink">
+                                        <div class="recentlyImg">
+                                            <img src="../img/productsByCategory/recentlyProducts/kiviiarvi.jpg" alt="Кивиярви">
+                                        </div>
+                                        <div class="recentlyText">
+                                            <h4>Кивиярви</h4>
+                                            <p>Lorem ipsum dolor sit amet...</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 products">
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 productItem">
+                                    <a href="productPage.html" class="productLink">
+                                        <div class="addToCompareReact">
+                                            <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                                        </div>
+                                        <img src="../img/productsByCategory/products/bath.jpg" alt="Бассейн">
+                                        <h3 class="productTitle">Баня с мансардой</h3>
+                                        <h5 class="productArea">Общая площадь: 62 м<sup>2</sup></h5>
+                                        <h5 class="floor">Этажность: 2</h5>
+                                        <h5 class="size">Размер: 6,0 x 6,4	м</h5>
+                                        <p class="productDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae libero, atque itaque ...</p>       
+                                    </a>
+                                    <div class="cart-button button-group">
+                                        <!--<button type="button" title="Wishlist" class="btn btn-wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </button>-->
+                                        <button type="button" title="Добавить для сранения" class="btn btn-compare">
+                                            <i class="fa fa-bar-chart-o"></i>
+                                        </button>
+                                        <a class="btn btn-default btn-cart" href="productPage.html" role="button">Подробнее
+                                            <i class="fa fa-info" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 productItem">
+                                    <a href="productPage.html" class="productLink">
+                                        <div class="addToCompareReact">
+                                            <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                                        </div>
+                                        <img src="../img/productsByCategory/products/canada.jpg" alt="Канадский">
+                                        <h3 class="productTitle">Калевала</h3>
+                                        <h5 class="productArea">Общая площадь: 125,7 м<sup>2</sup></h5>
+                                        <h5 class="floor">Этажность: 2</h5>
+                                        <h5 class="size">Размер: 6,9 x 12,5 м</h5>
+                                        <h5 class="personsCount">Количество человек: 4 - 5	</h5>
+                                        <p class="productDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae libero, atque itaque ...</p>
+                                    </a>
+                                    <div class="cart-button button-group">
+                                        <!--<button type="button" title="Wishlist" class="btn btn-wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </button>-->
+                                        <button type="button" title="Добавить для сранения" class="btn btn-compare">
+                                            <i class="fa fa-bar-chart-o"></i>
+                                        </button>
+                                        <a class="btn btn-default btn-cart" href="productPage.html" role="button">Подробнее
+                                            <i class="fa fa-info" aria-hidden="true"></i>
+                                        </a>									
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 productItem">
+                                    <a href="productPage.html" class="productLink">
+                                        <div class="addToCompareReact">
+                                            <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                                        </div>
+                                        <img src="../img/productsByCategory/products/construction.jpg" alt="Конструкция">
+                                        <h3 class="productTitle">Гараж-навес 3,0*7,3</h3>
+                                        <h5 class="productArea">Общая площадь: 19,2 м<sup>2</sup></h5>
+                                        <h5 class="floor">Этажность: 1</h5>
+                                        <h5 class="size">Размер: 7,3 x 3,0	м</h5>
+                                        <p class="productDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae libero, atque itaque ...</p>
+                                    </a>
+                                    <div class="cart-button button-group">
+                                        <!--<button type="button" title="Wishlist" class="btn btn-wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </button>-->
+                                        <button type="button" title="Добавить для сранения" class="btn btn-compare">
+                                            <i class="fa fa-bar-chart-o"></i>
+                                        </button>
+                                        <a class="btn btn-default btn-cart" href="productPage.html" role="button">Подробнее
+                                            <i class="fa fa-info" aria-hidden="true"></i>
+                                        </a>										
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 productItem">
+                                    <a href="productPage.html" class="productLink">
+                                        <div class="addToCompareReact">
+                                            <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                                        </div>
+                                        <img src="../img/productsByCategory/products/bath.jpg" alt="Бассейн">
+                                        <h3 class="productTitle">Баня с мансардой</h3>
+                                        <h5 class="productArea">Общая площадь: 62 м<sup>2</sup></h5>
+                                        <h5 class="floor">Этажность: 2</h5>
+                                        <h5 class="size">Размер: 6,0 x 6,4	м</h5>
+                                        <p class="productDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae libero, atque itaque ...</p>
+                                    </a>
+                                    <div class="cart-button button-group">
+                                        <!--<button type="button" title="Wishlist" class="btn btn-wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </button>-->
+                                        <button type="button" title="Добавить для сранения" class="btn btn-compare">
+                                            <i class="fa fa-bar-chart-o"></i>
+                                        </button>
+                                        <a class="btn btn-default btn-cart" href="productPage.html" role="button">Подробнее
+                                            <i class="fa fa-info" aria-hidden="true"></i>
+                                        </a>									
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 productItem">
+                                    <a href="productPage.html" class="productLink">
+                                        <div class="addToCompareReact">
+                                            <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                                        </div>
+                                        <img src="../img/productsByCategory/products/canada.jpg" alt="Канадский">
+                                        <h3 class="productTitle">Калевала</h3>
+                                        <h5 class="productArea">Общая площадь:  125,7 м<sup>2</sup></h5>
+                                        <h5 class="floor">Этажность:  2</h5>
+                                        <h5 class="size">Размер: 6,9 x 12,5 м</h5>
+                                        <h5 class="personsCount">Количество человек: 4 - 5	</h5>
+                                        <p class="productDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae libero, atque itaque ...</p>
+                                    </a>
+                                    <div class="cart-button button-group">
+                                        <!--<button type="button" title="Wishlist" class="btn btn-wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </button>-->
+                                        <button type="button" title="Добавить для сранения" class="btn btn-compare">
+                                            <i class="fa fa-bar-chart-o"></i>
+                                        </button>
+                                        <a class="btn btn-default btn-cart" href="productPage.html" role="button">Подробнее
+                                            <i class="fa fa-info" aria-hidden="true"></i>
+                                        </a>									
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 productItem">
+                                    <a href="productPage.html" class="productLink">
+                                        <div class="addToCompareReact">
+                                            <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                                        </div>
+                                        <img src="../img/productsByCategory/products/construction.jpg" alt="Конструкция">
+                                        <h3 class="productTitle">Гараж-навес 3,0*7,3</h3>
+                                        <h5 class="productArea">Общая площадь: 19,2 м<sup>2</sup></h5>
+                                        <h5 class="floor">Этажность: 1</h5>
+                                        <h5 class="size">Размер: 7,3 x 3,0	м</h5>
+                                        <p class="productDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae libero, atque itaque ...</p>
+                                    </a>
+                                    <div class="cart-button button-group">
+                                        <!--<button type="button" title="Wishlist" class="btn btn-wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </button>-->
+                                        <button type="button" title="Добавить для сранения" class="btn btn-compare">
+                                            <i class="fa fa-bar-chart-o"></i>
+                                        </button>
+                                        <a class="btn btn-default btn-cart" href="productPage.html" role="button">Подробнее
+                                            <i class="fa fa-info" aria-hidden="true"></i>
+                                        </a>								
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 productItem">
+                                    <a href="productPage.html" class="productLink">
+                                        <div class="addToCompareReact">
+                                            <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                                        </div>
+                                        <img src="../img/productsByCategory/products/bath.jpg" alt="Бассейн">
+                                        <h3 class="productTitle">Баня с мансардой</h3>
+                                        <h5 class="productArea">Общая площадь: 62 м<sup>2</sup></h5>
+                                        <h5 class="floor">Этажность: 2</h5>
+                                        <h5 class="size">Размер: 6,0 x 6,4	м</h5>
+                                        <p class="productDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae libero, atque itaque ...</p>
+                                    </a>
+                                    <div class="cart-button button-group">
+                                        <!--<button type="button" title="Wishlist" class="btn btn-wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </button>-->
+                                        <button type="button" title="Добавить для сранения" class="btn btn-compare">
+                                            <i class="fa fa-bar-chart-o"></i>
+                                        </button>
+                                        <a class="btn btn-default btn-cart" href="productPage.html" role="button">Подробнее
+                                            <i class="fa fa-info" aria-hidden="true"></i>
+                                        </a>								
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 productItem">
+                                    <a href="productPage.html" class="productLink">
+                                        <div class="addToCompareReact">
+                                            <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                                        </div>
+                                        <img src="../img/productsByCategory/products/canada.jpg" alt="Канадский">
+                                        <h3 class="productTitle">Калевала</h3>
+                                        <h5 class="productArea">Общая площадь: 125,7 м<sup>2</sup></h5>
+                                        <h5 class="floor">Этажность: 2</h5>
+                                        <h5 class="size">Размер: 6,9 x 12,5 м</h5>
+                                        <h5 class="personsCount">Количество человек: 4 - 5	</h5>
+                                        <p class="productDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae libero, atque itaque ...</p>
+                                    </a>
+                                    <div class="cart-button button-group">
+                                        <!--<button type="button" title="Wishlist" class="btn btn-wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </button>-->
+                                        <button type="button" title="Добавить для сранения" class="btn btn-compare">
+                                            <i class="fa fa-bar-chart-o"></i>
+                                        </button>
+                                        <a class="btn btn-default btn-cart" href="productPage.html" role="button">Подробнее
+                                            <i class="fa fa-info" aria-hidden="true"></i>
+                                        </a>								
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 productItem">
+                                    <a href="productPage.html" class="productLink">
+                                        <div class="addToCompareReact">
+                                            <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                                        </div>
+                                        <img src="../img/productsByCategory/products/construction.jpg" alt="Конструкция">
+                                        <h3 class="productTitle">Гараж-навес 3,0*7,3</h3>
+                                        <h5 class="productArea">Общая площадь: 19,2 м<sup>2</sup></h5>
+                                        <h5 class="floor">Этажность: 1</h5>
+                                        <h5 class="size">Размер: 7,3 x 3,0	м</h5>
+                                        <p class="productDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae libero, atque itaque ...</p>
+                                    </a>
+                                    <div class="cart-button button-group">
+                                        <!--<button type="button" title="Wishlist" class="btn btn-wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </button>-->
+                                        <button type="button" title="Добавить для сранения" class="btn btn-compare">
+                                            <i class="fa fa-bar-chart-o"></i>
+                                        </button>
+                                        <a class="btn btn-default btn-cart" href="productPage.html" role="button">Подробнее
+                                            <i class="fa fa-info" aria-hidden="true"></i>
+                                        </a>									
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <nav aria-label="..." class="newsPagination">
+				<ul class="pagination">
+					<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+					<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+					<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+				</ul>
+            </nav>
+            <div class="compareBtnConntainer">
+                <a href="compare.html" class="btn">
+                    1 товар в сравнении
+                </a>
+            </div>
+    	</div>
+    </main>
+    
+  
+    <!-- --- FOOTER --- -->
+    //= template/footer.html
+    <!-- --- End footer --- -->
+    
+    
+    <!-- --- SCROLL TO TOP BUTTON --- -->
+    <div id="scroller" title="to start" style="opacity: 0.2;"></div>
+    <!-- --- End scroll to top button --- -->
+
+</body>
+</html>

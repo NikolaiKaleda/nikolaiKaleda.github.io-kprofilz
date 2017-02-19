@@ -1,0 +1,49 @@
+/*  
+    Recommeded CSS
+    ==============
+*/
+
+.panel {
+    position: fixed;
+    left: -15.625em; /*or width of your navigation panel*/
+    width: 15.625em; /*should match the above value*/
+}
+
+/*  
+    Demo Specific Styles
+    ====================
+*/
+
+
+.wrap {
+    position: static;
+    max-width: 80%;
+    margin: 0 auto;
+	float: right;
+	padding: 20px 40px 15px;
+}
+
+.panel {
+	z-index: 9999;
+    background: #101820;
+}
+
+.panel ul {
+	margin-top: 30px;
+}
+
+.panel li {
+	margin-bottom: 15px;
+	border-bottom: 1px solid rgba(1,1,1,0);
+}
+
+.panel li:hover {
+	border-bottom: 1px solid #ffde00;
+}
+
+.panel a {
+	font-family: OswaldRegular, Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
+	color: white;
+	text-decoration: none;
+}

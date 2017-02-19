@@ -1,0 +1,131 @@
+﻿@{
+    Layout = "/Administration/Views/Shared/_AdminLayout.cshtml";
+}
+@model ConfigurationModel
+@using Nop.Plugin.Widgets.Gallery.Models
+@using Nop.Web.Framework;
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.WidgetZones)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopTextAreaFor(model => model.WidgetZones)
+                        @Html.ValidationMessageFor(model => model.WidgetZones)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.GalleryWidgetZones)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopTextAreaFor(model => model.GalleryWidgetZones)
+                        @Html.ValidationMessageFor(model => model.GalleryWidgetZones)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.ProductPerPage)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.ProductPerPage)
+                        @Html.ValidationMessageFor(model => model.ProductPerPage)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.ProductPerWidgetPage)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.ProductPerWidgetPage)
+                        @Html.ValidationMessageFor(model => model.ProductPerWidgetPage)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.ShareImage)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.ShareImage)
+                        @Html.ValidationMessageFor(model => model.ShareImage)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.ShowGallery)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.CheckBoxFor(model => model.ShowGallery)
+                        @Html.ValidationMessageFor(model => model.ShowGallery)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.ShowImageAfterGalleries)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.CheckBoxFor(model => model.ShowImageAfterGalleries)
+                        @Html.ValidationMessageFor(model => model.ShowImageAfterGalleries)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.SortByCreatedDate)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopDropDownListFor(model => model.SortByCreatedDate, Model.SortedFilters)
+                        @Html.ValidationMessageFor(model => model.SortByCreatedDate)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.SliderGallery)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopDropDownListFor(model => model.SliderGallery, Model.GalleryTypes)
+                        @Html.ValidationMessageFor(model => model.SliderGallery)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.GalleryWidgetName)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopDropDownListFor(model => model.GalleryWidgetName, Model.GalleryNames)
+                        @Html.ValidationMessageFor(model => model.GalleryWidgetName)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.ActionLink(T("Plugin.Widgets.Gallery.Configure.EditGalery").Text, "List", "GalleryConfigure")
+                    </div>
+                    <div class="col-md-9">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.ActionLink(T("Plugin.Widgets.Gallery.Configure.EditImages").Text, "ImagesList", "GalleryConfigure")
+                    </div>
+                    <div class="col-md-9">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-9">
+                        <input type="submit" name="save" class="btn bg-blue" value="@T("Plugin.Widgets.Gallery.Configure.Submit")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

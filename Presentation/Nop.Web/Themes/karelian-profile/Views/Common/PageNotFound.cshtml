@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.PageNotFound").Text);
+    //page class
+    Html.AppendPageCssClassParts("html-not-found-page");
+}
+
+<section class="notFounPage">
+    <img src="~/Themes/karelian-profile/img/404Page/bgError.png" alt="background" class="notFoundPageImg" />
+    <h2 class="notFoundPageTitle">@T("PageTitle.PageNotFound")</h2>
+    <p class="notFoundPageText">Такое иногда случается. Самые вероятные причины - устаревшая ссылка или страница была удалена автором. Перейдите на <a href="@Url.RouteUrl("HomePage")">главную страницу</a> или вернитесь назад.</p>
+</section>

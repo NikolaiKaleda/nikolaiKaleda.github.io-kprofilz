@@ -1,0 +1,48 @@
+.projectsPage {
+	width: 100%;
+	border-top: 1px solid #B3B3B3;
+	padding-bottom: 6%;
+	overflow: hidden;
+	.projectsPagePosition {
+		width: 90%;
+		margin: 0 auto;
+		.projectsTitle {
+			@include input-font($OswardFont, 4.5em, $textColor5, 5px, bold);
+			text-transform: uppercase;
+			text-align: center;
+			margin-top: 7%;
+			margin-bottom: 4%;
+		}
+		.row {
+			.projectItemContainer {
+				position: relative;
+				min-height: 1px;
+				padding: 2px;
+				.projectItem {
+					.projectText {
+						@include input-font($RalewayFont, 2em, $textColor3, 0, normal);
+						text-transform: capitalize;
+						text-shadow: 1px 1px 2px $textColor5;
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						max-width: 90%;
+						text-align: right;
+						z-index: 89;
+						margin: 22px;
+						background-color: rgba(255,255,255,0.5);
+					}
+					img {
+						width: 100%;
+						display: block;
+						max-width: 100%;
+						height: auto;
+					}
+				}
+			}
+			.projectItemContainer:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+}

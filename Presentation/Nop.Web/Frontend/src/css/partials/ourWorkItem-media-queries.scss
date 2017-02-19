@@ -1,0 +1,400 @@
+@media only screen and (min-width:1680px) {
+body {
+    max-width: 1920px;
+	font-size: 20px;
+}
+.temporarilyCap {
+	.title {
+		font-size: 2em;
+	}
+}
+.ourWorkItem {
+	.gallerySubtitle {
+		margin-bottom: 1%;
+	}	
+	.slide {
+		.my-gallery {
+			max-width: 100%;
+			figure {
+				display: inline-block;
+				float: none;
+				height: 500px;
+				width: 40%;
+				min-height: 1px;
+				min-width: 1px;
+				max-height: 2000px;
+				max-width: 2000px;
+				a{
+					img {
+						width: 100%;
+						height: 280px;
+                        opacity: 1;
+					}
+				}
+				.nameProject {
+					font-size: 1.4em;
+					margin-top: 25%;
+				}
+				.descriptionProject {
+					font-size: 0.8em;
+				}
+            }
+		}
+	}
+    .textAboutWork {
+        ul {
+            li {
+                font-size: 1.1em;
+            }
+        }
+        p {
+            font-size: 1.1em;
+        }
+    }
+    .seeInCatalog {
+        .btn {
+			width: 35%;
+        }
+    }
+	.pswp__counter {
+		font-size: 20px;
+	}
+}
+}
+
+
+@media only screen and (max-width:1680px) {
+body {
+	font-size: 18px;
+}
+.temporarilyCap {
+	.title {
+		font-size: 2em;
+	}
+}
+.ourWorkItem {
+	.gallerySubtitle {
+		margin-bottom: 0;
+	}
+	.moreInfo {
+		.btn {
+			font-size: 1.2em;
+			margin-top: 40px;
+		}
+	}
+	.slide {
+		.my-gallery {
+			max-width: 100%;
+			figure {
+				display: inline-block;
+				float: none;
+				height: 440px;
+				width: 40%;
+				min-height: 1px;
+				min-width: 1px;
+				max-height: 2000px;
+				max-width: 2000px;
+				a{
+					img {
+						width: 100%;
+						height: 280px;
+                        opacity: 1;
+					}
+				}
+				.nameProject {
+					font-size: 1.5em;
+					margin-top: 15%;
+				}
+				.descriptionProject {
+					font-size: 0.8em;
+				}
+            }
+		}
+	}
+    .textAboutWork {
+		margin-top: 0;
+        ul {
+            li {
+                font-size: 1em;
+            }
+        }
+        p {
+            font-size: 1em;
+        }
+    }
+    .seeInCatalog {
+        .btn {
+			width: 35%;
+        }
+    }
+	.pswp__counter {
+		font-size: 20px;
+	}
+}
+}
+
+
+@media only screen and (max-width:1370px) {
+body {
+	font-size: 16px;
+}
+.ourWorkItem {
+	.galleryTitle {
+		padding-top: 5%;
+	}
+	.moreInfo {
+		.btn {
+			margin-top: 30px;
+		}
+	}
+	.slide {
+		.my-gallery {
+			figure {
+				height: 360px;
+            }
+		}
+	}
+    .textAboutWork {
+        ul {
+            li {
+                font-size: 0.9em;
+            }
+        }
+        p {
+            font-size: 0.9em;
+        }
+    }
+	.pswp__counter {
+		font-size: 18px;
+	}
+}
+}
+
+@media only screen and (max-width:1199px) {
+body {
+	font-size: 14px;
+}
+.ourWorkItem {
+	.galleryTitle {
+		margin-bottom: 0;
+	}
+	.moreInfo {
+		.btn {
+			margin-top: 25px;
+		}
+	}
+	.slide {
+		.my-gallery {
+			figure {
+				height: 320px;
+				figcaption {
+					.descriptionProject {
+						font-size: .7em;
+					}
+				}
+            }
+		}
+	}
+    .textAboutWork {
+		width: 90%;
+    }
+	.seeInCatalog {
+		.btn {
+			font-size: 1.3em;
+		}
+	}
+	.pswp__counter {
+		font-size: 18px;
+	}
+}
+}
+
+
+@media only screen and (max-width:992px) {
+body {
+	font-size: 12px;
+}
+.ourWorkItem {
+	.moreInfo {
+		.btn {
+			margin-top: 25px;
+		}
+	}
+	.slide {
+		.my-gallery {
+			figure {
+				height: 265px;
+				a {
+					img {
+						height: 150px;
+					}
+				}
+            }
+		}
+	}
+    .textAboutWork {
+		width: 95%;
+		ul {
+			li {
+				font-size: 1em;
+			}
+		}
+		p {
+			font-size: 1em;
+		}
+    }
+	.pswp__counter {
+		font-size: 16px;
+	}
+}
+}
+
+
+@media only screen and (max-width:768px) {
+body {
+	font-size: 11px;
+}
+.ourWorkItem {
+	.moreInfo {
+		.btn {
+			margin-top: 25px;
+		}
+	}
+	.slide {
+		.my-gallery {
+			margin-top: 15px;
+			figure {
+				width: 100%;
+				height: 340px;
+				a {
+					figcaption {
+						.nameProject {
+							font-size: 1.7em;
+						}
+						.descriptionProject {
+							font-size: 1em;
+						}
+					}
+				}
+            }
+		}
+	}
+    .textAboutWork {
+		ul {
+			li {
+				font-size: 1.2em;
+			}
+		}
+		p {
+			font-size: 1.2em;
+		}
+    }
+	.pswp__counter {
+		font-size: 14px;
+	}
+}
+}
+
+@media only screen and (max-width:500px) {
+body {
+	font-size: 10px;
+}
+.ourWorkItem {
+	.moreInfo {
+		.btn {
+			width: 60%;
+			margin-top: 15px;
+			margin-left: 20%;
+		}
+	}
+	.slide {
+		.my-gallery {
+			figure {
+				height: 310px;
+				a {
+					figcaption {
+						.nameProject {
+							font-size: 2em;
+						}
+						.descriptionProject {
+							font-size: 1em;
+						}
+					}
+				}
+            }
+		}
+	}
+    .textAboutWork {
+		ul {
+			li {
+				font-size: 1.2em;
+			}
+		}
+		p {
+			font-size: 1.2em;
+		}
+    }
+	.seeInCatalog {
+		.btn {
+			width: 70%;
+		}
+	}
+	.pswp__counter {
+		font-size: 12px;
+	}
+}
+}
+
+@media only screen and (max-width:350px) {
+.ourWorkItem {
+	.slide {
+		.my-gallery {
+			figure {
+				height: 260px;
+				a {
+					figcaption {
+						.nameProject {
+							font-size: 2em;
+						}
+						.descriptionProject {
+							font-size: 1em;
+						}
+					}
+				}
+            }
+		}
+	}
+    .textAboutWork {
+		ul {
+			li {
+				font-size: 1.2em;
+			}
+		}
+		p {
+			font-size: 1.2em;
+		}
+    }
+	.seeInCatalog {
+		.btn {
+			margin-top: 30px;
+		}
+	}
+	.pswp__counter {
+		font-size: 10px;
+	}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

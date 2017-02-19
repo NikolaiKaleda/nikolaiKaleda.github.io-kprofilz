@@ -1,0 +1,154 @@
+﻿@model BlogPostModel
+@using Nop.Web.Models.Blogs;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(!String.IsNullOrEmpty(Model.MetaTitle) ? Model.MetaTitle : Model.Title);
+    //meta
+    Html.AddMetaDescriptionParts(Model.MetaDescription);
+    Html.AddMetaKeywordParts(Model.MetaKeywords);
+    //page class
+    Html.AppendPageCssClassParts("html-blogpost-page");
+}
+
+<div class="postBlogPageContainer">
+    @Html.Widget("blogpost_page_top", Model.Id)
+    <div class="titleBlogContainer">
+        <section class="postBlogTitle">
+            <h2 class="title">@Model.Title</h2>
+        </section>
+        @*<section class="breadCrumbs">
+                <ul>
+                    <li>
+                        <a href="index.html">Главная</a>
+                        <img src="../img/productsByCategory/breadcrums/separator.png" alt=">">
+                    </li>
+                    <li>
+                        <a href="blog.html">Блог</a>
+                        <img src="../img/productsByCategory/breadcrums/separator.png" alt=">">
+                    </li>
+                    <li>
+                        <a href="postByBlog.html" class="activeProduct">Устройство каркасной стены</a>
+                    </li>
+                </ul>
+            </section>*@
+    </div>
+    <div class="postBlogPage">
+        <section class="titleImgContainer">
+            @*<img src="../img/blog/post/1/3.jpg" alt="Устройство каркасной стены" class="titleImg">*@
+        </section>
+        <section class="postBlogText">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 mainText">
+                    @Html.Raw(Model.Body)
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 infoAboutPost">
+                    <h4 class="infoTitle">Детали</h4>
+                    <div class="details">
+                        @*<div class="nameAuthor">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <p>Василий Велосипедов</p>
+                            </div>*@
+                        <div class="datePost">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <p>@Model.CreatedOn.ToString("D")</p>
+                        </div>
+                        @if (Model.Tags.Count > 0)
+                        {
+                            <div class="tag">
+                                <i class="fa fa-tag" aria-hidden="true"></i>
+                                @for (int i = 0; i < Model.Tags.Count; i++)
+                                {
+                                    var tag = Model.Tags[i];
+                                    <p>@tag</p>
+                                    if (i != Model.Tags.Count - 1)
+                                    {
+                                        <span>,</span>
+                                    }
+                                }
+                            </div>
+                        }
+                        @if (Model.Comments.Count > 0)
+                        {
+                            <div class="comments">
+                                <i class="fa fa-comments" aria-hidden="true"></i>
+                                <p>@Model.Comments.Count комментария</p>
+                            </div>
+                        }
+                    </div>
+                    <div class="share">
+                        <h4 class="shareTitle">Поделиться</h4>
+                        <ul class="socialList">
+                            <li class="facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li class="twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li class="dribble"><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                            <li class="tumblr"><a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        @if (Model.Comments.Count > 0)
+        {
+            <section class="postComments">
+                <h3 class="commentsTitle">@Model.Comments.Count комментария</h3>
+                @foreach (var comment in Model.Comments)
+                {
+                    <div class="commentContainer">
+                        <h5 class="nameAuthor">@comment.CustomerName</h5>
+                        <div class="commentDate">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <p>@comment.CreatedOn.ToString("g")</p>
+                        </div>
+                        <div class="commentTextContainer">
+                            <p class="commentText">
+                                @Html.Raw(Nop.Core.Html.HtmlHelper.FormatText(comment.CommentText, false, true, false, false, false, false))
+                            </p>
+                        </div>
+                        @Html.Widget("blogpost_page_inside_comment", comment.Id)
+                    </div>
+                }
+            </section>
+        }
+
+        @if (Model.AllowComments)
+        {
+            <section class="addComment">
+                <h3 class="leaveCommentTitle">@T("Blog.Comments.LeaveYourComment")</h3>
+                @{
+                      var validationSummary = Html.ValidationSummary(true);
+                }
+                <div class="notifications">
+                    @if (!MvcHtmlString.IsNullOrEmpty(validationSummary))
+                    {
+                        <div class="message-error">@validationSummary</div>
+                    }
+                    @{
+                          var result = TempData["nop.blog.addcomment.result"] as string;
+                    }
+                    @if (!String.IsNullOrEmpty(result))
+                    {
+                        <div class="result">@result</div>
+                    }
+                </div>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    @*<div class="form-group">
+                            <label for="name">Имя</label>
+                            <input class="name form-control" data-val="true" data-val-required="Введите ваше имя" id="name" name="name" placeholder="Введите ваше имя" type="text" value="">
+                        </div>*@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.AddNewComment.CommentText, new { }, ":")
+                        @Html.TextAreaFor(model => model.AddNewComment.CommentText, new { @class="commentText form-control" })
+                        @Html.ValidationMessageFor(model => model.AddNewComment.CommentText)
+                    </div>
+                    <button type="submit" class="btn btn-default submitBtn">@T("Blog.Comments.SubmitButton")</button>
+                }
+            </section>
+        }
+    </div>
+    @Html.Widget("blogpost_page_bottom", Model.Id)
+</div>

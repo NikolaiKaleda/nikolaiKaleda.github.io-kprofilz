@@ -1,0 +1,81 @@
+﻿@model BlogPostListModel
+@using Nop.Web.Models.Blogs;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.Blog").Text);
+    //page class
+    Html.AppendPageCssClassParts("html-blog-page");
+}
+
+
+
+<div class="blogPage">
+    <section class="blogTitleContainer parallax" data-parallax="scroll" data-image-src="/Themes/karelian-profile/img/blog/bg.jpg">
+        <h3 class="title">@T("Blog")</h3>
+    </section>
+    @Html.Widget("bloglist_page_before_posts")
+    @foreach (var item in Model.BlogPosts)
+    {
+        @Html.Widget("bloglist_page_before_post", item.Id)
+        <section class="blogPost">
+            <div class="postTitleContainer">
+                <a href="@Url.RouteUrl("BlogPost", new {SeName = item.SeName})" class="postLink">
+                    <h3 class="postTitle">@item.Title</h3>
+                </a>
+            </div>
+            <div class="postDate">
+                <p class="date">@item.CreatedOn.ToString("D")</p>
+            </div>
+            @if (item.AllowComments)
+            {
+                <div class="commentLink">
+                    <a href="@Url.RouteUrl("BlogPost", new {SeName = item.SeName})#comments" class="commentsLink">@string.Format(T("Blog.CommentsLink").Text, item.NumberOfComments)</a>
+                </div>
+            }
+            <div class="bgImg">
+                @*<a href="#">
+                        <img src="../img/blog/post/1/1.jpg" alt="Каркасная стена">
+                    </a>
+                    <a href="#">
+                        <img src="../img/blog/post/1/2.jpg" alt="Каркасная стена">
+                    </a>*@
+            </div>
+            <div class="postText">
+                <p class="text">
+                    @Html.Raw(!String.IsNullOrEmpty(item.BodyOverview) ? item.BodyOverview : item.Body)
+                </p>
+            </div>
+            @if (item.Tags.Count > 0)
+            {
+                <div class="tags">
+                    <h4 class="tagsTitle">@T("Blog.Tags"): </h4>
+                    @for (int i = 0; i < item.Tags.Count; i++)
+                    {
+                        var tag = item.Tags[i];
+                        <a href="@Url.RouteUrl("BlogByTag", new {tag = tag})">@tag</a>
+                        if (i != item.Tags.Count - 1)
+                        {
+                            <p>,</p>
+                        }
+                    }
+                </div>
+            }
+            <div class="readMoreBtnContainer">
+                <a href="@Url.RouteUrl("BlogPost", new {SeName = item.SeName})" class="btn btn-default" role="button">@T("Blog.MoreInfo")</a>
+            </div>
+        </section>
+        @Html.Widget("bloglist_page_after_post", item.Id)
+    }
+    @Html.Widget("bloglist_page_after_posts")
+    @{
+        var pager = Html.Pager(Model.PagingFilteringContext).QueryParam("pagenumber");
+    }
+    @if (!pager.IsEmpty())
+    {
+        <div class="pager">
+            @pager
+        </div>
+    }
+</div>

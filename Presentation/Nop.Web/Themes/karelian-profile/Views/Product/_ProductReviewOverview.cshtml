@@ -1,0 +1,36 @@
+﻿@model ProductReviewOverviewModel
+@using System.Globalization
+@using Nop.Web.Models.Catalog;
+
+@if (Model.AllowCustomerReviews)
+{
+    if (Model.TotalReviews > 0)
+    {
+        var rating = Model.RatingSum / Model.TotalReviews;
+        <div class="rating">
+            <h4 class="title">Рейтинг</h4>
+            @for (int i = 1; i <= rating; i++)
+            {
+                <i class="fa fa-star" aria-hidden="true"></i>
+            }
+            @for (int i = 5 - rating; i > 0; i--)
+            {
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            }
+        </div>
+    }
+    <div class="reviewsPreview">
+        @if (Model.TotalReviews > 0)
+        {
+            <a href="@Url.RouteUrl("ProductReviews", new { productId = Model.ProductId })" class="linkToDetail" data-item="reviewsDetails">@Model.TotalReviews @T("Reviews.Overview.Reviews")</a>
+            <p>|</p>
+            <a href="@Url.RouteUrl("ProductReviews", new { productId = Model.ProductId })" class="linkToDetail" data-item="reviewsDetails">@T("Reviews.Overview.AddNew")</a>
+        }
+        else
+        {
+            <div class="product-no-reviews">
+                <a href="@Url.RouteUrl("ProductReviews", new { productId = Model.ProductId })">@T("Reviews.Overview.First")</a>
+            </div>
+        }
+    </div>
+}

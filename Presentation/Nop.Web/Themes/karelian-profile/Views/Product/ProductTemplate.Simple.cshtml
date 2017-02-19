@@ -1,0 +1,207 @@
+﻿@model ProductDetailsModel
+@using Nop.Core.Domain.Seo;
+@using Nop.Core.Infrastructure;
+@using Nop.Web.Models.Catalog;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(!String.IsNullOrEmpty(Model.MetaTitle) ? Model.MetaTitle : Model.Name);
+    //meta
+    Html.AddMetaDescriptionParts(Model.MetaDescription);
+    Html.AddMetaKeywordParts(Model.MetaKeywords);
+    //page class
+    Html.AppendPageCssClassParts("html-product-details-page");
+
+    var seoSettings = EngineContext.Current.Resolve<SeoSettings>();
+
+    //canonical URL
+    if (seoSettings.CanonicalUrlsEnabled)
+    {
+        var productUrl = Url.RouteUrl("Product", new { SeName = Model.SeName }, this.Request.Url.Scheme);
+        Html.AddCanonicalUrlParts(productUrl);
+    }
+
+    //open graph META tags
+    if (seoSettings.OpenGraphMetaTags)
+    {
+        Html.AddHeadCustomParts("<meta property=\"og:type\" content=\"product\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:title\" content=\"" + Html.Encode(Model.Name) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:description\" content=\"" + Html.Encode(Nop.Core.Html.HtmlHelper.StripTags(Model.MetaDescription)) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:site_name\" content=\"" + Html.Encode(Model.CurrentStoreName) + "\" />");
+    }
+
+    //Twitter META tags
+    if (seoSettings.TwitterMetaTags)
+    {
+        Html.AddHeadCustomParts("<meta property=\"twitter:card\" content=\"summary\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:site\" content=\"" + Html.Encode(Model.CurrentStoreName) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:title\" content=\"" + Html.Encode(Model.Name) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:description\" content=\"" + Html.Encode(Nop.Core.Html.HtmlHelper.StripTags(Model.MetaDescription)) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:image\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+    }
+}
+
+<div class="productPage">
+    <div class="productsPagePosition container-fluid">
+        @Html.Partial("_ProductBreadcrumb", Model.Breadcrumb)
+        @Html.Widget("productdetails_after_breadcrumb", Model.Id)
+        <section class="topMainInfo">
+            @Html.Widget("productdetails_top", Model.Id)
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    @Html.Widget("productdetails_before_pictures", Model.Id)
+                    <!--product pictures-->
+                    @Html.Partial("_ProductDetailsPictures", Model)
+                    @Html.Widget("productdetails_after_pictures", Model.Id)
+                    <!--product reviews-->
+                    @Html.Partial("_ProductReviewOverview", Model.ProductReviewOverview)
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <section class="rightProductDescription">
+                        <h2 class="productTitle">@Model.Name</h2>
+                        @{
+                            var panelTypeAttribute = Model.ProductAttributes.FirstOrDefault(item => item.ProductAttributeId == 10);
+                        }
+                        <div class="kit">
+                            @if (!String.IsNullOrEmpty(Model.ShortDescription))
+                            {
+                                @Html.Raw(Model.ShortDescription)
+                            }
+                        </div>
+                        <div class="characteristics">
+                            <table class="table">
+                                <tbody>
+                                    @foreach (var spec in Model.ProductSpecifications)
+                                    {
+                                        <tr>
+                                            <th>@spec.SpecificationAttributeName:</th>
+                                            <td>@spec.ValueRaw</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <section class="detailInfo">
+            <div class="navigation">
+                <ul class="nav nav-tabs">
+                    <li class="active description productDetailBtn" data-item="descriptionDetail"><a data-toggle="tab" href="#details" aria-expanded="true">Описание</a></li>
+                </ul>
+            </div>
+            <div class="detailContent">
+                <div class="descriptionDetail detailsItem">
+                    @if (!String.IsNullOrEmpty(Model.FullDescription))
+                    {
+                        @Html.Raw(Model.FullDescription)
+                    }
+                </div>
+                @*<div class="plansDetail detailsItem">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 plansImg">
+                            <img src="../img/productPreviewPage/gallery/kalevala/plans_kalevala_1.jpg" alt="План первого этажа">
+                            <img src="../img/productPreviewPage/gallery/kalevala/plan_kalevala_2.jpg" alt="План второго этажа">
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 footage">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th class="floorNumber" colspan="2">Первый этаж, м<sup>2</sup></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Котельная</th>
+                                        <td>5,14</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Кухня</th>
+                                        <td>9,0</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Гостиная</th>
+                                        <td>20,46</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Холл</th>
+                                        <td>8,86</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Прихожая</th>
+                                        <td>4,41</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Санузел</th>
+                                        <td>2,09</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Крыльцо</th>
+                                        <td>1,84</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Крыльцо</th>
+                                        <td>5,37</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Навес</th>
+                                        <td>4,86</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Терраса</th>
+                                        <td>13,69</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="floorNumber" colspan="2">Второй этаж, м<sup>2</sup></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Спальня</th>
+                                        <td>10,62</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Спальня</th>
+                                        <td>13,21</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ванная</th>
+                                        <td>8,15</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Холл</th>
+                                        <td>2,41</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Спальня</th>
+                                        <td>10,88</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Балкон</th>
+                                        <td>4,71</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="floorNumber" colspan="2">Общая площадь дома Калевала – 125,7 м<sup>2</sup></th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>*@
+                @*<div class="facadeDetails detailsItem">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 facadeImg">
+                            <img src="../img/productPreviewPage/gallery/kalevala/kalevala_f.jpg" alt="Фасад">
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 facadeDescription">
+                            <h3>Lorem ipsum dolor sit.</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid facilis at totam, ex fuga accusantium maxime fugiat dolor enim vitae labore, architecto minima rem illo id eveniet in error commodi dolorum quam sit quos cupiditate nobis nisi modi. um incidunt? Sapiente nulla, aliquam inventore! Saepe a laudantium cumque quam, modi doloremque totam sapiente.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid facilis at totam, ex fuga accusantium maxime fugiat dolor enim vitae labore, architecto minima rem illo id eveniet in error commodi dolorum quam sit quos cupiditate nobis nisi modi. Fugiat officicipit doloribus dolorum corporis consectetur ratione sapiente neque natus commodi blanditiis, error libero. Nostrum sit suscipit repudiandae eligendi ea, dolore, itaque illum assumenda, eaque eius exercitationem voluptas odio quo doloribus voluptatum incidunt? Sapiente nulla, aliquam inventore! Saepe a laudantium cumque quam, modi doloremque totam sapiente.</p>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </section>
+    </div>
+</div>

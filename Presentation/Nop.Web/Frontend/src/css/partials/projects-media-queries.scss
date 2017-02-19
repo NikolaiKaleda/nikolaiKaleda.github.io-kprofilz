@@ -1,0 +1,169 @@
+@media only screen and (min-width:1680px) {
+body {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+.projectsPage {
+	.projectsPagePosition {
+		.row {
+			.projectItemContainer {
+				.projectItem {
+					.projectText {
+						font-size: 3em;
+					}
+				}
+			}
+			.paddingBottomNone {
+				padding-bottom: 0!important;
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:1680px) {
+.projectsPage {
+	.projectsPagePosition {
+		.row {
+			.projectItemContainer {
+				.projectItem {
+					.projectText {
+						font-size: 2.5em;
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:1370px) {
+.projectsPage {
+	.projectsPagePosition {
+		.projectsTitle {
+			font-size: 3.8em;
+		}
+		.row {
+			.projectItemContainer {
+				.projectItem {
+					.projectText {
+						font-size: 2em;
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+@media only screen and (max-width:1199px) {
+.projectsPage {
+	padding-bottom: 8%;
+	.projectsPagePosition {
+		.projectsTitle {
+			font-size: 3.7em;
+			margin-top: 9%;
+			margin-bottom: 6%;
+		}
+		.row {
+			.projectItemContainer {
+				.projectItem {
+					.projectText {
+						font-size: 1.5em;
+						margin: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:992px) {
+.projectsPage {
+	.projectsPagePosition {
+		.projectsTitle {
+			font-size: 3.6em;
+			margin-bottom: 5%;
+		}
+		.row {
+			.projectItemContainer {
+				padding: 0;
+				padding-bottom: 4px;
+				.projectItem {
+					.projectText {
+						font-size: 2em;
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:768px) {
+.projectsPage {
+	padding-bottom: 10%;
+	.projectsPagePosition {
+		width: 100%;
+		.projectsTitle {
+			font-size: 3.5em;
+			margin-top: 12%;
+			margin-bottom: 8%;
+		}
+		.row {
+			.projectItemContainer {
+				.projectItem {
+					.projectText {
+						margin: 0px;
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+@media only screen and (max-width:500px) {
+.projectsPage {
+	.projectsPagePosition {
+		.projectsTitle {
+			font-size: 3em;
+			margin-top: 15%;
+    		margin-bottom: 10%;
+		}
+		.row {
+			.projectItemContainer {
+				.projectItem {
+					.projectText {
+						font-size: 1.8em;
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+@media only screen and (max-width:350px) {
+.projectsPage {
+	.projectsPagePosition {
+		.projectsTitle {
+			font-size: 2.3em;
+		}
+		.row {
+			.projectItemContainer {
+				.projectItem {
+					.projectText {
+						font-size: 1.5em;
+					}
+				}
+			}
+		}
+	}
+}
+}

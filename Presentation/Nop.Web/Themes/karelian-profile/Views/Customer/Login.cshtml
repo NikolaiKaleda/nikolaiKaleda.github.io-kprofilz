@@ -1,0 +1,71 @@
+﻿@model LoginModel
+@using Nop.Web.Models.Customer;
+@using Nop.Core;
+@using Nop.Core.Infrastructure;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.Login").Text);
+    //page class
+    Html.AppendPageCssClassParts("html-login-page");
+
+    //register URL with return URL (if specified)
+    var registerUrl = Url.RouteUrl("Register");
+    if (!String.IsNullOrEmpty(this.Context.Request.QueryString["returnUrl"]))
+    {
+        var webHelper = EngineContext.Current.Resolve<IWebHelper>();
+        registerUrl = webHelper.ModifyQueryString(registerUrl, "returnurl=" + HttpUtility.UrlEncode(this.Context.Request.QueryString["returnUrl"]), null);
+    }
+
+    var validationSummary = Html.ValidationSummary(true, T("Account.Login.Unsuccessful").Text);
+}
+<div class="loginPage">
+    <div class="loginTitle">
+        <h3 class="title">@T("Account.Login.Welcome")</h3>
+    </div>
+
+    @if (!MvcHtmlString.IsNullOrEmpty(validationSummary))
+    {
+        <div class="message-error alert alert-danger">@validationSummary</div>
+    }
+    @using (Html.BeginForm())
+    {
+        if (Model.UsernamesEnabled)
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.Username, new { }, ":")
+                @Html.TextBoxFor(m => m.Username, new { @class = "username", autofocus = "autofocus" })
+                @Html.ValidationMessageFor(m => m.Username)
+            </div>
+        }
+        else
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { }, ":")
+                @Html.TextBoxFor(m => m.Email, new { @class = "email form-control", autofocus = "autofocus" })
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+        }
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, new { }, ":")
+            @Html.PasswordFor(m => m.Password, new { @class = "password form-control" })
+            @Html.ValidationMessageFor(m => m.Password)
+        </div>
+        <div class="form-group reversed">
+            @Html.CheckBoxFor(m => m.RememberMe)
+            @Html.LabelFor(m => m.RememberMe)
+            <span class="forgot-password">
+                @Html.RouteLink(T("Account.Login.ForgotPassword").Text, "PasswordRecovery")
+            </span>
+        </div>
+        if (Model.DisplayCaptcha)
+        {
+            <div class="captcha-box">
+                @Html.Raw(Html.GenerateCaptcha())
+            </div>
+        }
+
+        <button type="submit" class="btn btn-default submitBtn">@T("Account.Login.LoginButton")</button>
+    }
+</div>

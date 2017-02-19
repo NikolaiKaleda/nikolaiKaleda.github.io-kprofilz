@@ -1,0 +1,160 @@
+.contactsPage {
+    .contactsTitleContainer {
+        min-height: 200px;
+        height: 220px;
+        .contactsTitle {
+            @include input-font($OswardFont, 85px, $textColor3, 5px, 400);
+            text-align: center;
+            margin: 0;
+            text-transform: uppercase;
+            padding: 60px;
+        }
+    }
+    .contactsIcons {
+        width: 100%;
+        background-color: $mainColor;
+        .contactsDataItems {
+            width: 90%;
+            margin: 0 auto;
+            padding: 60px 0;
+            .row {
+                margin: 0;
+                .contactItem {
+                    text-align: center;
+                    -webkit-transition: all 0.4s ease-out 0s;
+                    -moz-transition: all 0.4s ease-out 0s;
+                    -o-transition: all 0.4s ease-out 0s;
+                    transition: all 0.4s ease-out 0s;
+                    .contactLink {
+                        text-decoration: none;
+                        .contactIconContainer {
+                            color: $textColor5;
+                            .contactIcon {
+                                -webkit-transition: all 0.4s ease-out 0s;
+                                -moz-transition: all 0.4s ease-out 0s;
+                                -o-transition: all 0.4s ease-out 0s;
+                                transition: all 0.4s ease-out 0s;
+                            }
+                        }
+                        .contactText {
+                            .contactDataTitle {
+                                @include input-font($OswardFont, 2em, $textColor5, 0, 400);
+                                -webkit-transition: all 0.4s ease-out 0s;
+                                -moz-transition: all 0.4s ease-out 0s;
+                                -o-transition: all 0.4s ease-out 0s;
+                                transition: all 0.4s ease-out 0s;
+                            }
+                            .contactDataDescription {
+                                @include input-font($RalewayFont, 1.3em, $textColor4, 0, 400);
+                                -webkit-transition: all 0.4s ease-out 0s;
+                                -moz-transition: all 0.4s ease-out 0s;
+                                -o-transition: all 0.4s ease-out 0s;
+                                transition: all 0.4s ease-out 0s;
+                            }
+                        }
+                    }
+                }
+                .socialItem {
+                    text-align: center;
+                    -webkit-transition: all 0.4s ease-out 0s;
+                    -moz-transition: all 0.4s ease-out 0s;
+                    -o-transition: all 0.4s ease-out 0s;
+                    transition: all 0.4s ease-out 0s;
+                    .socialLink {
+                        color: $textColor5;
+                        text-decoration: none;
+                        .socialText {
+                            .socialTitle {
+                                @include input-font($RalewayFont, 1.3em, $textColor4, 0, 400);
+                                -webkit-transition: all 0.4s ease-out 0s;
+                                -moz-transition: all 0.4s ease-out 0s;
+                                -o-transition: all 0.4s ease-out 0s;
+                                transition: all 0.4s ease-out 0s;
+                            }
+                        }
+                        .socialIconContainer {
+                            .contactIcon {
+                                -webkit-transition: all 0.4s ease-out 0s;
+                                -moz-transition: all 0.4s ease-out 0s;
+                                -o-transition: all 0.4s ease-out 0s;
+                                transition: all 0.4s ease-out 0s;
+                            }
+                        }
+                    }
+                }
+            }
+            .row:first-child {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .contactsMap {
+        width: 100%;
+        .overlay {
+            background:transparent; 
+            position:relative; 
+            width:100%;
+            height:550px;
+            top:550px;
+            margin-top:-550px;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            margin-bottom: -10px;
+        }
+    }
+	.askQuestion {
+		width: 100%;
+		background-color: $bgPartnersColor;
+		padding: 60px;
+		margin: 0 auto;
+		form {
+			width: 60%;
+			margin: 0 auto;
+			.askQuestionTitle {
+				.title {
+					@include input-font($OswardFont, 2.5em, $textColor5, 1px, normal);
+					margin-bottom: 45px;
+				}
+			}
+			.form-group {
+				margin-bottom: 30px;
+				label {
+					@include input-font($RalewayFont, 1.5em, $textColor5, 0, normal);
+				}
+				textarea, input {
+					border-radius: 0;
+				}
+			}
+			.submitBtn {
+				@include input-font($RobotoRegularFont, 1.2em, #fff, 0, normal);
+				@include inlineBlock();
+				display: block;
+				border-radius: 0;
+				margin: 0 auto;
+				padding: 10px 45px;
+				transition: all .4s;
+				background-color: rgb(28,28,28);
+				text-align: center;
+				text-decoration: none;
+				text-transform: capitalize;
+			}
+			.submitBtn:hover {
+				background-color: #fff;
+				color: rgb(28,28,28);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

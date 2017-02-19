@@ -1,0 +1,125 @@
+﻿@using GalleryModel = Nop.Plugin.Widgets.Gallery.Models.ConfigurationGalleryImagesModel;
+@using GalleryLocalizedModel = Nop.Plugin.Widgets.Gallery.Models.GalleryImagesLocalizedModel;
+@using Nop.Web.Framework;
+@using Nop.Web.Framework.Events
+
+@model Nop.Plugin.Widgets.Gallery.Models.ConfigurationGalleryImagesModel
+
+@Html.ValidationSummary(false)
+@Html.AntiForgeryToken()
+@Html.HiddenFor(model => model.Id)
+
+<script>
+    $(document).ready(function () {
+        bindBootstrapTabSelectEvent('manufacturer-edit');
+    });
+</script>
+
+<div class="content">
+    <div class="form-horizontal">
+        <div id="gallery-image-edit" class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+                @Html.RenderBootstrapTabHeader("tab-info", @T("Plugin.Widgets.GalleryImages.Info"), true)
+            </ul>
+            <div class="tab-content">
+                @Html.RenderBootstrapTabContent("tab-info", @TabInfo(), true)
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@{
+    //custom tabs
+    var eventMessage = new AdminTabStripCreated(this.Html, "gallery-edit");
+    Nop.Core.Infrastructure.EngineContext.Current.Resolve<Nop.Services.Events.IEventPublisher>().Publish(eventMessage);
+    foreach (var eventBlock in eventMessage.BlocksToRender)
+    {
+        @eventBlock
+    }
+}
+
+@*save selected tab name*@
+<input type="hidden" id="selected-tab-name" name="selected-tab-name" value="@(Html.GetSelectedTabName())">
+
+
+@helper TabInfo()
+{ 
+    @(Html.LocalizedEditor<GalleryModel, GalleryLocalizedModel>("gallery-info-localized",
+                @<table class="adminContent">
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.Locales[item].Name):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => Model.Locales[item].Name)
+                            @Html.ValidationMessageFor(model => model.Locales[item].Name)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.Locales[item].Description):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.Locales[item].Description, "RichEditor")
+                            @Html.ValidationMessageFor(model => model.Locales[item].Description)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            @Html.HiddenFor(model => model.Locales[item].LanguageId)
+                        </td>
+                    </tr>
+                </table>
+                ,
+                @<table class="adminContent">
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.Name):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.Name)
+                            @Html.ValidationMessageFor(model => model.Name)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.Description):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(x => x.Description, "RichEditor")
+                            @Html.ValidationMessageFor(model => model.Description)
+                        </td>
+                    </tr>
+                </table>
+            ))
+    <table class="adminContent">
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.PictureId)
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.PictureId)
+                @Html.ValidationMessageFor(model => model.PictureId)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.DisplayOrder):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.DisplayOrder)
+                @Html.ValidationMessageFor(model => model.DisplayOrder)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.GalleryId):
+            </td>
+            <td class="adminData">
+                @Html.ListBoxFor(x => x.SelectedOptions, Model.ListGalleries, new { Multiple = "multiple" })
+                @Html.ValidationMessageFor(model => model.GalleryId)
+            </td>
+        </tr>
+    </table>
+}

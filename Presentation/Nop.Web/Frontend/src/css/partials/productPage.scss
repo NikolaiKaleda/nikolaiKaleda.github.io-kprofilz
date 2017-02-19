@@ -1,0 +1,459 @@
+.productPage {
+    width: 100%;
+	border-top: 1px solid #B3B3B3;
+	padding-bottom: 6%;
+	overflow: hidden;
+    .breadCrumbs {
+        margin-top: 30px;
+        ul {
+            padding: 0;
+            li {
+                @include inlineBlock();
+                a {
+                    margin-right: 15px;
+                    margin-left: 15px;
+                    @include input-font($RobotoRegularFont, 1em, $textColor5, 0, normal);
+                    text-decoration: none;
+                }
+                a:hover {
+                    color: $mainColor;
+                    //background-color: $textColor6;
+                }
+                img {
+                    height: 15px;
+                }
+                .activeProduct {
+                    color: $newsTextColor;
+                }
+            }
+        }
+    }
+    .topMainInfo {
+		.titleForDevice {
+			display: none;
+			h2 {
+				@include input-font($OswardFont, 3em, $textColor5, 1px, normal);
+				text-align: center;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+		}
+        .row {
+            width: 90%;
+            margin: 0 auto;
+            div {
+                .slide {
+                    .productGallery {
+                        .slide {
+                            .grid {
+                                figure {
+                                    min-width: 30px;
+                                    max-width: 100%;
+                                    width: 100%;
+                                    min-height: 20px;
+                                    max-height: 100%;
+                                    background: none;
+                                    a {
+                                        img {
+                                            width: 100%;
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                                .smallImg {
+                                    width: 32%;
+                                    margin-top: 2%;
+                                    margin-bottom: 30px;
+                                }
+                                .firstImg {
+                                    margin-right: 2%;
+                                }
+                                .smallImg:last-child {
+                                    margin-left: 2%;
+                                }
+                            }
+                        }
+                        .pswp {
+                            .pswp__scroll-wrap {
+                                .pswp__container {
+                                    .pswp__item {
+                                        .pswp__zoom-wrap {
+                                            .pswp__img {
+                                                height: auto!important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .rating {
+                    text-align: center;
+                    .title {
+                        @include input-font($OswardFont, 1.7em, $textColor5, 1px, normal);
+                        margin-top: 30px;
+                    }
+                    .fa-star {
+                        color: $mainColor;
+                    }
+                }
+                .reviewsPreview {
+                    text-align: center;
+                    a {
+                        @include input-font($RobotoRegularFont, 1em, $textColor5, 1px, normal);
+                        @include inlineBlock();
+                        border-bottom: 1px solid $textColor5;
+                        text-decoration: none;
+                    }
+                    p {
+                        @include inlineBlock(); 
+                    }
+                }
+            }
+            .rightProductDescription {
+                .productTitle {
+                    @include input-font($OswardFont, 2.5em, $textColor5, 1px, normal);
+                    text-align: center;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                }
+                .packageSeries {
+                    table {
+                        margin-top: 60px;
+                        background-color: $mainColor;
+                        tbody {
+                            tr {
+                                th {
+                                    @include input-font($RalewayFont, 1em, $textColor5, 1px, bold);
+                                }
+                                .leftTitle {
+                                    width: 100px;
+                                    a {
+                                        text-decoration: none;
+                                        color: $textColor5;
+                                        font-size: 1.1em;
+                                    }
+                                }
+                                .leftTitle :hover {
+                                    color: white;
+                                }
+                                .topTitle {
+                                    @include input-font($RalewayFont, 1.3em, $textColor5, 1px, bold);
+                                    text-align: center;
+                                    border: none;
+                                }
+                                .topTitle:first-child {
+                                    text-align: left;
+                                }
+                                td {
+                                    @include input-font($RalewayFont, 1.1em, $textColor5, 1px, normal);
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .kit {
+					list-style: inherit;
+					font-family: $RobotoRegularFont;
+					font-size: 1.1em;
+					color: $textColor5;
+					letter-spacing: 0;
+					font-weight: 400;
+                    h3 {
+                        @include input-font($OswardFont, 1.5em, $textColor5, 2px, normal);
+                        border-bottom: 1px solid $mainColor;
+                        margin-top: 30px;
+                    }
+                    ul {
+                        list-style: inherit;
+                        list-style-type: circle;
+                        padding-left: 20px;
+                        li {
+                            list-style: inherit;
+                            @include input-font($RobotoRegularFont, 1.1em, $textColor5, 0, normal);
+                        }
+                    }
+                }
+                .characteristics {
+                    table {
+                        margin-top: 30px;
+                        background-color: $mainColor;
+                        tbody {
+                            tr {
+                                th {
+                                    @include input-font($RalewayFont, 1.1em, $textColor5, 1px, bold);
+                                }
+                                td {
+                                    @include input-font($RalewayFont, 1.2em, $textColor5, 1px, normal);
+                                }
+                            }
+                            tr:first-child {
+                                th, td {
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detailInfo {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 60px;
+        .navigation {
+            .nav {
+				.plans, .facade, .reviews {
+					display: none;
+				}
+                li {
+                    a {
+                        @include input-font($RobotoRegularFont, 1.1em, $textColor5, 0, normal);
+                        border: none;
+                        padding: 10px;
+                    }
+                }
+                li:hover {
+                    a {
+                        border-radius: 0;
+                        background-color: $mainColor;
+                    }
+                    
+                }
+                .active {
+                    border-bottom: 1px solid $mainColor;
+                }
+            }
+        }
+        .detailContent {
+			display: block;
+            .descriptionDetail {
+                margin-top: 30px;
+                p {
+                    @include input-font($RobotoRegularFont, 1em, $newsTitleColor, 0, normal);
+                }
+				.plansDetail {
+					display: block;
+					margin-top: 60px;
+					.row {
+						.plansImg {
+							img {
+								width: 80%;
+							}
+						}
+						.footage {
+							table {
+								tbody {
+									tr {
+										.floorNumber {
+											@include input-font($RobotoRegularFont, 1.1em, $textColor5, 0, normal);
+											background-color: $mainColor;
+											text-align: center;
+										}
+										th {
+											@include input-font($RobotoRegularFont, 1em, $textColor5, 0, normal);
+										}
+										td {
+											@include input-font($RalewayFont, 1em, $newsTitleColor, 0, normal);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.facadeDetails {
+					display: block;
+					margin-top: 60px;
+					.facadeImg {
+						img {
+							width: 80%;
+						}
+					}
+					.facadeDescription {
+						h3 {
+							@include input-font($OswardFont, 1.5em, $textColor5, 0, normal);
+							border-bottom: 1px solid $mainColor;
+						}
+						p {
+							@include input-font($RobotoRegularFont, 1em, $textColor6, 0, normal);
+						}
+					}
+				}
+            }
+        }
+        .standartDetails, .logicDetails, .northDetails, .seismicDetails {
+            display: none;
+            .detailsTitle {
+                @include input-font($OswardFont, 2.7em, $textColor5, 0, normal);
+                margin-top: 45px;
+                text-align: center;
+            }
+            .topImg {
+                text-align: center;
+                margin-top: 60px;
+                margin-bottom: 30px;
+            }
+            .description {
+                p {
+                    @include input-font($RobotoRegularFont, 1em, $textColor4, 0, normal);
+                }
+                table {
+                    margin-top: 45px;
+                    tbody {
+                        tr {
+                            th {
+                                @include input-font($RobotoRegularFont, 1em, $textColor5, 0, normal);
+                            }
+                            td {
+                                @include input-font($RalewayFont, 1em, $textColor5, 0, normal);
+                            }
+                        }
+                        .improvements {
+                            background-color: $mainColor;
+                        }
+                        tr:first-child {
+                            th, td {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .reviewsDetails {
+			display: block!important;
+            .detailsTitle {
+                @include input-font($OswardFont, 2.7em, $textColor5, 0, normal);
+                text-align: center;
+                margin-top: 45px;
+            }
+            .authorReview {
+                width: 700px;
+                background-color: rgba(255, 222, 0, 0.2);
+                margin: 30px  auto 0 auto;
+                padding: 30px;
+				.nameAuthor {
+					@include input-font($OswardFont, 1.5em, $textColor5, 1px, normal);
+					@include inlineBlock();
+					margin-left: 50px;
+					margin-top: 0;
+				}
+				.authorRating {
+					@include inlineBlock();
+					float: right;
+					margin-right: 50px;
+					.fa-star {
+						color: $mainColor;
+					}
+					.fa-star-o {
+						color: $textColor5;
+					}
+				}
+				.reviewText {
+					@include input-font($regularFont, 1em, $textColor5, 0, normal);
+				}
+				.reviewDate {
+					@include input-font($RalewayFont, 1em, $textColor6, 1px, normal);
+					float: right;
+					margin-right: 50px;
+				}
+            }
+			.addReview {
+				width: 60%;
+				background-color: $bgPartnersColor;
+				padding: 60px;
+				margin: 60px auto 0 auto;
+				form {
+					.addReviewTitle {
+						.title {
+							@include input-font($OswardFont, 2.5em, $textColor5, 1px, normal);
+							margin-bottom: 45px;
+						}
+					}
+					.form-group {
+						margin-bottom: 30px;
+						label {
+							@include input-font($RalewayFont, 1.5em, $textColor5, 0, normal);
+						}
+						textarea, input {
+							border-radius: 0;
+						}
+					}
+					.ratingContainer {
+						margin-bottom: 60px;
+						.radio {
+							text-align: center;
+							.ratingTitle {
+								@include input-font($RalewayFont, 1.5em, $textColor5, 0, normal);
+							}
+							.ratingNumber {
+								@include input-font($RalewayFont, 1.3em, $textColor5, 0, normal);
+								@include inlineBlock();
+								vertical-align: super;
+								margin: 0;
+							}
+							.bad {
+								color: #d9534f;
+							}
+							.excellent {
+								color: #5cb85c;
+							}
+							label {
+								@include inlineBlock();
+								margin-right: 15px;
+								padding: 0;
+								input {
+									margin: 0 0 0 15px;
+									position: relative;
+									width: 20px;
+									height: 20px;
+								}
+							}
+						}
+					}
+					.submitBtn {
+						@include input-font($RobotoRegularFont, 1.2em, #fff, 0, normal);
+						@include inlineBlock();
+						display: block;
+						border-radius: 0;
+						margin: 0 auto;
+						padding: 10px 45px;
+						transition: all .4s;
+						background-color: rgb(28,28,28);
+						text-align: center;
+						text-decoration: none;
+						text-transform: capitalize;
+					}
+					.submitBtn:hover {
+						background-color: #fff;
+						color: rgb(28,28,28);
+					}
+				}
+			}
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

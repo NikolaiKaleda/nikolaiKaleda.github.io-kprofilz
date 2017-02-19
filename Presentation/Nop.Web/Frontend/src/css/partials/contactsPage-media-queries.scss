@@ -1,0 +1,252 @@
+@media only screen and (min-width:1680px) {
+body {
+    max-width: 1920px;
+    font-size: 20px;
+}
+.contactsPage {
+    .contactsTitleContainer {
+        height: 550px;
+        .contactsTitle {
+            font-size: 5.5em;
+            padding: 210px;
+        }
+    }
+    .contactsMap {
+        iframe {
+            height: 450px;
+        }
+    }
+	.askQuestion {
+		form {
+			.form-group {
+				margin-bottom: 30px;
+				label {
+					font-size: 1.7em;
+				}
+				input {
+					height: 2em;
+				}
+				textarea, input {
+					font-size: 1.2em;
+				}
+			}
+			.submitBtn {
+				font-size: 1.5em;
+				padding: 0.5em 5em;
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:1680px) {
+body {
+	font-size: 19px;
+}
+.contactsPage {
+    .contactsTitleContainer {
+        height: 400px;
+        .contactsTitle {
+            font-size: 5.5em;
+            padding: 140px;
+        }
+    }
+    .contactsMap {
+        iframe {
+            height: 400px;
+        }
+    }
+	.askQuestion {
+		form {
+			width: 70%;
+			.askQuestionTitle {
+				.title {
+					font-size: 2.7em;
+				}
+			}
+			.form-group {
+				margin-bottom: 30px;
+				label {
+					font-size: 1.6em;
+				}
+				textarea, input {
+					font-size: 1.1em;
+				}
+			}
+			.submitBtn {
+				font-size: 1.5em;
+				padding: 0.5em 5em;
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:1370px) {
+body {
+	font-size: 14px;
+}
+.contactsPage {
+    .contactsTitleContainer {
+        min-height: 200px;
+        height: 300px;
+        .contactsTitle {
+            padding: 110px;
+        }
+    }
+    .contactsMap {
+        iframe {
+            height: 270px;
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width:1199px) {
+body {
+	font-size: 12px;
+}
+.contactsPage {
+    .contactsIcons {
+        .contactsDataItems {
+            width: 95%;
+            padding: 45px 0;
+        }
+    }
+	.askQuestion {
+		padding: 45px;
+		form {
+			width: 75%;
+			.form-group {
+				margin-bottom: 25px;
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:992px) {
+body {
+    font-size: 13px;
+}
+.contactsPage {
+    .contactsTitleContainer {
+        height: 320px;
+    }
+    .contactsIcons {
+        .contactsDataItems {
+            width: 100%;
+            padding: 30px 0;
+            .row {
+                .contactItem {
+                    .contactLink {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+	.askQuestion {
+		padding: 30px;
+		form {
+			width: 80%;
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:768px) {
+body {
+    font-size: 12px;
+}
+.contactsPage {
+    .contactsTitleContainer {
+        .contactsTitle {
+            padding: 90px;
+        }
+    }
+	.askQuestion {
+		form {
+			width: 90%;
+		}
+	}
+}
+}
+
+@media only screen and (max-width:500px) {
+.contactsPage {
+    .contactsTitleContainer {
+        .contactsTitle {
+            padding: 14px;
+			padding-top: 65px;
+        }
+    }
+	.askQuestion {
+		form {
+			width: 100%;
+			.askQuestionTitle {
+				.title {
+					margin-bottom: 15px;
+				}
+			}
+			.form-group {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+}
+
+@media only screen and (max-width:350px) {
+body {
+    font-size: 11px;
+}
+.contactsPage {
+	.askQuestion {
+		padding: 60px 0 30px 0;
+		form {
+			width: 85%;
+			.askQuestionTitle {
+				.title {
+					margin-bottom: 15px;
+				}
+			}
+			.form-group {
+				margin-bottom: 10px;
+			}
+			.submitBtn {
+				@include input-font($RobotoRegularFont, 1.2em, #fff, 0, normal);
+				@include inlineBlock();
+				display: block;
+				border-radius: 0;
+				margin: 0 auto;
+				padding: 10px 45px;
+				transition: all .4s;
+				background-color: rgb(28,28,28);
+				text-align: center;
+				text-decoration: none;
+				text-transform: capitalize;
+			}
+		}
+	}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

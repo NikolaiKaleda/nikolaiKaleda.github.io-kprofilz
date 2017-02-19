@@ -1,0 +1,742 @@
+@media only screen and (min-width:1680px) {
+body {
+    max-width: 1920px;
+    font-size: 22px;
+    margin: 0 auto;
+}
+.aboutPage {
+	.aboutPageTitleContainer {
+		.aboutPageTitle {
+            font-size: 4em;
+            left: 37%;
+		}
+	}
+	.aboutContentPosition {
+		padding-bottom: 30px;
+		.aboutDescription {
+			.descriptionTextContainer {
+				.descriptionTitle {
+                    font-size: 2em;
+				}
+				.descriptionText {
+				    font-size: 1em;
+				}
+			}
+		}
+	}
+	.aboutAdvantagesPosition {
+		.aboutAdvantages {
+			width: 80%;
+			.aboutAdvantagesSubtitle {
+				font-size: 2em;
+			}
+			.row {
+				margin-top: 60px;
+				.aboutAdvantagesItem {
+					.itemTitleContent {
+						.itemNumber {
+				            font-size: 3.5em;
+						}
+						.itemTitle {
+				            font-size: 1.3em;
+						}
+					}
+					.itemTextContainer {
+						margin-top: 25px;
+						.itemText {
+				            font-size: 1em;
+						}
+					}
+				}
+			}
+		}
+	}
+	.aboutVideosPosition {
+		padding: 90px 0;
+		.aboutVideosContainer {
+			.aboutVideo {
+				iframe {
+					height: 615px;
+				}
+			}
+			.aboutVideosDescriptionContainer {
+				.aboutVideosDescription {
+					.videosDescriptionTitle {
+                        font-size: 2em;
+					}
+					p {
+				        font-size: 1em;
+					}
+				}
+				.aboutVideosStatistic {
+					.row {
+						.aboutVideosStatisticContainer {
+							h4 {
+								font-size: 4em;
+							}
+							p {
+								font-size: 1em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.contactUsBtn {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		.contactbtnContainer {
+			h4 {
+				font-size: 2em;
+				padding: 49px 0;
+			}
+			.contactUsBtn {
+				.contactBtn {
+				    font-size: 1.5em;
+					height: 70px;
+					width: 180%;
+					line-height: 60px;
+				}
+			}
+		}
+	}
+}
+//----- Sertificate gallery -----
+.sertificateGallery {
+	.row {
+		.galleryTitle {
+            font-size: 2em;
+		}
+		.slide {
+			.my-gallery {
+				figure {
+                    max-height: 330px;
+					a{
+						img {
+				            height: 360px;
+						}
+					}
+					figcaption {
+						.nameProject {
+				            font-size: 1.5em;
+							text-shadow: $textColor5 0 0 4px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.row:first-of-type {
+		padding-top: 50px;
+	}
+	.pswp__caption__center {
+		font-size: 1.5em;
+	}
+	.pswp__counter {
+		font-size: 1.3em;
+	}
+}
+//----- End sertificate gallery -----
+//----- Recomendation letters -----
+.aboutReccomendLetters {
+	.row {
+		.galleryTitle {
+            font-size: 2em;
+		}
+		.slide {
+			.my-gallery {
+				figure {
+                    max-height: 330px;
+                    float: none;
+                    margin: 0 auto;
+					a{
+						img {
+							width: 100%;
+							height: 365px;
+						}
+					}
+					figcaption {
+						.nameProject {
+				            font-size: 1.5em;
+							text-shadow: $textColor5 0 0 4px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.pswp__caption__center {
+		font-size: 1.5em;
+	}
+	.pswp__counter {
+		font-size: 1.3em;
+	}
+}
+//----- End recomendation letters -----
+}
+
+
+@media only screen and (max-width:1680px) {
+body {
+    font-size: 20px;
+}
+.aboutPage {
+	.aboutPageTitleContainer {
+        height: 330px;
+		.aboutPageTitle {
+            font-size: 4em;
+            left: 32%;
+		}
+	}
+	.aboutContentPosition {
+        padding: 4em 0 0em;
+		.aboutDescription {
+			.descriptionTextContainer {
+				.descriptionTitle {
+				    font-size: 2em;
+					margin-bottom: 30px;
+				}
+				.descriptionText {
+				    font-size: 0.8em;
+				}
+			}
+		}
+	}
+	.aboutAdvantagesPosition {
+		.aboutAdvantages {
+			width: 80%;
+			.aboutAdvantagesSubtitle {
+				font-size: 2em;
+			}
+			.row {
+				margin-top: 60px;
+				.aboutAdvantagesItem {
+					padding-right: 25px;
+    				padding-left: 25px;
+					.itemTitleContent {
+						.itemNumber {
+				            font-size: 3.5em;
+						}
+						.itemTitle {
+				            font-size: 1.2em;
+						}
+					}
+					.itemTextContainer {
+						.itemText {
+				            font-size: 0.7em;
+						}
+					}
+				}
+			}
+		}
+	}
+	.aboutVideosPosition {
+		padding: 4em 0;
+		.aboutVideosContainer {
+			.aboutVideo {
+				padding: 0 2em;
+			}
+			.aboutVideosDescriptionContainer {
+				.aboutVideosDescription {
+					.videosDescriptionTitle {
+				        font-size: 2em;
+					}
+					p {
+				        font-size: 0.7em;
+					}
+				}
+				.aboutVideosStatistic {
+					.row {
+						.aboutVideosStatisticContainer {
+							h4 {
+								font-size: 3em;
+							}
+							p {
+								font-size: 0.7em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.contactUsBtn {
+		.contactbtnContainer {
+			h4 {
+				font-size: 1.7em;
+				padding: 45px 0;
+			}
+			.contactUsBtn {
+				.contactBtn {
+				    font-size: 1em;
+					width: 180%;
+				}
+			}
+		}
+	}
+}
+//----- Sertificate gallery -----
+.sertificateGallery {
+	.row {
+		padding-bottom: 20px;
+		.galleryTitle {
+            font-size: 2em;
+			padding-top: 60px;
+		}
+		.slide {
+			.my-gallery {
+				figure {
+					figcaption {
+						.nameProject {
+				            font-size: 1.1em;
+							text-shadow: $textColor5 0 0 4px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End sertificate gallery -----
+//----- Recomendation letters -----
+.aboutReccomendLetters {
+	padding-bottom: 30px;
+	.row {
+		.galleryTitle {
+            font-size: 2em;
+			padding-top: 60px;
+		}
+		.slide {
+			.my-gallery {
+                padding-bottom: 0;
+				figure {
+				    float: none;
+                    margin: 0 auto;
+					figcaption {
+						.nameProject {
+				            font-size: 1.2em;
+							margin: 0px auto 10px auto;
+							text-shadow: $textColor5 0 0 4px;
+							span {
+								font-weight: 800;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End recomendation letters -----
+}
+
+
+@media only screen and (max-width:1370px) {
+body {
+    font-size: 18px;
+}
+.aboutPage {
+	.aboutPageTitleContainer {
+        height: 300px;
+	}
+	.aboutContentPosition {
+		.aboutDescription {
+			padding-bottom: 60px;
+			.descriptionTextContainer {
+				padding-right: 15px;
+				.descriptionTitle {
+					margin-bottom: 20px;
+				}
+			}
+			.descriptionImage {
+				padding-left: 15px;
+			}
+		}
+	}
+	.aboutAdvantagesPosition {
+		padding: 2em 0;
+		.aboutAdvantages {
+			width: 85%;
+			.row {
+				margin-top: 55px;
+				.aboutAdvantagesItem {
+					padding-right: 20px;
+    				padding-left: 20px;
+				}
+			}
+		}
+	}
+	.aboutVideosPosition {
+		.aboutVideosContainer {
+			.aboutVideo {
+				iframe {
+					height: 415px;
+				}
+			}
+			.aboutVideosDescriptionContainer {
+				.aboutVideosDescription {
+					padding-bottom: 1.5em;
+					margin-bottom: 1.5em;
+					.videosDescriptionTitle {
+						margin-bottom: 0.7em;
+					}
+				}
+			}
+		}
+	}
+	.contactUsBtn {
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+}
+//----- Recomendation letters -----
+.aboutReccomendLetters {
+	.row {
+		.slide {
+			.my-gallery {
+				figure {
+					figcaption {
+						.nameProject {
+							margin: -25px auto 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End recomendation letters -----
+}
+
+@media only screen and (max-width:1199px) {
+body {
+    font-size: 17px;
+}
+.aboutPage {
+	.aboutPageTitleContainer {
+        height: 260px;
+		.aboutPageTitle {
+            left: 30%;
+		}
+	}
+	.aboutContentPosition {
+		padding: 3em 0 0;
+        padding-bottom: 0;
+		.aboutDescription {
+			.descriptionTextContainer {
+				padding: 0 10px;
+				.descriptionTitle {
+				    margin-top: 0;
+				}
+			}
+			.descriptionImage {
+				padding: 0 50px;
+			}
+		}
+	}
+	.aboutAdvantagesPosition {
+		.aboutAdvantages {
+			.row {
+				margin-top: 50px;
+				.aboutAdvantagesItem {
+					height: 9em;
+				}
+			}
+		}
+	}
+	.aboutVideosPosition {
+		.aboutVideosContainer {
+			width: 95%;
+			.aboutVideo {
+				padding: 0 1em;
+			}
+		}
+	}
+	.contactUsBtn {
+		.contactbtnContainer {
+			width: 95%;
+			h4 {
+				font-size: 1.5em;
+			}
+		}
+	}
+}
+}
+
+
+@media only screen and (max-width:992px) {
+body {
+    font-size: 14px;
+}
+.aboutPage {
+	.aboutPageTitleContainer {
+        height: 250px;
+		.aboutPageTitle {
+            left: 27%;
+		}
+	}
+	.aboutContentPosition {
+		width: 95%;
+		.aboutDescription {
+            padding-bottom: 50px;
+			.descriptionTextContainer {
+				padding: 0 15px 15px 15px;
+				.descriptionText {
+				    font-size: 1em;
+				}
+			}
+			.descriptionImage {
+				padding: 0 40px;
+			}
+		}
+	}
+	.aboutAdvantagesPosition {
+		.aboutAdvantages {
+			width: 95%;
+			.row {
+				.aboutAdvantagesItem {
+                    height: 11em;
+					.itemTextContainer {
+						margin-top: 15px;
+						.itemText {
+				            font-size: 1em;
+						}
+					}
+				}
+			}
+		}
+	}
+	.aboutVideosPosition {
+		padding: 3em 0;
+		.aboutVideosContainer {
+			.aboutVideo {
+				iframe {
+					height: 425px;
+				}
+			}
+			.aboutVideosDescriptionContainer {
+				.aboutVideosDescription {
+					padding-bottom: 1.1em;
+					margin-bottom: 1.1em;
+					p {
+				        font-size: 0.9em;
+					}
+				}
+				.aboutVideosStatistic {
+					.row {
+						.aboutVideosStatisticContainer {
+							p {
+								font-size: .9em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.contactUsBtn {
+		.contactbtnContainer {
+			width: 100%;
+			h4 {
+				font-size: 1.3em;
+			}
+		}
+	}
+}
+//----- Sertificate gallery -----
+.sertificateGallery {
+	.row {
+		.slide {
+			.my-gallery {
+                padding-bottom: 15px;
+				figure {
+					float: none;
+                    margin: 0 auto;
+					a{
+						img {
+							width: 100%;
+							height: 280px;
+						}
+					}
+					figcaption {
+						.nameProject {
+				            font-size: 1.3em;
+				            padding-top: 105px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End sertificate gallery -----
+//----- Recomendation letters -----
+.aboutReccomendLetters {
+	.row {
+		.slide {
+			.my-gallery {
+				figure {
+					figcaption {
+						.nameProject {
+				            font-size: 1.3em;
+                            padding-top: 150px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//----- End recomendation letters -----
+}
+
+
+@media only screen and (max-width:768px) {
+body {
+    font-size: 12px;
+}
+.aboutPage {
+	.aboutPageTitleContainer {
+		.aboutPageTitle {
+            left: 19%;
+		}
+	}
+	.aboutContentPosition {
+		.aboutDescription {
+			.descriptionTextContainer {
+				.descriptionText {
+				    text-align: justify;
+				}
+			}
+		}
+	}
+	.aboutAdvantagesPosition {
+		.aboutAdvantages {
+			.row {
+				.aboutAdvantagesItem {
+                    height: 9em;
+					.itemTextContainer {
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+	}
+	.aboutVideosPosition {
+		.aboutVideosContainer {
+			.aboutVideo {
+				padding: 0 2em;
+				width: 100%;
+				iframe {
+					height: 320px;
+				}
+			}
+			.aboutVideosDescriptionContainer {
+				width: 100%;
+                text-align: justify;
+				.aboutVideosDescription {
+					p {
+				        font-size: 1em;
+					}
+				}
+			}
+		}
+	}
+	.contactUsBtn {
+        padding-top: 0em;
+		.contactbtnContainer {
+			h4 {
+				width: 100%;
+                text-align: center;
+			}
+			.contactUsBtn {
+                display: block;
+                text-align: center;
+				.contactBtn {
+				    font-size: 1.3em;
+					width: 50%;
+                    float: none;
+                    margin: -20px auto 0;
+				}
+			}
+		}
+	}
+}
+//----- Sertificate gallery -----
+.sertificateGallery {
+    padding-bottom: 30px;
+	.row {
+		.galleryTitle {
+			padding-top: 30px;
+		}
+	}
+}
+//----- End sertificate gallery -----
+//----- Recomendation letters -----
+.aboutReccomendLetters {
+    padding-bottom: 0px;
+	.row {
+		.galleryTitle {
+			padding-top: 30px;
+		}
+	}
+}
+//----- End recomendation letters -----
+}
+
+
+@media only screen and (max-width:500px) {
+.aboutPage {
+	.aboutPageTitleContainer {
+		.aboutPageTitle {
+            left: 2%;
+            text-align: center;
+            position: relative;
+		}
+	}
+	.aboutAdvantagesPosition {
+		.aboutAdvantages {
+			.row {
+				.aboutAdvantagesItem {
+                    height: 10em;
+				}
+			}
+		}
+	}
+	.aboutVideosPosition {
+		.aboutVideosContainer {
+			.aboutVideo {
+				padding: 0;
+			}
+		}
+	}
+	.contactUsBtn {
+		.contactbtnContainer {
+			h4 {
+				font-size: 1.5em;
+			}
+		}
+	}
+}
+}
+
+@media only screen and (max-width:350px) {
+body {
+    font-size: 10px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

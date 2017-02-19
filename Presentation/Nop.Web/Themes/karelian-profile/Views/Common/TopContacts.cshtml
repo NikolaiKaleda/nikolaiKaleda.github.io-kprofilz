@@ -1,0 +1,57 @@
+﻿@model Nop.Web.Models.Common.SocialModel
+
+<div class="topContacts">
+    <div class="emailContacts">
+        <div class="phone">
+            <a href="tel:@Model.Phone1" class="phoneLink">
+                <i class="fa fa-phone phoneLinkIcon" aria-hidden="true"></i>
+                <p class="phoneLinkText">@Model.Phone1</p>
+            </a>
+            <a href="tel:@Model.Phone2" class="phoneLink">
+                <i class="fa fa-phone phoneLinkIcon" aria-hidden="true"></i>
+                <p class="phoneLinkText">@Model.Phone2</p>
+            </a>
+        </div>
+        <div class="email">
+            <a href="mailto:@Model.Email" class="emailLink">
+                <i class="fa fa-envelope-o emailLinkIcon" aria-hidden="true"></i>
+                <p class="emailLinkText">@Model.Email</p>
+            </a>
+        </div>
+        <div class="skype">
+            <a href="skype:@Model.Skype?call" class="skypeLink">
+                <i class="fa fa-skype skypeLinkIcon" aria-hidden="true"></i>
+                <p class="skypeLinkText">@Model.Skype</p>
+            </a>
+        </div>
+    </div>
+    <div class="headerMobile">
+        <h2>Карельский профиль - запад</h2>
+    </div>
+    <div class="socialContacts">
+        @if (!string.IsNullOrEmpty(Model.FacebookLink))
+        {
+            <div class="facebook">
+                <a href="@Model.FacebookLink" class="facebookLink">
+                    <i class="fa fa-facebook facebookIcon" aria-hidden="true"></i>
+                </a>
+            </div>
+        }
+        @if (!string.IsNullOrEmpty(Model.VkLink))
+        {
+            <div class="vk">
+                <a href="@Model.VkLink" class="vkLink">
+                    <i class="fa fa-vk vkIcon" aria-hidden="true"></i>
+                </a>
+            </div>
+        }
+        @if (!string.IsNullOrEmpty(Model.InstagramLink))
+        {
+            <div class="insta">
+                <a href="@Model.InstagramLink" class="instaLink">
+                    <i class="fa fa-instagram instaIcon" aria-hidden="true"></i>
+                </a>
+            </div>
+        }
+    </div>
+</div>

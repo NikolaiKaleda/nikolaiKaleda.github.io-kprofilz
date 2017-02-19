@@ -1,0 +1,8 @@
+﻿Group: Widgets
+FriendlyName: Gallery
+SystemName: Widgets.Gallery
+Version: 3.0
+SupportedVersions: 3.80
+Author: Dmitry Pashuk
+DisplayOrder: 1
+FileName: Nop.Plugin.Widgets.Gallery.dll

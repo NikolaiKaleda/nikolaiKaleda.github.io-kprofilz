@@ -1,0 +1,150 @@
+.newsPage {
+	width: 100%;
+	background-image: url(../img/newsPage/bg.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;
+    opacity: 1.0;
+	padding-top: 60px;
+	.newsPageTitle {
+		@include input-font($OswardFont, 50px, $newsTitleColor, 0, 600);
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 50px;
+	}
+	.newsContentPosition {
+		width: 70%;
+		margin: 0 auto;
+		padding-bottom: 50px;
+		.newContainer {
+			width: 100%;
+			-webkit-box-shadow: 0 1px 21px rgba(0,0,0,.12);
+			-moz-box-shadow: 0 1px 21px rgba(0,0,0,.12);
+			box-shadow: 0 1px 21px rgba(0,0,0,.12);
+			margin-bottom: 35px;
+			.newImg {
+				height: 350px;
+				overflow: hidden;
+				img {
+					width: 100%;
+				}
+			}
+			.newText {
+				text-align: center;
+				background-color: $textColor3;
+				padding-bottom: 50px;
+				.newTitle {
+					@include input-font($RobotoRegularFont, 45px, $newsTitleColor, 0, 900);
+					text-transform: capitalize;
+					margin: 0;
+					padding: 50px 0 30px 0;
+				}
+				.postDate {
+					text-transform: capitalize;
+					margin-bottom: 16px;
+					.dateIcon {
+						@include inlineBlock();
+						padding-right: 15px;
+						color: $newsTextColor;
+					}
+					.dateNumber {
+						@include inlineBlock();
+						@include input-font($RobotoRegularFont, 15px, $newsTextColor, 0, normal);
+					}
+				}
+				.postText {
+					width: 80%;
+    				margin: 0 auto;
+					p {
+						@include input-font($RobotoRegularFont, 14px, $newsTextColor, 0, 200);
+					}
+				}
+				.moreBtnContainer {
+					transition: all .4s;
+					height: 50px;
+					width: 230px;
+					background-color: #fff;
+					border: 2px solid $newsTextColor;
+					line-height: 50px;
+					text-align: center;
+					margin: 50px auto 0 auto;
+					text-transform: capitalize;
+					.moreBtn {
+						text-decoration: none;
+						@include input-font($RobotoRegularFont, 14px, $newsTextColor, 0, normal);
+						@include inlineBlock();
+						.fa {
+    						padding-left: 15px;
+						}
+					}
+				}
+				.moreBtnContainer:hover {
+					background-color: $topMenuColor;
+					border: 2px solid $topMenuColor;
+					.moreBtn {
+						color: #fff;
+						.fa {
+							padding-left: 20px;
+							-webkit-transition: all 0.4s ease-out 0s;
+							-moz-transition: all 0.4s ease-out 0s;
+							-o-transition: all 0.4s ease-out 0s;
+							transition: all 0.4s ease-out 0s;
+						}
+					}
+				}
+			}
+		}
+		.newContainer:last-child {
+			margin: 0;
+		}
+		.newsPagination {
+			text-align: center;
+			.pagination {
+				li {
+					a {
+						color: $newsTextColor;
+					}
+				}
+				.active {
+					a {
+						background-color: $topMenuColor;
+						border-color: $topMenuColor;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+.sb-icon-search,
+.sb-search-submit  {
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon/icomoon.eot');
+    src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon/icomoon.woff') format('woff'),
+        url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+        url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+

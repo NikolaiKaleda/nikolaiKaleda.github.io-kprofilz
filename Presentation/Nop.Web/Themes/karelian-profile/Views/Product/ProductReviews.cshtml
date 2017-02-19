@@ -1,0 +1,93 @@
+﻿@model ProductReviewsModel
+@using Nop.Web.Models.Catalog;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(Model.ProductName);
+    Html.AddTitleParts(T("PageTitle.ProductReviews").Text);
+    //page class
+    Html.AppendPageCssClassParts("html-product-reviews-page");
+}
+
+
+<div class="productPage">
+    <section class="detailInfo">
+        <div class="reviewsDetails detailsItem">
+            <div id="reviewAnchor"></div>
+            <h3 class="detailsTitle">@T("Reviews.ProductReviewsFor") <a href="@Url.RouteUrl("Product", new { SeName = Model.ProductSeName })">@Model.ProductName</a></h3>
+            @if (Model.Items.Count > 0)
+            {
+                foreach (var review in Model.Items)
+                {
+                    <div class="authorReview">
+                        <h4 class="nameAuthor">@review.Title</h4>
+                        <div class="authorRating">
+                            @for (int i = 1; i <= review.Rating; i++)
+                            {
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            }
+                            @for (int i = 5 - review.Rating; i > 0; i--)
+                            {
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            }
+                        </div>
+                        <p class="reviewText">@Html.Raw(Nop.Core.Html.HtmlHelper.FormatText(review.ReviewText, false, true, false, false, false, false))</p>
+                        <p class="reviewDate">@review.WrittenOnStr</p>
+                    </div>
+                }
+            }
+            @if (Model.AddProductReview.SuccessfullyAdded)
+            {
+                <div class="result">
+                    @Model.AddProductReview.Result
+                </div>
+            }
+            else
+            {
+                @*<div id="newReviewAnchor"></div>*@
+                <div class="addReview">
+                    @using (Html.BeginForm())
+                    {
+                        <div class="addReviewTitle">
+                            <h3 class="title">@T("Reviews.Write")</h3>
+                        </div>
+                        @Html.AntiForgeryToken()
+                        var validationSummary = Html.ValidationSummary(true);
+                        if (!MvcHtmlString.IsNullOrEmpty(validationSummary))
+                        {
+                            <div class="message-error">@validationSummary</div>
+                        }
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.AddProductReview.Title, new { }, ":")
+                            @Html.RequiredHint()
+                            @Html.TextBoxFor(model => model.AddProductReview.Title, Model.AddProductReview.CanCurrentCustomerLeaveReview ? (object)(new { @class = "review-title form-control" }) : (object)(new { @class = "review-title", disabled = "disabled" }))
+                            @Html.ValidationMessageFor(model => model.AddProductReview.Title)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.AddProductReview.ReviewText, new { }, ":")
+                            @Html.RequiredHint()
+                            @Html.TextAreaFor(model => model.AddProductReview.ReviewText, Model.AddProductReview.CanCurrentCustomerLeaveReview ? (object)(new { @class = "review-text form-control" }) : (object)(new { @class = "review-text", disabled = "disabled" }))
+                            @Html.ValidationMessageFor(model => model.AddProductReview.ReviewText)
+                        </div>
+                        <div class="ratingContainer">
+                            <div class="radio">
+                                <h4 class="ratingTitle">@Html.LabelFor(model => model.AddProductReview.Rating, new { }, ":")</h4>
+                                <p class="ratingNumber bad">@T("Reviews.Fields.Rating.Bad")</p>
+                                <label>
+                                    @Html.RadioButtonFor(model => model.AddProductReview.Rating, "1", new { id = "addproductrating_1" })
+                                    @Html.RadioButtonFor(model => model.AddProductReview.Rating, "2", new { id = "addproductrating_2" })
+                                    @Html.RadioButtonFor(model => model.AddProductReview.Rating, "3", new { id = "addproductrating_3" })
+                                    @Html.RadioButtonFor(model => model.AddProductReview.Rating, "4", new { id = "addproductrating_4" })
+                                    @Html.RadioButtonFor(model => model.AddProductReview.Rating, "5", new { id = "addproductrating_5" })
+                                </label>
+                                <p class="ratingNumber excellent">@T("Reviews.Fields.Rating.Excellent")</p>
+                            </div>
+                        </div>
+                        <button type="submit" name="add-review" class="btn btn-default submitBtn">@T("Reviews.SubmitButton")</button>
+                    }
+                </div>
+            }
+        </div>
+    </section>
+</div>

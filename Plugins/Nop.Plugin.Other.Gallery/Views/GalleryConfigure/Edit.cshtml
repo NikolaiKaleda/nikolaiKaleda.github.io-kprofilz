@@ -1,0 +1,26 @@
+﻿@using Nop.Web.Framework
+@using GalleryModel = Nop.Plugin.Widgets.Gallery.Models.ConfigurationGalleryModel;
+
+@model Nop.Plugin.Widgets.Gallery.Models.ConfigurationGalleryModel
+@{
+    Layout = "/Administration/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+    //page title
+    ViewBag.Title = T("Plugin.Widgets.Gallery.EditGalleryDetails").Text;
+}
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "gallery-form" }))
+{
+    <div class="section-header">
+        <div class="title">
+            <img src="@Url.Content("/Administration/Content/images/ico-catalog.png")" alt="" />
+            @T("Plugin.Widgets.Gallery.EditGalleryDetails") - @Model.Name @Html.ActionLink("(" + T("Plugin.Widgets.Gallery.BackToList") + ")", "List", new { area = ""})
+        </div>
+        <div class="options">
+            <input type="submit" name="save" class="k-button" value="@T("Plugin.Widgets.Gallery.Save")" />
+            <span id="gallery-delete" class="k-button">@T("Plugin.Widgets.Gallery.Delete")</span>
+        </div>
+    </div>
+    @Html.Partial("~/Plugins/Widgets.Gallery/Views/GalleryConfigure/_CreateOrUpdate.cshtml", Model)
+}
+@Html.DeleteConfirmation("gallery-delete")

@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/_Root.Head.cshtml";
+}
+@Html.Widget("body_start_html_tag_after")
+<p class="topAnchor"><a name="topAnchor"></a></p>
+
+<div id="page-preloader">
+    <h2>Загрузка ...</h2>
+    <img src="/Themes/karelian-profile/img/preloader/logo_kprofil.png" alt="ЛКарельский профиль запад">
+    <span class="spinner"></span>
+</div>
+
+@Html.Partial("_Notifications")
+@Html.Action("JavaScriptDisabledWarning", "Common")
+@Html.Partial("OldInternetExplorerWarning")
+
+@*@Html.Action("AdminHeaderLinks", "Common")*@
+@Html.Partial("Header")
+@*<script type="text/javascript">
+        AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart');
+    </script>*@
+<main>
+    @Html.Widget("content_before")
+    @if (IsSectionDefined("Breadcrumb"))
+    {
+        @RenderSection("Breadcrumb")
+    }
+    @RenderBody()
+    @Html.Widget("content_after")
+</main>
+@Html.Action("Footer", "Common")
+@Html.Action("EuCookieLaw", "Common")
+@Html.Widget("body_end_html_tag_before")
+
+<!-- --- SCROLL TO TOP BUTTON --- -->
+<div id="scroller" title="to start" style="opacity: 0.2;"></div>
+<!-- --- End scroll to top button --- -->
+
+
+@*<div class="master-wrapper-content">
+        @Html.Widget("content_before")
+
+        @if (IsSectionDefined("Breadcrumb"))
+        {
+            @RenderSection("Breadcrumb")
+        }
+        <div class="master-column-wrapper">
+            @RenderBody()
+        </div>
+        @Html.Widget("content_after")
+    </div>
+    @Html.Action("Footer", "Common")
+    @Html.Action("EuCookieLaw", "Common")
+    @Html.Widget("body_end_html_tag_before")*@

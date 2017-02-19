@@ -1,0 +1,50 @@
+﻿@model List<Nop.Web.Models.Catalog.ReviewModel>
+
+
+<!-- --- CUSTOMER REVIEWS --- -->
+<section class="customerReviews parallax" <!--data-parallax="scroll" data-image-src="/Themes/karelian-profile/img/homePage/main/customerReview/bg.jpg"-->>
+    <div class="customerReviewsPosition">
+        <h3 class="customerReviewsTitle">Отзывы наших клиентов</h3>
+        <div class="cd-testimonials-wrapper cd-container">
+            <ul class="cd-testimonials">
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <p>@item.ReviewText</p>
+                        <div class="cd-author">
+                            <ul class="cd-author-info">
+                                <li>@item.CustomerName</li>
+                                <li><a href="@Url.RouteUrl("Product", new { SeName = item.ProductSeName })">Проект дома: @item.ProductName</a></li>
+                                <li>@item.Date.ToString("D")</li>
+                            </ul>
+                        </div>
+                    </li>
+                }
+            </ul> <!-- cd-testimonials -->
+
+            <a href="#0" class="moreBtn cd-see-all">Все отзывы</a>
+        </div> <!-- cd-testimonials-wrapper -->
+
+        <div class="cd-testimonials-all">
+            <div class="cd-testimonials-all-wrapper">
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        <li class="cd-testimonials-item">
+                            <p>@item.ReviewText</p>
+                            <div class="cd-author">
+                                <ul class="cd-author-info">
+                                    <li>@item.CustomerName</li>
+                                    <li><a href="@Url.RouteUrl("Product", new { SeName = item.ProductSeName })">Проект дома: @item.ProductName</a></li>
+                                    <li>@item.Date.ToString("D")</li>
+                                </ul>
+                            </div> <!-- cd-author -->
+                        </li>
+                    }
+                </ul>
+            </div>    <!-- cd-testimonials-all-wrapper -->
+            <a href="#0" class="close-btn">Close</a>
+        </div> <!-- cd-testimonials-all -->
+    </div>
+</section>
+<!-- --- End customer reviews --- -->

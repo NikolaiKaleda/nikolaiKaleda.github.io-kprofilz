@@ -1,0 +1,69 @@
+.temporarilyCap {
+	display: none;
+}
+.notFounPage {
+	background: url(../img/404Page/bg.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	min-height: 500px;
+	border-top: 1px solid #B3B3B3;
+	margin-bottom: -10px;
+    padding-bottom: 5%;
+	text-align: center;
+    .notFoundPageImg {
+        width: 25%;
+        margin-top: 5%;
+    }
+	.notFoundPageTitle {
+		@include input-font($OswardFont, 5em, $textColor5, 1px, bold);
+		margin-top: 1%;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	}
+	.notFoundPageSubTitle {
+		@include input-font($OswardFont, 3em, $textColor5, 1px, bold);
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	}
+	.notFoundPageText {
+		@include input-font($RobotoRegularFont, 1.5em, $textColor3, 1px, bold);
+		background-color: rgba(1,1,1,0.5);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        width: 60%;
+        margin: 0 auto;
+        a {
+            text-decoration: none;
+            color: $mainColor;
+        }
+        a:hover {
+            color: $borderFooterColor;
+        }
+	}
+}
+
+@media only screen and (max-width:992px) {
+.notFounPage {
+    .notFoundPageImg {
+        width: 30%;
+    }
+    .notFoundPageText {
+        width: 100%;
+    }
+}
+}
+
+@media only screen and (max-width:768px) {
+.notFounPage {
+    min-height: 350px;
+}
+}
+
+@media only screen and (max-width:500px) {
+.notFounPage {
+    .notFoundPageImg {
+        width: 40%;
+    }
+}
+}

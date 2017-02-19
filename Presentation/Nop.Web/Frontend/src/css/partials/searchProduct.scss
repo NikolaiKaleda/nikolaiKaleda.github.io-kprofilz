@@ -1,0 +1,556 @@
+.searchPage {
+    width: 100%;
+	border-top: 1px solid #B3B3B3;
+	padding-bottom: 6%;
+	overflow: hidden;
+    .searchTitleContainer {
+        position: relative;
+        min-height: 200px;
+        height: 300px;
+        .searchTitle {
+            @include input-font($OswardFont, 4.5em, $textColor5, 5px, bold);
+			text-transform: uppercase;
+			text-align: center;
+            position: absolute;
+			margin-top: 7%;
+			margin-bottom: 4%;
+            width: 100%;
+            background-color: rgba(255,255,255,0.5);
+            padding: 10px;
+        }
+    }
+    .searchNavigation {
+		display: none;
+        margin-bottom: 30px;
+        .row {
+            .navLinkContainer {
+                .row {
+                    .linkToProduct {
+                        text-decoration: none;
+                        .linkTextContainer:last-child {
+                            border: 1px solid #B3B3B3;
+                        }
+                        .linkTextContainer {
+                            text-align: center;
+                            padding: 0;
+                            margin: 0;
+                            border: 1px solid #B3B3B3;
+                            border-right: none;
+                            -webkit-transition: all 0.4s ease-out 0s;
+                            -moz-transition: all 0.4s ease-out 0s;
+                            -o-transition: all 0.4s ease-out 0s;
+                            transition: all 0.4s ease-out 0s;
+                            .linkText {
+                                @include input-font($RobotoRegularFont, 1em, $textColor5, 0, normal);
+                                line-height: 4;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .searchPagePosition {
+        width: 90%;
+        margin: 0 auto;
+        .breadCrumbs {
+            ul {
+                padding: 0;
+                li {
+                    @include inlineBlock();
+                    a {
+                        margin-right: 15px;
+                        margin-left: 15px;
+                        @include input-font($RobotoRegularFont, 1em, $textColor5, 0, normal);
+                        text-decoration: none;
+                    }
+                    a:hover {
+                        color: $mainColor;
+                        //background-color: $textColor6;
+                    }
+                    img {
+                        height: 15px;
+                    }
+                    .activeProduct {
+                        color: $newsTextColor;
+                    }
+                }
+            }
+        }
+        .sortProducts {
+            margin-top: 40px;
+            margin-left: 15px;
+            .sort {
+                @include inlineBlock();
+                margin-right: 15px;
+                .sortTitle {
+                    @include input-font($RobotoRegularFont, 0.9em, $textColor5, 0, normal);
+                    display: block;
+                }
+                #sortBy {
+                    @include input-font($RalewayFont, 1.1em, $textColor4, 0, normal);
+                    width: 150px;
+                }
+            }
+            .currency {
+                @include inlineBlock();
+                .currencyTitle {
+                    @include input-font($RobotoRegularFont, 0.9em, $textColor5, 0, normal);
+                    display: block;
+                }
+                #currencyBy {
+                    @include input-font($RalewayFont, 1.1em, $textColor4, 0, normal);
+                    width: 150px;
+                }
+            }
+            .search {
+				display: block;
+				width: 50%;
+				padding: 30px 0;
+				margin: 15px auto 0 auto;
+				background-color: $bgPartnersColor;
+                form {
+                    position: relative;
+                    width: 350px;
+                    margin: 0 auto;
+                    input, button {
+                        border: none;
+                        outline: none;
+                        background: transparent;
+                    }
+                    input {
+                        width: 100%;
+                        height: 42px;
+                        padding-left: 15px;
+						background: $mainColor;
+                    }
+                    button {
+                        height: 42px;
+                        width: 42px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        cursor: pointer;
+                    }
+                    button:before {
+                        content: "\f002";
+                        font-family: FontAwesome;
+                        font-size: 16px;
+                        color: $textColor5;
+                    }
+					.advancedSearch {
+						display: block;
+    					margin-bottom: 45px;
+						p {
+							@include input-font($RobotoRegularFont, 1.3em, $textColor5, 0, normal);
+							cursor: pointer;
+							text-align: center;
+							margin-top: 15px;
+						}
+					}
+					.hiddenBlock {
+						display: none;
+						.inputs {
+							margin-bottom: 15px;
+							label {
+								@include input-font($RobotoRegularFont, 1.1em, $textColor5, 0, normal);
+							}
+							select {
+								background: $mainColor;
+								min-width: 180px;
+								border: none;
+								height: 40px;
+							}
+							.price-range {
+								.price-from, .price-to {
+									width: 35%;
+								}
+							}
+						}
+						.reversed {
+							input {
+								@include inlineBlock();
+								width: 15px;
+								height: auto;
+							}
+							table {
+								@include inlineBlock();
+							}
+						}
+					}
+					.buttons {
+						text-align: center;
+						.search-button {
+							@include input-font($RobotoRegularFont, 1.5em, $textColor5, 0, normal);
+							-webkit-transition: all 0.4s ease-out 0s;
+							-moz-transition: all 0.4s ease-out 0s;
+							-o-transition: all 0.4s ease-out 0s;
+							transition: all 0.4s ease-out 0s;
+							width: 70%;
+							border: 1px solid $mainColor;
+							background: #fff;
+						}
+						.search-button:hover {
+							background: $mainColor;
+						}
+					}
+                }
+            }
+        }
+        .products {
+            margin-top: 55px;
+            .row {
+                border-top: 1px solid rgba(132,132,132, 0.5);
+                .filtersProductContainer {
+                    .filtersProduct {
+                        border-right: 1px solid rgba(132,132,132,.5);
+                        border-left: 1px solid rgba(132,132,132,.5);
+                        padding: 0;
+                        .smartfilter {
+                            .buildType {
+                                border-bottom: 1px solid rgba(132,132,132,.5);
+                                background-color: $mainColor;
+                                .typeTitle {
+                                    @include input-font($OswardFont, 1.8em, $textColor5, 0, normal);
+                                    padding: 30px 0 15px 30px;
+                                    margin: 0;
+                                }
+                                .listBuildings {
+                                    list-style-type: circle;
+                                    margin: 0;
+                                    padding-bottom: 10px;
+                                    .buildItem {
+                                        @include input-font($OswardFont, 1em, $textColor5, 0.5px, normal);
+                                        list-style-type: disc;
+                                        padding-bottom: 5px;
+                                        a {
+                                            text-decoration: none;
+                                            color: $newsTitleColor;
+                                            -webkit-transition: all 0.4s ease-out 0s;
+                                            -moz-transition: all 0.4s ease-out 0s;
+                                            -o-transition: all 0.4s ease-out 0s;
+                                            transition: all 0.4s ease-out 0s;
+                                        }
+                                        a:hover {
+                                            color: $newsTextColor;
+                                        }
+                                        .sublist {
+                                            padding-left: 25px;
+                                            .buildSubItem {
+                                                @include input-font($OswardFont, 1em, $textColor5, 0.5px, normal);
+                                                list-style-type: circle;
+                                                a {
+                                                    text-decoration: none;
+                                                    color: $newsTitleColor;
+                                                }
+                                                a:hover {
+                                                    color: $newsTextColor;
+                                                }
+                                            }
+                                            .active a {
+                                                color: $newsTextColor;
+                                            }
+                                            .active a:after {
+                                                content: "	  >";
+                                            }
+                                        }
+                                    }
+                                    .active a {
+                                        color: $newsTextColor;
+                                    }
+                                }
+                            }
+                            .buildPrice {
+                                border-bottom: 1px solid rgba(132,132,132, 0.5);
+                                margin-top: 30px;
+                                padding: 0 15px 20px;
+                                p {
+                                    text-align: center;
+                                    label {
+                                        @include input-font($OswardFont, 1.3em, $textColor5, 0.5px, normal);
+                                        text-transform: uppercase;
+                                        display: block;
+                                    }
+                                    #amount {
+										display: none;
+                                        @include input-font($RalewayFont, 1em, $textColor5, 0.5px, normal);
+                                        text-align: center;
+                                    }
+                                }
+                                #slider-range {
+									display: none;
+                                    .ui-slider-range {
+                                        background: #90BD29;
+                                    }
+                                    .ui-state-default {
+                                        background: $mainColor;
+                                    }
+                                    .ui-slider-handle {
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                    .ui-corner-all {
+                                        border-radius: 10px;
+                                    }
+                                }
+								.checkbox {
+									margin-bottom: 0;
+									label {
+										@include input-font($OswardFont, 1em, #f6931f, 0.5px, bold);
+                                        padding-bottom: 5px;
+									}
+								}
+                            }
+                            .floorCount {
+                                border-bottom: 1px solid rgba(132,132,132,.5);
+                                padding-left: 40px;
+                                .floorTitle {
+                                    @include input-font($OswardFont, 1.3em, $textColor5, 0.5px, normal);
+                                    padding: 30px 0 15px 30px;
+                                    margin: 0;
+                                }
+                                .checkbox {
+                                    label {
+                                        @include input-font($OswardFont, 1em, $textColor5, 0.5px, normal);
+                                        padding-bottom: 5px;
+                                    }
+                                }
+                            }
+                            .buildArea {
+                                border-bottom: 1px solid rgba(132,132,132, 0.5);
+                                margin-top: 30px;
+                                margin-bottom: 0;
+                                padding: 0 10px 20px;
+                                p {
+                                    text-align: center;
+                                    label {
+                                        @include input-font($OswardFont, 1.3em, $textColor5, 0.5px, normal);
+                                        display: block;
+                                    }
+                                    #amount-area {
+                                        @include input-font($RalewayFont, 1em, $textColor5, 0.5px, normal);
+                                        text-align: center;
+										display: none;
+                                    }
+                                }
+                                #slider-range-area {
+									display: none;
+                                    .ui-slider-range {
+                                        background: #90BD29;
+                                    }
+                                    .ui-state-default {
+                                        background: $mainColor;
+                                    }
+                                    .ui-slider-handle {
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                    .ui-corner-all {
+                                        border-radius: 10px;
+                                    }
+                                }
+								.checkbox {
+									margin-bottom: 0;
+									label {
+										@include input-font($OswardFont, 1em, $textColor5, 0.5px, normal);
+                                        padding-bottom: 5px;
+									}
+								}
+                            }
+                            .submit {
+                                border-bottom: 1px solid rgba(132,132,132, 0.5);
+                                margin-top: 30px;
+                                margin-bottom: 0;
+                                padding: 0 10px 20px;
+                                text-align: center;
+                                .set_filter {
+                                    @include input-font($RobotoRegularFont, 1.2em, #fff, 0, normal);
+                                    transition: all .4s;
+                                    border-radius: 0;
+                                    height: 40px;
+                                    width: 45%;
+                                    background-color: $textColor5;
+                                    line-height: 30px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    text-transform: capitalize;
+                                }
+                                .set_filter:hover {
+                                    background-color: #fff;
+                                    color: rgb(28,28,28);
+                                    border: 1px solid rgb(28,28,28);
+                                }
+                                #del_filter {
+                                    @include input-font($RobotoRegularFont, 1.2em, $textColor5, 0, normal);
+                                    transition: all .4s;
+                                    text-decoration: none;
+                                    height: 40px;
+                                }
+                                #del_filter:hover {
+                                    border: 1px solid rgb(28,28,28);
+                                }
+                            }
+                        }
+                    }
+                    .recentlyProducts {
+                        .recentlyTitle {
+                            @include input-font($OswardFont, 1.5em, $textColor5, 0.5px, normal);
+                            border-bottom: 1px solid rgba(132,132,132,.5);
+                            padding: 60px 10px 15px 10px;
+                            margin: 0;
+                            margin-bottom: 30px;
+                            text-align: center;
+                        }
+                        .recentlyItem {
+                            position: relative;
+                            margin-bottom: 30px;
+                            .recentlyLink {
+                                text-decoration: none;
+                                .recentlyImg {
+                                    width: 40%;
+                                    @include inlineBlock();
+                                    img {
+                                       width: 100%; 
+                                    }
+                                }
+                                .recentlyText {
+                                    @include inlineBlock();
+                                    position: absolute;
+                                    margin-left: 15px;
+                                    width: 40%;
+                                    h4 {
+                                        @include input-font($OswardFont, 1.1em, $textColor5, 1px, normal);
+                                    }
+                                    p {
+                                        @include input-font($RalewayFont, 1em, $newsTextColor, 0, normal);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .products {
+                    .row {
+                        border: none;
+                        margin-left: 15px;
+                        .productItem {
+                            position: relative;
+                            border: 1px solid rgba(132,132,132, 0.5);
+                            padding: 0;
+                            width: 32%;
+                            height: 420px;
+                            margin: 0 0.5% 30px 0.5%;
+                            .productLink {
+                                text-decoration: none;
+                                .addToCompareReact {
+                                    display: none;
+                                    background-color: $mainColor;
+                                    height: 40px;
+                                    width: 40px;
+                                    position: absolute;
+                                    right: 0;
+                                    .fa {
+                                        @include inlineBlock();
+                                        margin: 15%;
+                                        color: #5cb85c;
+                                    }
+                                }
+                                img {
+                                    width: 100%;
+                                    height: 185px;
+                                }
+                                .productTitle {
+                                    @include input-font($RobotoRegularFont, 1.3em, $textColor5, 0, bold);
+                                    margin: 7% 0 5% 5%;
+                                }
+                                .productArea, .floor, .size, .personsCount {
+                                    @include input-font($RalewayFont, 1.1em, $textColor4, 0, normal);
+                                    margin: 1% 0 1% 5%;
+                                }
+                                .productDescription {
+                                    @include input-font($RalewayFont, 0.8em, $newsTextColor, 0, normal);
+                                    margin: 7% 5% 5% 5%;
+                                }
+                            }
+                            .cart-button {
+                                position: absolute;
+                                bottom: 1%;
+                                left: 23%;
+                                .btn {
+                                    @include input-font($RalewayFont, 1em, #fff, 0, normal);
+                                    transition: all .4s;
+                                    border-radius: 0;
+                                    border: 1px solid rgba(1, 1, 1, 0);
+                                    background-color: $textColor5;
+                                    color: #fff;
+                                    text-transform: capitalize;
+                                    i {
+                                        transition: all .4s;
+                                        color: $mainColor;
+                                    }
+                                }.btn:hover {
+                                    background-color: #fff;
+                                    color: rgb(28,28,28);
+                                    border: 1px solid rgb(28,28,28);
+                                    i {
+                                        transition: all .4s;
+                                        color: $textColor5;
+                                    }
+                                }
+                                .btn-cart {
+                                    background-color: $mainColor;
+                                    color: $textColor5;
+                                    i {
+                                        transition: all .4s;
+                                        color: $textColor5;
+                                    }
+                                }
+                                .btn-cart:hover {
+                                    background-color: #fff;
+                                    color: $textColor5;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .newsPagination {
+        text-align: center;
+		.pagination {
+		    li {
+				a {
+					color: $newsTextColor;
+				}
+			}
+			.active {
+				a {
+					background-color: $topMenuColor;
+					border-color: $topMenuColor;
+					color: #fff;
+				}
+			}
+        }
+	}
+    .compareBtnConntainer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        .btn {
+            background-color: rgba(1,1,1,0.8);
+            border-radius: 0;
+            color: $mainColor;
+        }
+    }
+	.hiddenClass {
+		display: block;
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+﻿@model SearchModel
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.Search").Text);
+    //page class
+    Html.AppendPageCssClassParts("html-search-page");
+}
+@using Nop.Web.Models.Catalog;
+
+<div class="searchPage">
+    <section class="searchTitleContainer parallax" data-parallax="scroll" data-image-src="/Themes/karelian-profile/img/productsByCategory/bg.jpg">
+        <h2 class="searchTitle">@T("Search")</h2>
+    </section>
+    <div class="searchPagePosition container-fluid">
+        <section class="sortProducts">
+            <div class="product-sorting sort">
+                <span class="sortTitle">Сортировать по</span>
+                <select id="sortBy" name="products-orderby" onchange="setLocation(this.value)">
+                    <option selected="selected" value="http://demo.nopcommerce.com/camera-photo?orderby=0">Цене</option>
+                    <option value="http://demo.nopcommerce.com/camera-photo?orderby=5">Площади</option>
+                    <option value="http://demo.nopcommerce.com/camera-photo?orderby=6">Названию</option>
+                </select>
+            </div>
+            <div class="product-sorting currency">
+                <span class="currencyTitle">Выберите валюту</span>
+                <select id="currencyBy" name="products-orderby" onchange="setLocation(this.value)">
+                    <option selected="selected" value="http://demo.nopcommerce.com/camera-photo?orderby=0">BYN</option>
+                    <option value="http://demo.nopcommerce.com/camera-photo?orderby=5">USD</option>
+                </select>
+            </div>
+            <div class="search">
+
+                @using (Html.BeginRouteForm("ProductSearch", FormMethod.Get))
+                {
+                    @Html.TextBoxFor(model => model.q, new { placeholder = "Поиск ..." })
+                    <button type="submit"></button>
+                    <div class="advancedSearch">
+                        <p>Расширенный поиск</p>
+                    </div>
+                    <div class="hiddenBlock">
+                        @if (Model.AvailableCategories.Count > 0)
+                        {
+                            <div class="inputs">
+                                <label for="cid">Категории:</label>
+                                @Html.DropDownListFor(model => model.cid, Model.AvailableCategories)
+                            </div>
+                            <div class="inputs reversed">
+                                @Html.CheckBoxFor(model => model.isc)
+                                @Html.LabelFor(model => model.isc)
+                            </div>
+                        }
+                        <div class="inputs">
+                            <label>@T("Search.PriceRange"):</label>
+                            <span class="price-range">
+                                @T("Search.PriceRange.From")
+                                @Html.TextBoxFor(model => model.pf, new { @class = "price-from" })
+                                @T("Search.PriceRange.To")
+                                @Html.TextBoxFor(model => model.pt, new { @class = "price-to" })
+                            </span>
+                        </div>
+                        <div class="inputs reversed">
+                            @Html.CheckBoxFor(model => model.sid)
+                            @Html.LabelFor(model => model.sid)
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <input type="submit" class="button-1 search-button" value="@T("Search.Button")" />
+                    </div>
+                }
+
+            </div>
+        </section>
+        <section class="products">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 filtersProductContainer">
+                    <div class="filtersProduct">
+                        <div class="smartfilter">
+                            @Html.Action("CategoryNavigation", "Catalog", new { currentCategoryId = 0, currentProductId = 0 })
+                            @*@if (Model.PagingFilteringContext.PriceRangeFilter.Enabled)
+                                {
+                                    @Html.Partial("_FilterPriceBox", Model.PagingFilteringContext.PriceRangeFilter, new ViewDataDictionary())
+                                }
+                                @if (Model.PagingFilteringContext.SpecificationFilter.Enabled)
+                                {
+                                    @Html.Partial("_FilterSpecsBox", Model.PagingFilteringContext.SpecificationFilter, new ViewDataDictionary())
+                                }
+                                <div class="submit form-group">
+                                    <div class="btn btn-default set_filter">Показать</div>
+                                    <input class="btn btn-link" type="submit" id="del_filter" name="del_filter" value="Сбросить">
+                                </div>*@
+                        </div>
+                    </div>
+                    @Html.Action("RecentlyViewedProductsBlock", "Product", new { productThumbPictureSize = 159 })
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 products">
+                    @if (!String.IsNullOrEmpty(Model.Warning))
+                    {
+                        <div class="warning">
+                            @Model.Warning
+                        </div>
+                    }
+                    @if (Model.NoResults)
+                    {
+                        <div class="no-result">
+                            @T("Search.NoResultsText")
+                        </div>
+                    }
+                    @if (Model.Products.Count > 0)
+                    {
+                        for (int i = 0; i < Model.Products.Count; i++)
+                        {
+                            if (i % 3 == 0)
+                            {
+                                <div class="row">
+                                    @foreach (var product in Model.Products.Skip(i).Take(3))
+                                    {
+                                        @Html.Partial("_ProductBox", product)
+                                    }
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        </section>
+        @Html.Widget("productsearch_page_after_results")
+    </div>
+    @{
+        var pager = Html.Pager(Model.PagingFilteringContext).QueryParam("pagenumber").BooleanParameterName("adv").BooleanParameterName("isc").BooleanParameterName("sid").RenderEmptyParameters(true);
+    }
+    @if (!pager.IsEmpty())
+    {
+        <div class="pager">
+            @pager
+        </div>
+    }
+</div>
